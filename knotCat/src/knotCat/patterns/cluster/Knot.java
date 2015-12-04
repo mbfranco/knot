@@ -1,5 +1,6 @@
 package knotCat.patterns.cluster;
 
+import java.util.Arrays;
 
 /**
  * Knot structure used by clusters
@@ -8,58 +9,82 @@ package knotCat.patterns.cluster;
  */
 public class Knot {
 	
-	int reference;
-	String name;
+	int[] references;
+	String[] names;
 	BitArray features;
 	
-	/**
-	 * number of bits to characterize each feature.
-	 * 00 -> feature not present in the knot
-	 * 11 -> feature present in the knot
-	 * 01/10 -> feature probably present/not present
-	 */
-	static final int UNCERTAINTY = 2;
+//	/**
+//	 * number of bits to characterize each feature.
+//	 * 00 -> feature not present in the knot
+//	 * 11 -> feature present in the knot
+//	 * 01/10 -> feature probably present/not present
+//	 */
+//	static final int UNCERTAINTY = 2;
 
 	
 	/** Constructor
-	 * @param ref The reference to the ABOK knot entry
-	 * @param name The name of the Knot
-	 * @param nfeatures Number of features 
+	 * @param references The references to the ABOK knot entry
+	 * @param names The names of the Knot
+	 * @param features Present features 
 	 */
-	public Knot(int ref, String name,int nfeatures) {
-		reference = ref;
-		this.name = name;
-		this.features = new BitArray(nfeatures * UNCERTAINTY);
+	public Knot(int[] references, String[] names, BitArray features) {
+		this.references = references;
+		this.names = names;
+		this.features = features;
 	}
 	
-	public int getUncertainty(){
-		return UNCERTAINTY;
-	}
+//	public int getUncertainty(){
+//		return UNCERTAINTY;
+//	}
 
 	public BitArray getFeatures() {
 		return features;
 	}
 
-	public void setFeatures(BitArray features) {
-		this.features = features;
+	public void setFeatures(String feature) {
+		//TODO Has to call 
 	}
 
-	public int getReference() {
-		return reference;
-	}
-
-	public String getName() {
-		return name;
+	public int[] getReference() {
+		return references;
 	}
 	
+	private String printReference() {
+		return Arrays.toString(this.getReference());
+	}
+
+	public String[] getName() {
+		return names;
+	}
+	
+	public String printName(){
+		return Arrays.toString(this.getName());
+	}
+	
+	/** Search nameToIntroduce in the FeatureNames vector
+	 * 		if exists NameAlreadyExistsException
+	 * 		else insert FeatureNames in the otherName index
+	 */
+	public void addName(String otherName, String nameToIntroduce){
+		//TODO 
+	}
 	
 //	public static void main(String[] args) {
 //		
-//		Knot kn = new Knot(4);
+//		int[] r = {1};
+//		String[] n = {"knot"};
+//		BitArray f = new BitArray(55);
 //		
-//		kn.set(1);
+//		f.set(7);
+//		f.set(5);
+//		f.set(23);
 //		
-//		System.out.println("kn = " + kn.toString() + "   kn.size() = " + kn.length());
+//		Knot kn = new Knot(r, n, f);
+//		
+//		
+//		
+//		System.out.println("kn = " + kn.printName() + "  " + kn.printReference() + "  " + kn.getFeatures() );
 //	}
+
 }
 
