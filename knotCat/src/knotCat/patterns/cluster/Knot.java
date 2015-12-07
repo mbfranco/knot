@@ -1,6 +1,7 @@
 package knotCat.patterns.cluster;
 
 import java.util.Arrays;
+import java.util.LinkedList;
 
 /**
  * Knot structure used by clusters
@@ -12,6 +13,7 @@ public class Knot {
 	int[] references;
 	String[] names;
 	BitArray features;
+	LinkedList<BitArray> atoms;
 	
 //	/**
 //	 * number of bits to characterize each feature.
@@ -26,6 +28,21 @@ public class Knot {
 	 * @param references The references to the ABOK knot entry
 	 * @param names The names of the Knot
 	 * @param features Present features 
+	 * @param atom Present atomic features
+	 */
+	public Knot(int[] references, String[] names, BitArray features, LinkedList<BitArray> atoms) {
+		this.references = references;
+		this.names = names;
+		this.features = features;
+		this.atoms = atoms;
+	}
+	
+	/** Constructor
+	 * Knot with no atom features
+	 * @param references The references to the ABOK knot entry
+	 * @param names The names of the Knot
+	 * @param features Present features 
+	 * @param atom Present atomic features
 	 */
 	public Knot(int[] references, String[] names, BitArray features) {
 		this.references = references;
@@ -49,6 +66,7 @@ public class Knot {
 		return references;
 	}
 	
+	@SuppressWarnings("unused")
 	private String printReference() {
 		return Arrays.toString(this.getReference());
 	}
