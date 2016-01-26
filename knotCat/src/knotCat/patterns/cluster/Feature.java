@@ -1,6 +1,9 @@
 package knotCat.patterns.cluster;
 
+import knotCat.patterns.cluster.Exceptions.*;
+
 import java.util.LinkedList;
+import java.util.ListIterator;
 
 /**
  * @author miguel
@@ -26,11 +29,49 @@ public class Feature {
 		this.name = name;
 	}
 	
-	
 	public LinkedList<AtomFeature> getAtomArray() {
 		return atom;
 	}
 	
-
+	public void addAtomFeature(String atomFeature) throws Exception{
+		AtomFeature a = new AtomFeature(this, atomFeature);
+//		ListIterator<AtomFeature> li = atom.listIterator();
+//
+//		while(li.hasNext()){
+//			
+//			try{
+//			if(li.toString().contentEquals(atomFeature)){
+//				throw new AtomNameAlreadyExistsException();//AtomNameAlreadyExistsException;
+//			}
+//			} catch(AtomNameAlreadyExistsException e){
+//				System.err.println("AtomNameAlreadyExistsException: " + e.getMessage());
+//			} catch(Exception e){
+//				System.err.println(e.getLocalizedMessage());
+//			}
+//		}
+		try{
+		for(AtomFeature at : this.getAtomArray()){
+			if(at.getAtomName().equals(atomFeature)){
+				throw new AtomNameAlreadyExistsException(atomFeature);
+			}
+		}
+		
+		atom.add(a);
+		}catch(AtomNameAlreadyExistsException e){
+			System.err.println(e.getMessage());
+		}
+	}
+	
+//	public static void main(String[] args) throws Exception {
+//		LinkedList<AtomFeature> l = new LinkedList<>();
+//		Feature f = new Feature("strong", l);
+//		
+//		f.addAtomFeature("very");
+//		f.addAtomFeature("tension");
+//		f.addAtomFeature("tension");
+//		System.out.println("Feature: " + f.getName());
+//		for(AtomFeature a : f.getAtomArray())
+//			System.out.println("Atom Features: " + a.getAtomName());
+//	}
 	
 }
