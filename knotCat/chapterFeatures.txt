@@ -1,0 +1,78 @@
+Chapter 3: knob single-strand stopper or terminal knots
+514 to 563
+
+knob
+single-strand
+stopper
+terminal
+tie, (tie, end) (tie, running-to-rigging)
+bunch
+prevent, (prevent, unreeving) (prevent, unlaying-not) (prevent, fraying-not) (prevent, fraying-small-cord) (prevent, fraying-twine)
+secure, (secure, sewing-thread-end)
+bell-rope, (bell-rope, handhold) (bell-rope, foothold)
+footrope, (footrope, handhold) (footrope, foothold)
+add-weight, (add-weight, heaving-line) (add-weight, end)
+decorative
+practical
+
+
+
+Chapter 4: knob single-strand lanyard knots
+564 to 598
+
+knob
+single-strand
+lanyard
+decorative
+attach, (attach, marlinspike) (attach, fid) (attach, paint-can) (attach, slush-bucket) (attach, eyeglass) (attach, pencil) (attach, hat) (attach, snuffbox) (attach, jackknife) (attach, tobacco-pouch) (attach, amulet) (attach, money-pouch) (attach, bosun-whistle) (attach, watch) (attach, binoculars) (attach, pipe) (attach, key) (attach, buttonhole) (attach, belt) (attach, suspender)
+tie, (tie, neck) (tie, shoulder) (tie, wrist) (tie, bight) (tie, movable-objects)
+symmetrical
+opposite, (opposite, working-end-to-running-end)
+
+
+
+Chapter 5: knob single-strand button knots
+599 to 669
+
+knob
+single-strand
+button
+symmetrical
+parallel, (parallel, standing-part)
+leave-knot, (leave-knot, working-end-at-neck)
+stem, (stem, ends-form)
+neck, (neck, ends-form)
+same-lay, (same-lay, ends)
+
+
+
+Chapter 6: knob multi-strand stopper or terminal knots
+670 to 726
+
+knob
+multi-strand
+stopper
+terminal
+prevent, (prevent, unreeving)
+tie, (tie, strand)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
