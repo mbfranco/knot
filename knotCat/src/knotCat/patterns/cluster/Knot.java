@@ -1,7 +1,10 @@
 package knotCat.patterns.cluster;
 
-import java.util.Arrays;
-import java.util.LinkedList;
+import java.util.*;
+
+import knotCat.patterns.cluster.Exceptions.FeatureDoesNotExistExcetion;
+import knotCat.patterns.cluster.Exceptions.KnotNameAlreadyExistsException;
+import knotCat.patterns.cluster.Exceptions.KnotNameDoesNotExistException;
 
 /**
  * Knot structure used by clusters
@@ -9,100 +12,185 @@ import java.util.LinkedList;
  *
  */
 public class Knot {
-	
-	int[] references;
-	String[] names;
-	BitArray features;
-	LinkedList<BitArray> atoms;
-	
-//	/**
-//	 * number of bits to characterize each feature.
-//	 * 00 -> feature not present in the knot
-//	 * 11 -> feature present in the knot
-//	 * 01/10 -> feature probably present/not present
-//	 */
-//	static final int UNCERTAINTY = 2;
 
-	
+	List<Integer> references; //Implemented as an ArrayList
+	List<String> names; //Implemented as an ArrayList
+	BitArray features;
+	Map<Integer,BitArray> atoms; //Implemented as a TreeMap
+
+	//	/**
+	//	 * number of bits to characterize each feature.
+	//	 * 00 -> feature not present in the knot
+	//	 * 11 -> feature present in the knot
+	//	 * 01/10 -> feature probably present/not present
+	//	 */
+	//	static final int UNCERTAINTY = 2;
+
+
 	/** Constructor
-	 * @param references The references to the ABOK knot entry
-	 * @param names The names of the Knot
-	 * @param features Present features 
-	 * @param atom Present atomic features
+	 * @param references The references to the ABOK knot entry (a knot may have different entries)
+	 * @param names The names of the Knot (a knot may have different names)
+	 * @param features Knot's present features in the form of a binary representation
+	 * @param atoms Knot's present atomic features in a binary representation. Atoms are associated to present Features.
 	 */
-	public Knot(int[] references, String[] names, BitArray features, LinkedList<BitArray> atoms) {
+	public Knot(List<Integer> references, List<String> names, BitArray features, Map<Integer,BitArray> atoms) {
 		this.references = references;
 		this.names = names;
 		this.features = features;
 		this.atoms = atoms;
 	}
-	
+
 	/** Constructor
 	 * Knot with no atom features
-	 * @param references The references to the ABOK knot entry
-	 * @param names The names of the Knot
-	 * @param features Present features 
-	 * @param atom Present atomic features
+	 * @param r The references to the ABOK knot entry (a knot may have different entries)
+	 * @param n The names of the Knot (a knot may have different names)
+	 * @param features Knot's present features in the form of a binary representation
 	 */
-	public Knot(int[] references, String[] names, BitArray features) {
-		this.references = references;
-		this.names = names;
+	public Knot(List<Integer> r, List<String> n, BitArray features) {
+		this.references = r;
+		this.names = n;
 		this.features = features;
 	}
-	
-//	public int getUncertainty(){
-//		return UNCERTAINTY;
-//	}
+
+	//	public int getUncertainty(){
+	//		return UNCERTAINTY;
+	//	}
 
 	public BitArray getFeatures() {
 		return features;
 	}
 
-	public void setFeatures(String feature) {
-		//TODO Has to call 
-	}
-
-	public int[] getReference() {
+	public List<Integer> getReference() {
 		return references;
 	}
 	
-	@SuppressWarnings("unused")
-	private String printReference() {
-		return Arrays.toString(this.getReference());
-	}
-
-	public String[] getName() {
+	public List<String> getName() {
 		return names;
 	}
 	
-	public String printName(){
-		return Arrays.toString(this.getName());
+	public Map<Integer, BitArray> getAtoms(){
+		return atoms;
 	}
 	
-	/** Search nameToIntroduce in the FeatureNames vector
-	 * 		if exists NameAlreadyExistsException
-	 * 		else insert FeatureNames in the otherName index
+	public BitArray getAtomFeature(int featureIndex) throws Exception{
+		try{
+			
+		if(this.getFeatures().get(featureIndex) == false){
+			throw new FeatureDoesNotExistExcetion(featureIndex, this.getName().toString());
+		}
+			
+		}catch(FeatureDoesNotExistExcetion e){
+			System.err.println(e.getMessage());
+		}
+		
+		return this.atoms.get(featureIndex);
+		
+	}
+	
+	/**
+	 * @return
 	 */
-	public void addName(String otherName, String nameToIntroduce){
-		//TODO 
+	private String printReference() {
+		return this.getReference().toString();
 	}
-	
-//	public static void main(String[] args) {
-//		
-//		int[] r = {1};
-//		String[] n = {"knot"};
-//		BitArray f = new BitArray(55);
-//		
-//		f.set(7);
-//		f.set(5);
-//		f.set(23);
-//		
-//		Knot kn = new Knot(r, n, f);
-//		
-//		
-//		
-//		System.out.println("kn = " + kn.printName() + "  " + kn.printReference() + "  " + kn.getFeatures() );
-//	}
+
+	/**
+	 * @return
+	 */
+	public String printName(){
+		return this.getName().toString();
+	}
+
+	 
+	/** Adds Name to an existing Knot
+	 * @param existingName Existing name for the knot
+	 * @param nameToIntroduce Name to introduce in this knot
+	 * @throws KnotNameDoesNotExistException if the existingName doesn't characterize this knot
+	 * @throws KnotNameAlreadyExistsException if the nameToIntroduce already characterizes this knot
+	 */
+	public void addName(String existingName, String nameToIntroduce) throws Exception{
+		
+		try{
+			if(this.getName().contains(existingName) == false){
+				throw new KnotNameDoesNotExistException(existingName);
+			}
+			
+			if(this.getName().contains(nameToIntroduce)){
+				throw new KnotNameAlreadyExistsException(nameToIntroduce);				
+			}
+
+			this.getName().add(nameToIntroduce);
+			
+		}catch(Exception e){
+			System.err.println(e.getMessage());
+		}
+	}
+
+
+	public static void main(String[] args) throws Exception {
+
+		List<Integer> r = new ArrayList<Integer>();
+		List<Integer> r1 = new ArrayList<Integer>();
+		List<String> n = new ArrayList<String>();
+		List<String> n1 = new ArrayList<String>();
+		BitArray f = new BitArray(55);
+		BitArray f1 = new BitArray(55);
+
+		r.add(1);
+		n.add("knot A");
+		f.set(7);
+		f.set(5);
+		f.set(23);
+
+		r1.add(2);
+		r1.add(78);
+		n1.add("knot B");
+		n1.add("knot B1");
+		f1.set(2);
+		f1.set(45);
+		f1.set(44);
+		f1.set(13);
+		f1.set(21);
+
+		Map<Integer, BitArray> atom = new TreeMap<Integer, BitArray>();
+		BitArray af2 = new BitArray(10);
+		BitArray af13 = new BitArray(10);
+		af2.set(1);
+		af13.set(8);
+		af13.set(2);
+
+		atom.put(2, af2);
+		atom.put(13, af13);
+
+		Knot kn = new Knot(r, n, f);
+		Knot kn1 = new Knot(r1, n1, f1, atom);
+
+		System.out.println("References lenght: " + r.size());
+		System.out.println("Names lenght: " + n.size());
+
+		System.out.println("kn = " + kn.printName() + "  " + kn.printReference() + "  " + kn.getFeatures() );
+
+		r.add(5);
+		n.add("figure-eight");
+
+		System.out.println("kn = " + kn.printName() + "  " + kn.printReference() + "  " + kn.getFeatures() );
+
+		System.out.println("-------------------------");
+
+		System.out.println("References lenght: " + r1.size());
+		System.out.println("Names lenght: " + n1.size());
+
+		System.out.println("kn1 = " + kn1.printName() + "  " + kn1.printReference() + "  " + kn1.getFeatures() + "  " + kn1.getAtoms());
+		System.out.println("Inexistent Atom Feature: " + kn1.getAtomFeature(4));
+
+		kn1.addName("knot B1", "knot B2");
+		kn1.addName("Fail", "This Fails");
+		kn1.addName("knot B1", "knot B2");
+
+		System.out.println("kn1 = " + kn1.printName() + "  " + kn1.printReference() + "  " + kn1.getFeatures() + "  " + kn1.getAtoms());
+
+
+	}
 
 }
 
