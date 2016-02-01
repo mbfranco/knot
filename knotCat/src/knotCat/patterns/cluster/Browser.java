@@ -8,6 +8,7 @@ import java.util.LinkedList;
 import java.util.ListIterator;
 
 import knotCat.patterns.cluster.Exceptions.FeatureAlreadyExistsException;
+import knotCat.patterns.cluster.Exceptions.FeatureDoesNotExistExcetion;
 
 public class Browser {
 
@@ -70,12 +71,11 @@ public Browser(LinkedList<Feature> featureNames, LinkedList<Knot> knotList, Link
 	 * @param feature feature's name
 	 * @param atom atom's name
 	 */
-	public void insertAtom(String feature, String atom){
-
+	public void insertAtom(String feature, String atom) throws Exception{
+		try{
 		int index = this.featureNames.indexOf(feature);
 		if(index == -1){
-			//TODO throw FeatureDoesntExistException
-			System.out.println("A feature with that name doesn't exist");
+			throw new FeatureDoesNotExistExcetion(index, feature);
 		}
 
 		Feature f = this.featureNames.get(index);
@@ -91,6 +91,9 @@ public Browser(LinkedList<Feature> featureNames, LinkedList<Knot> knotList, Link
 			}
 		}
 		l.addLast(a); //TODO check if it adds the element if the list is empty
+		}catch(Exception e){
+			e.getMessage();
+		}
 	}
 
 	public static void main(String[] args) {
