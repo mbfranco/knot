@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.ListIterator;
 
+import knotCat.patterns.cluster.Exceptions.FeatureAlreadyExistsException;
+
 public class Browser {
 
 	//	Should the feature array length be static? Because in each knot the array of features' length is static..
@@ -51,14 +53,16 @@ public Browser(LinkedList<Feature> featureNames, LinkedList<Knot> knotList, Link
 	 * @param name - feature's name
 	 */
 	public void insertFeature(String name){
-
-		if(featureNames.contains(name)){
-			//TODO FeatureAlreadyExistsException
-			System.out.println("A feature with that name already exists");
-		}else{
-			LinkedList<AtomFeature> l = new LinkedList<AtomFeature>();
-			Feature f = new Feature(name, l);
-			featureNames.add(f);
+		try{
+			if(featureNames.contains(name)){
+			throw new FeatureAlreadyExistsException(name);
+			}else{
+				LinkedList<AtomFeature> l = new LinkedList<AtomFeature>();
+				Feature f = new Feature(name, l);
+				featureNames.add(f);
+			}
+		}catch(Exception e){
+			e.getMessage();
 		}
 	}
 
