@@ -33,7 +33,7 @@ public class Knot {
 	 * @param features Knot's present features in the form of a binary representation
 	 * @param atoms Knot's present atomic features in a binary representation. Atoms are associated to present Features.
 	 */
-	public Knot(List<Integer> references, List<String> names, BitArray features, Map<Integer,BitArray> atoms) {
+	public Knot(List<Integer> references, List<String> names, BitArray features, MultiMap<Integer,BitArray> atoms) {
 		this.references = references;
 		this.names = names;
 		this.features = features;
