@@ -72,19 +72,29 @@ public class Knot {
 		return atoms;
 	}
 	
+	
+	/** Gets the AtomFeatures for the Nth feature of the knot
+	 * @param featureIndex 
+	 * @return BitArray 
+	 * @throws FeatureDoesNotExistExcetion
+	 */
 	public BitArray getAtomFeature(int featureIndex) throws Exception{
+		
 		try{
-			
-		if(this.getFeatures().get(featureIndex) == false){
-			throw new FeatureDoesNotExistExcetion(featureIndex, this.getName().toString());
-		}
-			
+
+			if(this.getFeatures().get(featureIndex) == false){
+				throw new FeatureDoesNotExistExcetion(featureIndex, this.getName().toString());
+			}
+
+
 		}catch(FeatureDoesNotExistExcetion e){
 			System.err.println(e.getMessage());
+		}catch(ArrayIndexOutOfBoundsException e){
+			System.err.println("The max value for featureIndex should be " + this.getFeatures().size + " and is " + featureIndex);
 		}
-		
+		//TODO This return shouldn't be here because the exception persists -> ArrayIndexOutOfBoundsException
 		return this.atoms.get(featureIndex);
-		
+
 	}
 	
 	/**
@@ -125,10 +135,12 @@ public class Knot {
 			System.err.println(e.getMessage());
 		}
 	}
+	
+	//TODO public void addFeature(String knot, String feature)
 
 
 	public static void main(String[] args) throws Exception {
-
+			
 		List<Integer> r = new ArrayList<Integer>();
 		List<Integer> r1 = new ArrayList<Integer>();
 		List<String> n = new ArrayList<String>();
@@ -188,7 +200,7 @@ public class Knot {
 		kn1.addName("knot B1", "knot B2");
 
 		System.out.println("kn1 = " + kn1.printName() + "  " + kn1.printReference() + "  " + kn1.getFeatures() + "  " + kn1.getAtoms());
-
+		System.out.println("Get unbounded FeatureIndex: " + kn1.getAtomFeature(1564));
 
 	}
 
