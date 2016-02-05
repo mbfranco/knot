@@ -1,21 +1,16 @@
 package knotCat.patterns.cluster;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.ObjectInputStream.GetField;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.ListIterator;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
 import java.util.Vector;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import knotCat.patterns.cluster.Exceptions.AtomNameAlreadyExistsException;
 import knotCat.patterns.cluster.Exceptions.FeatureAlreadyExistsException;
@@ -25,8 +20,11 @@ public class Browser {
 
 	//Maximum number of supported features for one knot. Because in each knot the BitArray of features has a static length.
 	//Should the feature array length be static? Because in each knot the array of features' length is static..
-		static int NUMFEATURES = 55;
-	//	
+	static int NUMFEATURES = 55;
+	
+	//Maximum number of atom features for each knot
+	static int NUMATOMS = 40;
+		
 	//	Feature[] featureArray = new Feature[NUMFEATURES]; //
 
 	static String SESSION = "Browser";
@@ -51,47 +49,152 @@ public class Browser {
 		this.knotNames = knotNames;
 	}
 
+	
+	
+	public LinkedList<Feature> getFeatureNames() {
+		return featureNames;
+	}
+
+
+
+	public LinkedList<Knot> getKnotList() {
+		return knotList;
+	}
+
+
+
+	public LinkedList<String> getKnotNames() {
+		return knotNames;
+	}
+
+
+
 	/**  
 	 * Returns the index of a certain feature in the featureNames LinkedList
 	 * @param name - the name of the feature
 	 * @return index of that knot in the featureNames LinkedList
+	 * @throws IndexOutOfBoundsException if the feature doesn't exist
 	 */
-	public int getFeatureIndex(String name) {
-		return featureNames.indexOf(name);
+	public int getFeatureIndex(String name) throws IndexOutOfBoundsException{
+		
+//		ListIterator<Feature> li = getFeatureNames().listIterator();
+//		while(li.hasNext()){
+//			if(li.equals(name)){
+//				int i = getFeatureNames().indexOf(name);
+		int i = -1;
+		
+		for(Feature f : getFeatureNames()){
+			if(f.getName().equals(name)){
+				i = getFeatureNames().indexOf(f);
+				break;
+			}
+		}
+		
+		try{
+			if(i == -1){
+				throw new IndexOutOfBoundsException("The feature \"" + name + "\" does not exist.");
+			}
+		}catch(IndexOutOfBoundsException e){
+			e.getMessage();
+		}
+		
+		return i;
+	}
+	
+	public int getAtomFeatureIndex(int featureIndex, String atom){
+		
+		int i = -1;
+		Feature feature = getFeatureNames().get(featureIndex);
+		
+		for(AtomFeature a : feature.getAtomFeatures()){
+			if(a.getAtomName().equals(atom)){
+				i = getFeatureNames().indexOf(a);
+				break;
+			}
+		}
+		
+		return i;
+	}
+	
+	
+	/**Returns the index of a certain atom of a feature in the featureNames LinkedList
+	 * @param feature name of the feature
+	 * @param atom name of the atom
+	 * @return index of the atom feature
+	 */
+	public int getAtomFeatureIndex(String feature, String atom) throws IndexOutOfBoundsException{
+
+		int fi = -1;
+		int ai = -1;
+
+		try{
+			
+			fi = getFeatureIndex(feature);
+			ai = getAtomFeatureIndex(fi, atom);//getFeatureNames().get(fi).getAtomFeatures(). (index)//indexOf(atom);
+			
+			if(fi == -1){
+				throw new IndexOutOfBoundsException("The feature \"" + feature + "\" does not exist.");
+			}
+			if(ai == -1){
+				throw new IndexOutOfBoundsException("The atom \"" + atom + "\" does not exist for the feature \"" + feature + "\".");
+			}
+
+			return ai;
+
+
+		}catch(IndexOutOfBoundsException e){
+			e.getMessage();
+		}
+		
+		return ai;
+
 	}
 
 	
-	/** Method that should be used for adding a knot because it creates the knot and updates the lists that control the system integrity
+	/** Method that should be used for adding a new knot. It creates the knot and updates the lists that control the system integrity
 	 * @param references ABOK reference numbers
 	 * @param names Knot names
 	 * @param features Knot features
-	 * @param atoms Knot Atom Features
+	 * @param atomsF Knot Atom Features - Features
+	 * @param atomsA Knot Atom Features - Atoms
 	 * @throws Exception see Knot class
 	 */
-	public void addKnot(List<Integer> references, List<String> names, ArrayList<String> features, Vector<String> atomsF, Vector<String> atomsA) throws Exception{
+	public void addNewKnot(List<Integer> references, List<String> names, ArrayList<String> features, Vector<String> atomsF, Vector<String> atomsA) throws Exception{
 		
-		BitArray feat = new BitArray(NUMFEATURES);
-		Map<Integer, BitArray> atm = new TreeMap<Integer,BitArray>();
+		//TODO use LinkedMultimap to avoid having atomsF and atomA
 		
+		BitArray featureBitArray = new BitArray(NUMFEATURES);
+		BitArray atomBitArray = new BitArray(NUMATOMS);
+		Map<Integer, BitArray> atm = new TreeMap<>();
+		
+		//Knot's Features
 		for(String f : features){
 			//updates the "featureNames" LinkedList 
 			insertFeature(f);
-			//updates the knot BitArray of features
-			int idx = features.indexOf(f);
-			feat.set(idx);
+			//get the this knot's feature BitArray index and updates it
+			int idx = getFeatureIndex(f);
+			featureBitArray.set(idx);
 		}
 		
-		//update AtomFeatures
-		for (int i = 0; i < atomsF.size(); i++) {
-			String f = atomsF.elementAt(i);
-			int j = this.featureNames.indexOf(f);
-			j
+		//Knot's AtomFeatures
+		for (int i = 0; i < atomsF.size() && (atomsF.get(i) != null); i++) {
+			//Get the Feature at which the Atom belongs
+			String featureName = atomsF.get(i);//elementAt(i);
 			
+			String atomName = atomsA.get(i);//elementAt(i);
+			//Check if the atom already exists for the feature
+			insertAtomFeature(featureName, atomName); 
+	
+			//update knot's atom BitArray
+			Integer atomIndex = getAtomFeatureIndex(featureName, atomName);
+			atomBitArray.set(atomIndex);
+			
+			atm.put(atomIndex , atomBitArray);
 		}
 		
 		
 		
-		Knot k = new Knot(references, names, feat, atm);
+		Knot k = new Knot(references, names, featureBitArray, atm);
 		//Updates knotList & knotNames
 		insertKnot(k);
 		
@@ -105,25 +208,37 @@ public class Browser {
 	 * Inserts a feature in the featureNames LinkedList
 	 * @param name - feature's name
 	 */
-	protected void insertFeature(String name) throws Exception{
+	public void insertFeature(String name) throws Exception{
 		try{
-			if(featureNames.contains(name)){
+			for(Feature f : getFeatureNames())
+			if(f.getName().equals(name)){
 				throw new FeatureAlreadyExistsException(name);
 			}else{
 				LinkedList<AtomFeature> l = new LinkedList<AtomFeature>();
-				Feature f = new Feature(name, l);
-				featureNames.add(f);
+				Feature ft = new Feature(name, l);
+				getFeatureNames().add(ft);
+				//TODO Erase sysout
+				System.out.println("\tFeatureNames State: " + getFeatureNames().toString());
 			}
 		}catch(Exception e){
 			e.getMessage();
 		}
 	}
 	
+//	public void insertAtomFeature(Feature feature, String atom) throws Exception{
+//		try{
+//			if(!featureNames.contains(feature)){
+//				throw new FeatureDoesNotExistExcetion(feature.getName());
+//			}
+//			if(featureNames.)
+//		}
+//	}
+//	
 	
 	/** Updates knotList and knotNames when adding a knot
 	 * @param knot
 	 */
-	protected void insertKnot(Knot knot){
+	public void insertKnot(Knot knot){
 		knotList.add(knot);
 		for(String k : knot.getName()){
 			knotNames.addLast(k);
@@ -134,24 +249,41 @@ public class Browser {
 	 * @param feature feature's name
 	 * @param atom atom's name
 	 */
-	protected void insertAtom(String feature, String atom) throws Exception{
+	public void insertAtomFeature(String feature, String atom) throws Exception{
+		int index = -1;
+		
 		try{
-			int index = this.featureNames.indexOf(feature);
+			for(Feature a : getFeatureNames()){
+				if(a.getName().equals(feature)){
+					index = getFeatureNames().indexOf(a);
+					break;
+				}
+			}
 			if(index == -1){
 				throw new FeatureDoesNotExistExcetion(index, feature);
 			}
 
-			Feature f = this.featureNames.get(index);
-			//TODO verify if it works for an Empty List
-			LinkedList<AtomFeature> l = f.getAtomArray();
-			AtomFeature a = new AtomFeature(f,atom);
+			Feature f = getFeatureNames().get(index);
 
-			ListIterator<AtomFeature> li = l.listIterator();		
-			while(li.hasNext()){
-				if(li.equals(a)){
+
+//
+//			ListIterator<AtomFeature> li = l.listIterator();
+//			while(li.hasNext()){
+//				if(li.equals(a)){
+//					throw new AtomNameAlreadyExistsException();
+//				}
+//				//TODO Confirm li.next()
+//				li.next();
+//			}
+			
+			for(AtomFeature a : f.getAtomFeatures()){
+				if(a.getAtomName().equals(atom)){
 					throw new AtomNameAlreadyExistsException();
 				}
 			}
+			
+			LinkedList<AtomFeature> l = f.getAtomFeatures();
+			AtomFeature a = new AtomFeature(f,atom);
 			
 			l.addLast(a); //TODO check if it adds the element if the list is empty
 			
@@ -162,11 +294,11 @@ public class Browser {
 
 	public static void main(String[] args) throws Exception{
 		
-		LinkedList<Feature> featureNames = new LinkedList<Feature>();
-		LinkedList<Knot> knotList = new LinkedList<Knot>();
-		LinkedList<String> knotNames = new LinkedList<String>();
+		LinkedList<Feature> featureNa = new LinkedList<Feature>();
+		LinkedList<Knot> knotLi = new LinkedList<Knot>();
+		LinkedList<String> knotNam = new LinkedList<String>();
 		
-		Browser browser = new Browser(featureNames, knotList, knotNames);
+		Browser browser = new Browser(featureNa, knotLi, knotNam);
 
 		String inputFileName = "source.txt";
 		Path inputPath = Paths.get(inputFileName);
@@ -254,7 +386,7 @@ public class Browser {
         	int j = 0;
         	Vector<String> atomsF = new Vector<String>();
         	Vector<String> atomsA = new Vector<String>();
-        	Map<String, String> atoms = new TreeMap<String, String>();
+        	//Map<String, String> atoms = new TreeMap<String, String>();
         	String[] aa = atomContent.split("\\.| ");
         	for(String a : aa){
         		//split feature from atom
@@ -271,13 +403,24 @@ public class Browser {
         		}
         		j++;
         	}
-        	System.out.println("Atoms: "+atoms);
+        //	System.out.println("Atoms: "+ atoms);
 
 			
 			//creating the knot..
-			browser.addKnot(references, names, features, atomsF, atomsA);
+			browser.addNewKnot(references, names, features, atomsF, atomsA);
 
         }
-        		
+
+        System.out.println("-------------------------------------");
+        for(Knot f : browser.getKnotList()){
+        	System.out.println(f.getName().toString());
+        	System.out.println(f.getFeatures());
+        }
+        for(Feature f : browser.getFeatureNames()){
+        	System.out.println("Feature: " + f.getName());
+        	for(AtomFeature a : f.getAtomFeatures()){
+        		System.out.println("Atom: " + a.getAtomName());
+        	}
+        }
 	}
 }

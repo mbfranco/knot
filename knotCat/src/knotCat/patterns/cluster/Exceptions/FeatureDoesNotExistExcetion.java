@@ -11,6 +11,10 @@ public class FeatureDoesNotExistExcetion extends Exception {
         super();
     }
 	
+	public FeatureDoesNotExistExcetion(String m2){
+		this.m2 = m2;
+	}
+	
 	public FeatureDoesNotExistExcetion(int m1, String m2) {
 		this.m1 = m1;
 		this.m2 = m2;
@@ -26,9 +30,18 @@ public class FeatureDoesNotExistExcetion extends Exception {
 
 	@Override
 	public String getMessage() {
+		String msg;
 		
-		String msg = "The feature " + getM1() + " is not present for this knot: " + getM2();
-
+		if(getM1() > 0){
+			msg = "The feature " + getM1() + " is not present for this knot: " + getM2();
+		}
+		if(getM1() == 0){
+			msg = "The feature " + getM2() + " does not exist.";
+		}
+		else{
+			msg = "This shouldn't be the error messasge.....";
+		}
+		
 		return msg;
 	}
 	 	

@@ -2,6 +2,9 @@ package knotCat.patterns.cluster;
 
 import java.util.*;
 
+import com.google.common.collect.LinkedListMultimap;
+import com.google.common.collect.Multimap;
+
 import knotCat.patterns.cluster.Exceptions.FeatureDoesNotExistExcetion;
 import knotCat.patterns.cluster.Exceptions.KnotNameAlreadyExistsException;
 import knotCat.patterns.cluster.Exceptions.KnotNameDoesNotExistException;
@@ -16,7 +19,7 @@ public class Knot {
 	List<Integer> references; //Implemented as an ArrayList
 	List<String> names; //Implemented as an ArrayList
 	BitArray features;
-	Map<Integer,BitArray> atoms; //Implemented as a TreeMap
+	Map<Integer, BitArray> atoms; //Implemented as TreeMap
 
 	//	/**
 	//	 * number of bits to characterize each feature.
@@ -31,13 +34,13 @@ public class Knot {
 	 * @param references The references to the ABOK knot entry (a knot may have different entries)
 	 * @param names The names of the Knot (a knot may have different names)
 	 * @param features Knot's present features in the form of a binary representation
-	 * @param atoms Knot's present atomic features in a binary representation. Atoms are associated to present Features.
+	 * @param atm Knot's present atomic features. Atoms are associated to present Features. The key is the index of a present feature and the in a binary representation. 
 	 */
-	public Knot(List<Integer> references, List<String> names, BitArray features, MultiMap<Integer,BitArray> atoms) {
+	public Knot(List<Integer> references, List<String> names, BitArray features, Map<Integer, BitArray> atm) {
 		this.references = references;
 		this.names = names;
 		this.features = features;
-		this.atoms = atoms;
+		this.atoms = atm;
 	}
 
 	/** Constructor
@@ -100,7 +103,7 @@ public class Knot {
 	/**
 	 * @return
 	 */
-	private String printReference() {
+	public String printReference() {
 		return this.getReference().toString();
 	}
 
@@ -164,7 +167,7 @@ public class Knot {
 		f1.set(13);
 		f1.set(21);
 
-		Map<Integer, BitArray> atom = new TreeMap<Integer, BitArray>();
+		Map<Integer,BitArray> atom = new TreeMap<>();
 		BitArray af2 = new BitArray(10);
 		BitArray af13 = new BitArray(10);
 		af2.set(1);

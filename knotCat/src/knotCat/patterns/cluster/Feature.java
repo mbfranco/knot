@@ -28,7 +28,7 @@ public class Feature {
 		this.name = name;
 	}
 
-	public LinkedList<AtomFeature> getAtomArray() {
+	public LinkedList<AtomFeature> getAtomFeatures() {
 		return atom;
 	}
 
@@ -36,7 +36,7 @@ public class Feature {
 		AtomFeature a = new AtomFeature(this, atomFeature);
 
 		try{
-			for(AtomFeature at : this.getAtomArray()){
+			for(AtomFeature at : this.getAtomFeatures()){
 				if(at.getAtomName().equals(atomFeature)){
 					throw new AtomNameAlreadyExistsException(atomFeature);
 				}
