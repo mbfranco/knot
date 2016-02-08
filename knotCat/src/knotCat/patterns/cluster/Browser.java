@@ -20,7 +20,7 @@ public class Browser {
 
 	//Maximum number of supported features for one knot. Because in each knot the BitArray of features has a static length.
 	//Should the feature array length be static? Because in each knot the array of features' length is static..
-	static int NUMFEATURES = 55;
+	static int NUMFEATURES = 75;
 	
 	//Maximum number of atom features for each knot
 	static int NUMATOMS = 40;
@@ -209,31 +209,26 @@ public class Browser {
 	 * @param name - feature's name
 	 */
 	public void insertFeature(String name) throws Exception{
-		try{
-			for(Feature f : getFeatureNames())
-			if(f.getName().equals(name)){
-				throw new FeatureAlreadyExistsException(name);
-			}else{
+		
+		if(getFeatureNames().isEmpty()){
+			LinkedList<AtomFeature> l = new LinkedList<AtomFeature>();
+			Feature ft = new Feature(name, l);
+			getFeatureNames().add(ft);
+		}else if(!getFeatureNames().isEmpty()){
+			try{
+				for(Feature f : getFeatureNames()){
+					if(f.getName().equals(name)){
+						throw new FeatureAlreadyExistsException(name);
+					}
+				}
 				LinkedList<AtomFeature> l = new LinkedList<AtomFeature>();
 				Feature ft = new Feature(name, l);
 				getFeatureNames().add(ft);
-				//TODO Erase sysout
-				System.out.println("\tFeatureNames State: " + getFeatureNames().toString());
+			}catch(Exception e){
+				e.getMessage();
 			}
-		}catch(Exception e){
-			e.getMessage();
 		}
 	}
-	
-//	public void insertAtomFeature(Feature feature, String atom) throws Exception{
-//		try{
-//			if(!featureNames.contains(feature)){
-//				throw new FeatureDoesNotExistExcetion(feature.getName());
-//			}
-//			if(featureNames.)
-//		}
-//	}
-//	
 	
 	/** Updates knotList and knotNames when adding a knot
 	 * @param knot
@@ -266,16 +261,6 @@ public class Browser {
 			Feature f = getFeatureNames().get(index);
 
 
-//
-//			ListIterator<AtomFeature> li = l.listIterator();
-//			while(li.hasNext()){
-//				if(li.equals(a)){
-//					throw new AtomNameAlreadyExistsException();
-//				}
-//				//TODO Confirm li.next()
-//				li.next();
-//			}
-			
 			for(AtomFeature a : f.getAtomFeatures()){
 				if(a.getAtomName().equals(atom)){
 					throw new AtomNameAlreadyExistsException();
@@ -416,8 +401,9 @@ public class Browser {
         	System.out.println(f.getName().toString());
         	System.out.println(f.getFeatures());
         }
+        
         for(Feature f : browser.getFeatureNames()){
-        	System.out.println("Feature: " + f.getName());
+        	System.out.println("\nFeature: " + f.getName());
         	for(AtomFeature a : f.getAtomFeatures()){
         		System.out.println("Atom: " + a.getAtomName());
         	}

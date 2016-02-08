@@ -1,6 +1,6 @@
 520, figure-eight, single-stand stopper tie untie jam injure large strong secure, stopper.temporary untie.easy tie.bight tie.end tie.tackle-fall jam.not injure.fiber-not
-1010, bowline, important hold take tie capsize important hitch loop, hold.weather-leech hold.forward hold.square-sail take.sail-aback-not capsize.not tie.boat-pointer-to-ring tie.monkey-rope tie.firm tie.bridle-to-cringle
-1204, square reef, important untie reef furl, untie.easy use.parcel use.roll use.bundle reef.sail furl.sail drying.clothes-not
+1010, bowline, important hold take tie capsize hitch loop, hold.weather-leech hold.forward hold.square-sail take.sail-aback-not capsize.not tie.boat-pointer-to-ring tie.monkey-rope tie.firm tie.bridle-to-cringle
+1204, square reef, important untie reef furl use drying, untie.easy use.parcel use.roll use.bundle reef.sail furl.sail drying.clothes-not
 1171, crossing, important make use hold cross, make.parcel use.parcel hold.lashing hold.firm cross.itself
 1176, clove-hitch, important use tie, use.shrouds tie.heavy-bundle tie.around-post
 1734 1735 1736, rolling-hitch magnus-hitch, best-for-purpose attach relieve tie untie bind use, attach.rope-to-rope attach.rope-to-parallel-pole relieve.strain-hawser tie.under-load untie.under-load bind.not use.winch
