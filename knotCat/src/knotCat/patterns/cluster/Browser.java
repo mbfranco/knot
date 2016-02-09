@@ -4,7 +4,6 @@ import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -310,6 +309,7 @@ public class Browser {
 			outputFile.createNewFile();
 		}
 		
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(inputPath);
 		//read line by line
 		
@@ -382,7 +382,7 @@ public class Browser {
         	Vector<String> atomsF = new Vector<String>();
         	Vector<String> atomsA = new Vector<String>();
         	String[] aa = atomContent.split("\\.| ");
-        	for(String a : aa){
+        	for(@SuppressWarnings("unused") String a : aa){
         		//split feature from atom
         		if(j%2==0){
         			System.out.println("\t\tFeature: "+ aa[j]);
@@ -409,21 +409,10 @@ public class Browser {
         	System.out.println(f.getName().toString());
         	System.out.println(f.getFeatures());
         	
-//        	Iterator entries = f.getAtoms().entrySet().iterator();
-//        	while(entries.hasNext()){
-//        		Map<Integer,BitArray> thisEntry = (Map<Integer, BitArray>) entries.next();
-//        		Integer key = thisEntry.entrySet()
-//        	
         	for(Map.Entry<Integer, BitArray> i : f.getAtoms().entrySet()){
         		Integer key = i.getKey();
         		BitArray value = i.getValue();
         		System.out.println("Feature: "+key+" - Atom: "+value);
-        		
-        		
-        	//for(int i=0; f.getFeatures().count() - i > 0 ; i++){
-        		//if(f.getAtomFeature(i).size != 0){
-        			//System.out.println("HERE: " + f.getAtomFeature(i));
-        		//}
         	}
         }
         

@@ -2,8 +2,6 @@ package knotCat.patterns.cluster;
 
 import java.util.*;
 
-import com.google.common.collect.LinkedListMultimap;
-import com.google.common.collect.Multimap;
 
 import knotCat.patterns.cluster.Exceptions.FeatureDoesNotExistExcetion;
 import knotCat.patterns.cluster.Exceptions.KnotNameAlreadyExistsException;
