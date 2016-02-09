@@ -1,10 +1,10 @@
 package knotCat.patterns.cluster;
 
 import java.io.File;
-import java.io.ObjectInputStream.GetField;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -20,10 +20,10 @@ public class Browser {
 
 	//Maximum number of supported features for one knot. Because in each knot the BitArray of features has a static length.
 	//Should the feature array length be static? Because in each knot the array of features' length is static..
-	static int NUMFEATURES = 75;
+	static int NUMFEATURES = 40;
 	
 	//Maximum number of atom features for each knot
-	static int NUMATOMS = 40;
+	static int NUMATOMS = 25;
 		
 	//	Feature[] featureArray = new Feature[NUMFEATURES]; //
 
@@ -105,10 +105,10 @@ public class Browser {
 		
 		int i = -1;
 		Feature feature = getFeatureNames().get(featureIndex);
-		
+		//TODO O erro está aqui
 		for(AtomFeature a : feature.getAtomFeatures()){
 			if(a.getAtomName().equals(atom)){
-				i = getFeatureNames().indexOf(a);
+				i = getFeatureNames().get(featureIndex).getAtomFeatures().indexOf(a);
 				break;
 			}
 		}
@@ -164,7 +164,7 @@ public class Browser {
 		//TODO use LinkedMultimap to avoid having atomsF and atomA
 		
 		BitArray featureBitArray = new BitArray(NUMFEATURES);
-		BitArray atomBitArray = new BitArray(NUMATOMS);
+		
 		Map<Integer, BitArray> atm = new TreeMap<>();
 		
 		//Knot's Features
@@ -178,6 +178,7 @@ public class Browser {
 		
 		//Knot's AtomFeatures
 		for (int i = 0; i < atomsF.size() && (atomsF.get(i) != null); i++) {
+			BitArray atomBitArray = new BitArray(NUMATOMS);
 			//Get the Feature at which the Atom belongs
 			String featureName = atomsF.get(i);//elementAt(i);
 			
@@ -187,9 +188,17 @@ public class Browser {
 	
 			//update knot's atom BitArray
 			Integer atomIndex = getAtomFeatureIndex(featureName, atomName);
+			Integer featureIndex = getFeatureIndex(featureName);
+			
+			if(atm.get(featureIndex) != null){
+				atomBitArray = atm.get(featureIndex);
+			}
+			
 			atomBitArray.set(atomIndex);
 			
-			atm.put(atomIndex , atomBitArray);
+			
+			atm.put(featureIndex, atomBitArray);
+			
 		}
 		
 		
@@ -271,7 +280,6 @@ public class Browser {
 			AtomFeature a = new AtomFeature(f,atom);
 			
 			//Updates the Atoms for this Feature
-			//TODO check if it adds the element if the list is empty
 			getFeatureNames().get(index).getAtomFeatures().addLast(a); 
 			
 		}catch(Exception e){
@@ -400,8 +408,22 @@ public class Browser {
         for(Knot f : browser.getKnotList()){
         	System.out.println(f.getName().toString());
         	System.out.println(f.getFeatures());
-        	for(int i=0; f.getFeatures().count() - i > 0 ; i++){
-        		System.out.println("Here:" + f.getAtomFeature(i));
+        	
+//        	Iterator entries = f.getAtoms().entrySet().iterator();
+//        	while(entries.hasNext()){
+//        		Map<Integer,BitArray> thisEntry = (Map<Integer, BitArray>) entries.next();
+//        		Integer key = thisEntry.entrySet()
+//        	
+        	for(Map.Entry<Integer, BitArray> i : f.getAtoms().entrySet()){
+        		Integer key = i.getKey();
+        		BitArray value = i.getValue();
+        		System.out.println("Feature: "+key+" - Atom: "+value);
+        		
+        		
+        	//for(int i=0; f.getFeatures().count() - i > 0 ; i++){
+        		//if(f.getAtomFeature(i).size != 0){
+        			//System.out.println("HERE: " + f.getAtomFeature(i));
+        		//}
         	}
         }
         
