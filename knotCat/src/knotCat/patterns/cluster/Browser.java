@@ -267,10 +267,12 @@ public class Browser {
 				}
 			}
 			
-			LinkedList<AtomFeature> l = f.getAtomFeatures();
+			//LinkedList<AtomFeature> l = f.getAtomFeatures();
 			AtomFeature a = new AtomFeature(f,atom);
 			
-			l.addLast(a); //TODO check if it adds the element if the list is empty
+			//Updates the Atoms for this Feature
+			//TODO check if it adds the element if the list is empty
+			getFeatureNames().get(index).getAtomFeatures().addLast(a); 
 			
 		}catch(Exception e){
 			e.getMessage();
@@ -371,7 +373,6 @@ public class Browser {
         	int j = 0;
         	Vector<String> atomsF = new Vector<String>();
         	Vector<String> atomsA = new Vector<String>();
-        	//Map<String, String> atoms = new TreeMap<String, String>();
         	String[] aa = atomContent.split("\\.| ");
         	for(String a : aa){
         		//split feature from atom
@@ -384,12 +385,9 @@ public class Browser {
         			atomsA.addElement(aa[j]);
         			
         			//the atom is ready to be created in the second iteration only
-//        			atoms.put(fea, ato);
         		}
         		j++;
         	}
-        //	System.out.println("Atoms: "+ atoms);
-
 			
 			//creating the knot..
 			browser.addNewKnot(references, names, features, atomsF, atomsA);
@@ -397,9 +395,14 @@ public class Browser {
         }
 
         System.out.println("-------------------------------------");
+        System.out.println("ALL KNOTS: " + browser.getKnotNames().toString()+"\n");
+        
         for(Knot f : browser.getKnotList()){
         	System.out.println(f.getName().toString());
         	System.out.println(f.getFeatures());
+        	for(int i=0; f.getFeatures().count() - i > 0 ; i++){
+        		System.out.println("Here:" + f.getAtomFeature(i));
+        	}
         }
         
         for(Feature f : browser.getFeatureNames()){
