@@ -413,6 +413,8 @@ public class Browser {
         		Integer key = i.getKey();
         		BitArray value = i.getValue();
         		System.out.println("Feature: "+key+" - Atom: "+value);
+        		
+        		
         	}
         }
         
