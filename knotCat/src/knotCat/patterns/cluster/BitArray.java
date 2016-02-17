@@ -29,6 +29,14 @@ public class BitArray implements Cloneable {
         size = n;
         barray = a;
     }
+    
+    /** Constructor for an EXISTING Knot array
+     * @param a integer array containing all bits
+     */
+  //  public BitArray(int[] a){
+    //	size = a.length;
+    //	barray = a;
+   // }
 
     /** Return a new copy of the bit array
      * @return     copy of this bit array
@@ -225,4 +233,11 @@ public class BitArray implements Cloneable {
                 str.append( '0' );
         return str.toString();
     }
+    
+	/** ---Not in the original code---
+	 * @return int[] barray
+	 */
+	public int[] getBarray() {
+		return barray;
+	}
 }

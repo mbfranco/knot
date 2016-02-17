@@ -11,6 +11,9 @@ import java.util.Scanner;
 import java.util.TreeMap;
 import java.util.Vector;
 
+import knotCat.algorithms.clustering.distanceFunctions.DistanceEuclidian;
+import knotCat.algorithms.clustering.distanceFunctions.DistanceFunction;
+import knotCat.algorithms.clustering.hierarchical_clustering.AlgoHierarchicalClustering;
 import knotCat.patterns.cluster.Exceptions.AtomNameAlreadyExistsException;
 import knotCat.patterns.cluster.Exceptions.FeatureAlreadyExistsException;
 import knotCat.patterns.cluster.Exceptions.FeatureDoesNotExistExcetion;
@@ -76,10 +79,6 @@ public class Browser {
 	 */
 	public int getFeatureIndex(String name) throws IndexOutOfBoundsException{
 		
-//		ListIterator<Feature> li = getFeatureNames().listIterator();
-//		while(li.hasNext()){
-//			if(li.equals(name)){
-//				int i = getFeatureNames().indexOf(name);
 		int i = -1;
 		
 		for(Feature f : getFeatureNames()){
@@ -104,7 +103,6 @@ public class Browser {
 		
 		int i = -1;
 		Feature feature = getFeatureNames().get(featureIndex);
-		//TODO O erro está aqui
 		for(AtomFeature a : feature.getAtomFeatures()){
 			if(a.getAtomName().equals(atom)){
 				i = getFeatureNames().get(featureIndex).getAtomFeatures().indexOf(a);
@@ -129,7 +127,7 @@ public class Browser {
 		try{
 			
 			fi = getFeatureIndex(feature);
-			ai = getAtomFeatureIndex(fi, atom);//getFeatureNames().get(fi).getAtomFeatures(). (index)//indexOf(atom);
+			ai = getAtomFeatureIndex(fi, atom);
 			
 			if(fi == -1){
 				throw new IndexOutOfBoundsException("The feature \"" + feature + "\" does not exist.");
@@ -275,7 +273,6 @@ public class Browser {
 				}
 			}
 			
-			//LinkedList<AtomFeature> l = f.getAtomFeatures();
 			AtomFeature a = new AtomFeature(f,atom);
 			
 			//Updates the Atoms for this Feature
@@ -424,5 +421,13 @@ public class Browser {
         		System.out.println("Atom: " + a.getAtomName());
         	}
         }
+        
+        
+        AlgoHierarchicalClustering hc = new AlgoHierarchicalClustering();
+        DistanceFunction distanceFunction = new DistanceEuclidian();
+        
+        hc.runAlgorithm("", 2, distanceFunction, browser);
+        hc.printStatistics();
+        hc.saveToFile("out1.txt");
 	}
 }
