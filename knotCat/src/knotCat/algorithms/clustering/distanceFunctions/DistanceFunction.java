@@ -58,8 +58,8 @@ public abstract class DistanceFunction {
 			return new DistanceEuclidian();
 //		}else if(DistanceCorrelation.NAME.equals(name)) {
 //			return new DistanceCorrelation();
-//		}else if(DistanceManathan.NAME.equals(name)) {
-//			return new DistanceManathan();
+		}else if(DistanceManhattan.NAME.equals(name)) {
+			return new DistanceManhattan();
 //		}else if(DistanceJaccard.NAME.equals(name)) {
 //			return new DistanceJaccard();
 		}
