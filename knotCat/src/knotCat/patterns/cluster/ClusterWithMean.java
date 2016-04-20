@@ -68,7 +68,6 @@ public class ClusterWithMean extends Cluster {
 	public BitArray getmean() {
 		return mean;
 	}
-
 	/**
 	 * This method is called by clustering algorithms to recompute the mean
 	 * of the cluster.

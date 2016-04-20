@@ -5,13 +5,17 @@ knob
 single-strand
 stopper
 terminal
-tie, (tie, end) (tie, running-to-rigging)
+tie, tie, end tie, running-to-rigging
 bunch
-prevent, (prevent, unreeving) (prevent, unlaying-not) (prevent, fraying-not) (prevent, fraying-small-cord) (prevent, fraying-twine)
-secure, (secure, sewing-thread-end)
-bell-rope, (bell-rope, handhold) (bell-rope, foothold)
-footrope, (footrope, handhold) (footrope, foothold)
-add-weight, (add-weight, heaving-line) (add-weight, end)
+unreeving, unreeving.prevent
+unlaying, unlaying.prevent-not 
+fraying, fraying.prevent-not fraying.prevent-small-cord fraying.prevent-twine
+secure, secure.sewing-thread-end
+handhold, handhold.bell-rope handhold.foothold
+footrope, footrope.bell-rope footrope.foothold
+bell-rope, bell-rope.handhold bell-rope.foothold
+footrope, footrope.handhold footrope.foothold
+add-weight, add-weight.heaving-line add-weight.end
 decorative
 practical
 
@@ -24,10 +28,10 @@ knob
 single-strand
 lanyard
 decorative
-attach, (attach, marlinspike) (attach, fid) (attach, paint-can) (attach, slush-bucket) (attach, eyeglass) (attach, pencil) (attach, hat) (attach, snuffbox) (attach, jackknife) (attach, tobacco-pouch) (attach, amulet) (attach, money-pouch) (attach, bosun-whistle) (attach, watch) (attach, binoculars) (attach, pipe) (attach, key) (attach, buttonhole) (attach, belt) (attach, suspender)
-tie, (tie, neck) (tie, shoulder) (tie, wrist) (tie, bight) (tie, movable-objects)
-symmetrical
-opposite, (opposite, working-end-to-running-end)
+attach, attach.marlinspike attach.fid. attach.paint-can attach.slush-bucket attach.eyeglass attach.pencil attach.hat attach.snuffbox attach.jackknife attach.tobacco-pouch attach.amulet attach.money-pouch attach.bosun-whistle attach.watch attach.binoculars attach.pipe attach.key attach.buttonhole attach.belt attach.suspender
+tie, tie.neck tie.shoulder tie.wrist tie.bight tie.movable-object
+symmetric
+opposite, opposite.working-end-to-running-end
 
 
 
@@ -38,11 +42,11 @@ knob
 single-strand
 button
 symmetrical
-parallel, (parallel, standing-part)
-leave-knot, (leave-knot, working-end-at-neck)
-stem, (stem, ends-form)
-neck, (neck, ends-form)
-same-lay, (same-lay, ends)
+parallel, parallel.standing-part
+leave-knot, leave-knot.working-end-at-neck
+stem, stem.ends-form
+neck, neck.ends-form
+same-lay, same-lay.ends
 
 
 
@@ -53,8 +57,78 @@ knob
 multi-strand
 stopper
 terminal
-prevent, (prevent, unreeving)
-tie, (tie, strand)
+unreeving, unreeving.prevent
+tie, tie.strand
+untie, unite.never
+
+
+Chapter 7: knob multi-strand lanyard knots
+727 to 774
+
+rope, rope.short
+tie, tie.fast tie.chain
+handle
+handhold
+foothold
+secure
+knob
+decorative
+length, length.adjust
+untie, unite.never
+
+
+
+CHAPTER 8: knob two-strand lanyard knots
+755 to 844
+
+knob
+lanyard, lanyard.ornament
+tie, tie.two-chords
+top, top.enter
+bottom, bottom.enter
+depart, depart.other-end
+
+
+
+CHAPTER 9: knob multi-strand buttons tied in hand knots
+845 to 886
+
+knob
+use, use.becket use.clew
+secure, secure.standing-ends-of-running-rigging
+unreeving, unreeving.prevent
+untie, unite.never
+canvas, canvas.covered-before-tie canvas.filled-after-tie canvas.painted-after-tie
+practical
+decorative
+combination, combination.two-elementary-knots
+tie, tie.in-hand
+
+
+
+CHAPTER 10: knob multi-strand buttons tied on the table
+887 to 1008
+
+knob
+symmetric, symmetric.lines
+number, number.strands-equals-rim number.centre-parts-equals-rim
+tie, tie.on-table
+
+
+
+CHAPTER 11: single-loop knots
+1009 to 1067
+
+loop
+bight, bight.closed
+tie, tie.end tie.centre tie.bight tie.rope-to-object tie.in-hand 
+place, place.over-peg place.over-post place.over-pile place.over-hook place.over-archer's-bow-lug
+secure, secure.rope-to-object
+rigid
+holdfast, holdfast.independent
+use, use.repeatedly
+handhold
+foothold
 
 
 
@@ -65,6 +139,13 @@ tie, (tie, strand)
 
 
 
+
+
+
+
+
+
+Nota: hitch -> fast.around-object
 
 
 

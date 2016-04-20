@@ -34,19 +34,24 @@ import java.util.List;
 public class Cluster {
 
 	protected List<BitArray> vectors = new ArrayList<BitArray>();
+	protected List<Integer> distances = new ArrayList<Integer>(); // record the clustering distance to later use in the retrieving of the dendrogram
 
 	public Cluster() {
 		super();
 	}
 
 	/**
-	 * Add a vector of doubles to this cluster.
-	 * @param vector The vector of doubles to be added.
+	 * Add a BitArray to this cluster.
+	 * @param vector The BitArray to be added.
 	 */
 	public void addVector(BitArray vector) {
 		vectors.add(vector);
 	}
 
+	public void addDistance(Integer distance){
+		distances.add(distance);
+	}
+	
 	/**
 	 * Return a string representing this cluster.
 	 */
@@ -69,6 +74,10 @@ public class Cluster {
 	public List<BitArray> getVectors() {
 		return vectors;
 	}
+	
+	public List<Integer> getDistances(){
+		return distances;
+	}
 
 	/**
 	 * Method to remove a vector from this cluster and update
@@ -77,6 +86,11 @@ public class Cluster {
 	 */
 	public void remove(BitArray vector) {
 		vectors.remove(vector);		
+	}
+	
+	
+	public void remove(Integer distance){
+		distances.remove(distance);
 	}
 
 	/**

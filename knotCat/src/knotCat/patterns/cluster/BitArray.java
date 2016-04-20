@@ -1,5 +1,7 @@
 package knotCat.patterns.cluster;
 
+import java.util.Arrays;
+
 /**
  * The bit array class that functs as an array of boolean, in which
  * each elements takes one bit.  The return type of matrix comparison.
@@ -240,4 +242,41 @@ public class BitArray implements Cloneable {
 	public int[] getBarray() {
 		return barray;
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + Arrays.hashCode(barray);
+		result = prime * result + size;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		BitArray other = (BitArray) obj;
+		if (!Arrays.equals(barray, other.barray))
+			return false;
+		if (size != other.size)
+			return false;
+		if(obj instanceof BitArray){
+			BitArray bar = new BitArray(this.size);
+			if(this.and((BitArray) obj).equals(bar)){
+				return true;
+			}else{
+				return false;
+			}
+		}
+		if(!(obj instanceof BitArray))
+			return false;
+		
+		return true;
+	}
+		
 }

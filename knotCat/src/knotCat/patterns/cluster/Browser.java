@@ -1,6 +1,9 @@
 package knotCat.patterns.cluster;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -11,8 +14,14 @@ import java.util.Scanner;
 import java.util.TreeMap;
 import java.util.Vector;
 
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.Iterators;
+import com.google.common.collect.LinkedListMultimap;
+import com.google.common.collect.ListMultimap;
+
 import knotCat.algorithms.clustering.distanceFunctions.DistanceEuclidian;
 import knotCat.algorithms.clustering.distanceFunctions.DistanceFunction;
+import knotCat.algorithms.clustering.distanceFunctions.DistanceHamming;
 import knotCat.algorithms.clustering.hierarchical_clustering.AlgoHierarchicalClustering;
 import knotCat.patterns.cluster.Exceptions.AtomNameAlreadyExistsException;
 import knotCat.patterns.cluster.Exceptions.FeatureAlreadyExistsException;
@@ -22,20 +31,37 @@ public class Browser {
 
 	//Maximum number of supported features for one knot. Because in each knot the BitArray of features has a static length.
 	//Should the feature array length be static? Because in each knot the array of features' length is static..
-	static int NUMFEATURES = 40;
+	static final int NUMFEATURES = 40;
 	
 	//Maximum number of atom features for each knot
-	static int NUMATOMS = 25;
+	static final int NUMATOMS = 25;
 		
-	//	Feature[] featureArray = new Feature[NUMFEATURES]; //
-
-	static String SESSION = "Browser";
-
+	/**
+	 * Tree Cluster of Knots
+	 * Each entry in the ArrayListMultimap is a cluster of knots.
+	 * This cluster is represented thorough an ArrayListMultimap<K,V> where
+	 * Key(K) is an Integer, which corresponds to the number of the cluster
+	 * Value(V) is a ClusterKnot, with variables: Features, Atoms, Names, Distance
+	 * @see ClusterKnot
+	 */
+	//ArrayListMultimap<Integer, ClusterKnot> finalCluster;
+	List<FinalCluster> finalCluster = new ArrayList<FinalCluster>();
+	
 	/**
 	 * List with all the features' names. All features have different names.
 	 */
 	LinkedList<Feature> featureNames;
 
+	
+	/**
+	 * Inverted index of all the atomFeature names. Each entry is
+	 * an atomFeature name and the mapping is the features that have
+	 * that atomFeature name.
+	 * String - AtomFeature name
+	 * Integer - index of the Feature
+	 */
+	ListMultimap<String, Integer> atomFeatureNames;
+	
 	/**
 	 * List with all the knots. All knots are different.
 	 */
@@ -58,6 +84,10 @@ public class Browser {
 	}
 
 
+	public ListMultimap<String, Integer> getAtomFeatureNames() {
+		return atomFeatureNames;
+	}
+	
 
 	public LinkedList<Knot> getKnotList() {
 		return knotList;
@@ -70,6 +100,9 @@ public class Browser {
 	}
 
 
+	public List<FinalCluster> getFinalCluster() {
+		return finalCluster;
+	}
 
 	/**  
 	 * Returns the index of a certain feature in the featureNames LinkedList
@@ -158,7 +191,7 @@ public class Browser {
 	 */
 	public void addNewKnot(List<Integer> references, List<String> names, ArrayList<String> features, Vector<String> atomsF, Vector<String> atomsA) throws Exception{
 		
-		//TODO use LinkedMultimap to avoid having atomsF and atomA
+		//TODO use LinkedMultimap to avoid having atomsF and atomA (cleaner code)
 		
 		BitArray featureBitArray = new BitArray(NUMFEATURES);
 		
@@ -236,6 +269,25 @@ public class Browser {
 		}
 	}
 	
+	/**
+	 * Adds an atomFeature to the atomFeatureNames LinkedList
+	 * @param name - atom feature's name
+	 */
+	
+	public void addAtomFeatureToList(String name, int index) throws Exception{
+
+		try{
+			
+			getAtomFeatureNames().put(name, index);
+			
+		}catch(Exception e){
+			e.getMessage();
+		}
+
+	}
+	
+	
+	
 	/** Updates knotList and knotNames when adding a knot
 	 * @param knot
 	 */
@@ -276,7 +328,10 @@ public class Browser {
 			AtomFeature a = new AtomFeature(f,atom);
 			
 			//Updates the Atoms for this Feature
-			getFeatureNames().get(index).getAtomFeatures().addLast(a); 
+			getFeatureNames().get(index).getAtomFeatures().addLast(a);
+			
+			//Updates the LinkedList of AtomFeatures
+			addAtomFeatureToList(f.getName(), index);
 			
 		}catch(Exception e){
 			e.getMessage();
@@ -293,7 +348,8 @@ public class Browser {
 
 		String inputFileName = "source.txt";
 		Path inputPath = Paths.get(inputFileName);
-		File outputFile = new File("output.txt");
+		String outputFileName = "output.txt";
+		File outputFile = new File(outputFileName );
 		
 		//content to be written to file
 		String numberContent = "";
@@ -319,22 +375,22 @@ public class Browser {
         	int i = 0;
         	for(String s : ss){
         		if(i % 4 == 0){
-        			System.out.println("ABOK number: " + s);
+//        			System.out.println("ABOK number: " + s);
         			numberContent = s;
         			i++;	
         		}
         		else if(i % 4 == 1){
-        			System.out.println("Name: " + s);
+//        			System.out.println("Name: " + s);
         			nameContent = s;
         			i++;	
         		}
         		else if(i % 4 == 2){
-        			System.out.println("Features: " + s);
+//        			System.out.println("Features: " + s);
         			featureContent = s;
         			i++;	
         		}
         		else if(i % 4 == 3){
-        			System.out.println("Atom Features: " + s);
+//        			System.out.println("Atom Features: " + s);
         			atomContent = s;
         			i++;	
         		}
@@ -344,34 +400,34 @@ public class Browser {
         	List<Integer> references = new ArrayList<Integer>();
         	String[] sn = numberContent.split(" ");
         	for(String a : sn){
-        		System.out.println("\tEach number: " + a + "\n");
+//        		System.out.println("\tEach number: " + a + "\n");
         		
         		int n =	Integer.parseInt(a);
         		references.add(n);
         		
-        		System.out.println("Ref: "+references);
+//        		System.out.println("Ref: "+references);
         	}
         	
         	//names
 			List<String> names = new ArrayList<String>();
 			String[] na = nameContent.split(" ");
         	for(String a : na){
-        		System.out.println("\tEach Name: " + a + "\n");
+//        		System.out.println("\tEach Name: " + a + "\n");
         		
         		names.add(a);
         		
-        		System.out.println("Name: "+names);
+//        		System.out.println("Name: "+names);
         	}
 
         	//features
 			ArrayList<String> features = new ArrayList<>();
 			String[] nf = featureContent.split(" ");
         	for(String a : nf){
-        		System.out.println("\tEach Feature: " + a + "\n");
+//        		System.out.println("\tEach Feature: " + a + "\n");
         		
         		features.add(a);
         		
-        		System.out.println("Features: "+features);
+//        		System.out.println("Features: "+features);
         	}
         	
         	//atoms
@@ -382,11 +438,11 @@ public class Browser {
         	for(@SuppressWarnings("unused") String a : aa){
         		//split feature from atom
         		if(j%2==0){
-        			System.out.println("\t\tFeature: "+ aa[j]);
+//        			System.out.println("\t\tFeature: "+ aa[j]);
         			atomsF.addElement(aa[j]);
         		        			
         		}else{
-        			System.out.println("\t\tAtoms: "+ aa[j]);
+//        			System.out.println("\t\tAtoms: "+ aa[j]);
         			atomsA.addElement(aa[j]);
         			
         			//the atom is ready to be created in the second iteration only
@@ -399,35 +455,70 @@ public class Browser {
 
         }
 
-        System.out.println("-------------------------------------");
-        System.out.println("ALL KNOTS: " + browser.getKnotNames().toString()+"\n");
-        
-        for(Knot f : browser.getKnotList()){
-        	System.out.println(f.getName().toString());
-        	System.out.println(f.getFeatures());
-        	
-        	for(Map.Entry<Integer, BitArray> i : f.getAtoms().entrySet()){
-        		Integer key = i.getKey();
-        		BitArray value = i.getValue();
-        		System.out.println("Feature: "+key+" - Atom: "+value);
-        		
-        		
-        	}
-        }
-        
-        for(Feature f : browser.getFeatureNames()){
-        	System.out.println("\nFeature: " + f.getName());
-        	for(AtomFeature a : f.getAtomFeatures()){
-        		System.out.println("Atom: " + a.getAtomName());
-        	}
-        }
+//        System.out.println("-------------------------------------");
+//        System.out.println("ALL KNOTS: " + browser.getKnotNames().toString()+"\n");
+//        
+//        for(Knot f : browser.getKnotList()){
+//        	System.out.println(f.getName().toString());
+//        	System.out.println(f.getFeatures());
+//        	
+//        	for(Map.Entry<Integer, BitArray> i : f.getAtoms().entrySet()){
+//        		Integer key = i.getKey();
+//        		BitArray value = i.getValue();
+//        		System.out.println("Feature: "+key+" - Atom: "+value);
+//        		
+//        		
+//        	}
+//        }
+//        
+//        for(Feature f : browser.getFeatureNames()){
+//        	System.out.println("\nFeature: " + f.getName());
+//        	for(AtomFeature a : f.getAtomFeatures()){
+//        		System.out.println("Atom: " + a.getAtomName());
+//        	}
+//        }
         
         
         AlgoHierarchicalClustering hc = new AlgoHierarchicalClustering();
-        DistanceFunction distanceFunction = new DistanceEuclidian();
+        //DistanceFunction distanceFunction = new DistanceEuclidian();
+        DistanceFunction distanceFunction = new DistanceHamming();
+        
+        for(int i=0;i<browser.getKnotList().size()-1;i++){
+        	System.out.println(browser.getKnotList().get(i).getName().toString());
+        	System.out.println(browser.getKnotList().get(i).getFeatures().toString());
+        }
+        
+        
+//        for(String s : browser.getAtomFeatureNames().keys()){
+//        	System.out.println("Atom Features: " + s);
+//        }	
         
         hc.runAlgorithm("", 2, distanceFunction, browser);
         hc.printStatistics();
-        hc.saveToFile("out1.txt");
+        hc.saveToFile(outputFileName);
+        
+        Search s = new Search(outputFile, browser);
+        
+        s.searchForKnot("tie", 0);
+        
+//        while(true){
+//        	
+//        	System.out.println("Enter the 'features' to search separated by a \"space\": ");
+//			System.out.println("If you want any 'sub-features' add a \".\" between the feature and the sub-feature: ");
+//            try{
+//                BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
+//                String s = bufferRead.readLine();
+//                
+//                Search search = new Search(outputFile, browser);
+//                
+//                //System.out.println(search); //TODO print the supposed result of the search
+//            }
+//            catch(IOException e)
+//            {
+//                e.printStackTrace();
+//            }
+        	
+//        }
+        
 	}
 }

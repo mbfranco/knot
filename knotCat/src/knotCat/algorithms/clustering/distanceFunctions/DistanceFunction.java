@@ -40,7 +40,7 @@ public abstract class DistanceFunction {
 	public abstract double calculateDistance(BitArray vector1, BitArray vector2);
 	
 	/**
-	 * Get the nam of this distance function
+	 * Get the name of this distance function
 	 * @return a string
 	 */
 	public  abstract String getName();
@@ -48,7 +48,7 @@ public abstract class DistanceFunction {
 	
 	/**
 	 * This method returns the distance function having a given name
-	 * @param name the name  (euclidian, manathan, cosine, correlation,...)
+	 * @param name the name  (euclidian, Hamming, cosine, correlation,...)
 	 * @return the distance function
 	 */
 	public static DistanceFunction getDistanceFunctionByName(String name){
@@ -58,8 +58,8 @@ public abstract class DistanceFunction {
 			return new DistanceEuclidian();
 //		}else if(DistanceCorrelation.NAME.equals(name)) {
 //			return new DistanceCorrelation();
-		}else if(DistanceManhattan.NAME.equals(name)) {
-			return new DistanceManhattan();
+		}else if(DistanceHamming.NAME.equals(name)) {
+			return new DistanceHamming();
 //		}else if(DistanceJaccard.NAME.equals(name)) {
 //			return new DistanceJaccard();
 		}

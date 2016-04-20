@@ -51,6 +51,8 @@ import knotCat.tools.MemoryLogger;
 
 public class AlgoHierarchicalClustering {
 	
+	private Browser browser;
+	
 	// parameter
 	private double maxDistance =0;  // maximum distance allowed for merging two clusters
 	
@@ -81,6 +83,88 @@ public class AlgoHierarchicalClustering {
 	 * @throws IOException exception if error while reading the file
 	 */
 	public List<ClusterWithMean> runAlgorithm(String inputFile, double maxDistance, DistanceFunction distanceFunction, Browser browser) throws NumberFormatException, IOException {
+		// record start time
+		startTimestamp = System.currentTimeMillis();
+		
+		// save the parameter
+		this.maxDistance = maxDistance;
+		
+		// save the distance function
+		this.distanceFunction = distanceFunction;
+		
+		// create an empty list of clusters
+		clusters = new ArrayList<ClusterWithMean>();
+		
+		
+		
+		for(Knot k : browser.getKnotList()){
+			BitArray theVector = k.getFeatures().copy();
+		
+		
+		
+		
+		// Read the vectors from the input file
+		// and add each vector to an individual cluster.
+/*		BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+		String line;
+		// for each line until the end of file
+		while (((line = reader.readLine()) != null)) { 
+			// if the line is  a comment, is  empty or is a
+			// kind of metadata
+			if (line.isEmpty() == true ||
+					line.charAt(0) == '#' || line.charAt(0) == '%'
+							|| line.charAt(0) == '@') {
+				continue;
+			}
+			// split the line by spaces
+			String[] lineSplited = line.split(" ");
+			// convert the values to double values and put them in 
+			// a vector of doubles
+			double [] vector = new double[lineSplited.length];
+			
+			for (int i=0; i< lineSplited.length; i++) { 
+				double value = Double.parseDouble(lineSplited[i]);
+				vector[i] = value;
+//				System.out.println("val");
+			}*/
+			// create a BitArray object with the vector
+//			BitArray theVector = new BitArray(vector);
+			
+			// Initially we create a cluster for each vector
+			ClusterWithMean cluster = new ClusterWithMean(theVector.length());
+			cluster.addVector(theVector);
+			cluster.setMean(theVector.copy());
+			clusters.add(cluster);
+		}
+//		reader.close(); // close the input file
+
+		// (2) Loop to combine the two closest clusters into a bigger cluster
+		// until no clusters can be combined.
+		boolean changed = false;
+		do {
+			// merge the two closest clusters
+			changed = mergeTheClosestCluster();
+			// record memory usage
+			MemoryLogger.getInstance().checkMemory();
+		} while (changed);
+
+		// record end time
+		endTimestamp = System.currentTimeMillis();
+		
+		// return the clusters
+		return clusters;
+	}
+
+	/**
+	 * Run the algorithm only for the features.
+	 * @param inputFile an input file containing vectors of BitArrays
+	 * @param maxDistance  the maximum distance allowed for merging two clusters, i.e. the threshold
+	 * @param distanceFunction euclidean or hamming
+	 * @param browser this Browser
+	 * @return a list of Clusters 
+	 * @throws IOException exception if error while reading the file
+	 */
+	public List<ClusterWithMean> runOnlyFeaturesAlgorithm(String inputFile, double maxDistance, DistanceFunction distanceFunction, Browser browser) throws NumberFormatException, IOException {
 		// record start time
 		startTimestamp = System.currentTimeMillis();
 		
@@ -150,7 +234,8 @@ public class AlgoHierarchicalClustering {
 		// return the clusters
 		return clusters;
 	}
-
+	
+	
 	/**
 	 * Merge the two closest clusters in terms of distance.
 	 * @return true if a merge was done, otherwise false.
@@ -158,6 +243,9 @@ public class AlgoHierarchicalClustering {
 	private boolean mergeTheClosestCluster() {
 		// These variables will contain the two closest clusters that
 		// can be merged
+		
+		//TODO Verify how the merging is done, in order to present the final tree as a dendrogram.
+		
 		ClusterWithMean clusterToMerge1 = null;
 		ClusterWithMean clusterToMerge2 = null;
 		double minClusterDistance = Integer.MAX_VALUE;
@@ -183,12 +271,15 @@ public class AlgoHierarchicalClustering {
 		if (clusterToMerge1 == null) {
 			return false;
 		}
-
+		
+		//Add the clusters to the dendrogram (browser.finalCluster), before the distance is lost and the clusters are merged
+		//browser.getFinalCluster().
+		
 		// else, merge the two closest clusters
 		for(BitArray vector : clusterToMerge2.getVectors()){
 			clusterToMerge1.addVector(vector);
 		}
-		// after mergint, we need to recompute the mean of the resulting cluster
+		// after merging, we need to recompute the mean of the resulting cluster
 		clusterToMerge1.recomputeClusterMean();
 		// we delete the cluster that was merged
 		clusters.remove(clusterToMerge2);
