@@ -1,31 +1,41 @@
 package knotCat.patterns.cluster;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import knotCat.patterns.cluster.Exceptions.MoreThanTwoChildException;
 
 /** Distance is an element of the final dendrogram that has TWO branches. They are either:
- * ClusterKnot (leaf) + Distance (non-leaf element);
- * or ClusterKnot (leaf) + ClusterKnot (leaf)
+ * ClusterKnot (leaf) + Node (non-leaf element);
+ * or ClusterKnot (leaf) + ClusterKnot (leaf);
+ * or Node (non-leaf element) + Node (non-leaf element)
  * @author miguel
  *
  */
 public class Node extends FinalCluster {
 
-	Browser browser;
-	int distance;
-	List<FinalCluster> branches = new ArrayList<FinalCluster>();
+//	Browser browser;
+	double distance;
+	ArrayList<FinalCluster> branches = new ArrayList<FinalCluster>();
 	
-	public Node(int distance, List<FinalCluster> finalCluster) {
-		// TODO Auto-generated constructor stub
+	public Node(double distance, List<FinalCluster> finalCluster) {
+		this.distance = distance;
 	}
 	
+	public Node() {
+	}
+
 	@Override
 	public void print() {
 		
-		for(FinalCluster fc : this.branches){
-			System.out.println("Distance " + this.distance);
+		System.out.println("Distance: " + this.getDistance());
+		//Iterator<FinalCluster> nodeIterator = this.branches.iterator();
+		Iterator<FinalCluster> branchesIterator = branches.iterator();
+		
+		while(branchesIterator.hasNext()){
+			
+			FinalCluster fc = branchesIterator.next();
 			fc.print();
 		}
 		
@@ -35,16 +45,16 @@ public class Node extends FinalCluster {
 		this.distance = distance;
 	}
 	
-	public int getDistance() {
+	public double getDistance() {
 		return distance;
 	}
 	
-	public Browser getBrowser() {
-		return browser;
-	}
+//	public Browser getBrowser() {
+//		return browser;
+//	}
 	
 	public void add(FinalCluster branch){
-		if(this.getFinalCluster().size() > 2){
+		if(this.getFinalCluster().size() >= 2){
 			String msg = "";
 			try {
 				throw new MoreThanTwoChildException(msg + this.getFinalCluster().size());

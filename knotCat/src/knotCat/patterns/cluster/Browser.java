@@ -1,5 +1,6 @@
 package knotCat.patterns.cluster;
 
+import java.awt.LinearGradientPaint;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -29,6 +30,9 @@ import knotCat.patterns.cluster.Exceptions.FeatureDoesNotExistExcetion;
 
 public class Browser {
 
+	
+	
+	
 	//Maximum number of supported features for one knot. Because in each knot the BitArray of features has a static length.
 	//Should the feature array length be static? Because in each knot the array of features' length is static..
 	static final int NUMFEATURES = 40;
@@ -131,6 +135,13 @@ public class Browser {
 		
 		return i;
 	}
+	
+	
+//	public Knot getKnotByFeatures(BitArray knotFeatures){
+//		for(Knot k : this.getKnotList()){
+//			k.getFeatures()
+//		}
+//	}
 	
 	public int getAtomFeatureIndex(int featureIndex, String atom){
 		
@@ -340,6 +351,7 @@ public class Browser {
 
 	public static void main(String[] args) throws Exception{
 		
+		
 		LinkedList<Feature> featureNa = new LinkedList<Feature>();
 		LinkedList<Knot> knotLi = new LinkedList<Knot>();
 		LinkedList<String> knotNam = new LinkedList<String>();
@@ -493,13 +505,18 @@ public class Browser {
 //        	System.out.println("Atom Features: " + s);
 //        }	
         
-        hc.runAlgorithm("", 2, distanceFunction, browser);
+        hc.runAlgorithm(6, distanceFunction, browser);
         hc.printStatistics();
         hc.saveToFile(outputFileName);
+        //TODO print não está a ser bem feito
+        for(FinalCluster fc : browser.getFinalCluster()){
+        	fc.print();
+        }
         
         Search s = new Search(outputFile, browser);
         
         s.searchForKnot("tie", 0);
+        
         
 //        while(true){
 //        	

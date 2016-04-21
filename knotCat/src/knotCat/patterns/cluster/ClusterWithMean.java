@@ -1,5 +1,10 @@
 package knotCat.patterns.cluster;
 
+import java.util.List;
+import java.util.Map;
+
+import com.google.common.collect.Multimap;
+
 /* This file is copyright (c) 2008-2012 Philippe Fournier-Viger
 * 
 * This file is part of the SPMF DATA MINING SOFTWARE
@@ -28,6 +33,13 @@ public class ClusterWithMean extends Cluster {
 	
 	BitArray sum; // the sum of all vectors in this clusters 
 	// (used to calculate the mean efficiently)
+	
+	List<String> names;
+
+	Map<Integer, BitArray> atoms;
+	
+	
+	
 	
 	/**
 	 * Constructor
@@ -68,6 +80,16 @@ public class ClusterWithMean extends Cluster {
 	public BitArray getmean() {
 		return mean;
 	}
+	
+	public List<String> getNames() {
+		return names;
+	}
+	
+	public Map<Integer, BitArray> getAtoms() {
+		return atoms;
+	}
+	
+	
 	/**
 	 * This method is called by clustering algorithms to recompute the mean
 	 * of the cluster.
@@ -91,6 +113,14 @@ public class ClusterWithMean extends Cluster {
 			sum.getBarray()[i] -= vector.getBarray()[i];
 		}
 		
+	}
+
+	public void addNames(List<String> theVectorNames) {
+		this.names = theVectorNames;	
+	}
+
+	public void addAtomFeatures(Map<Integer, BitArray> theVectorAtoms) {
+		this.atoms = theVectorAtoms;
 	}
 
 	

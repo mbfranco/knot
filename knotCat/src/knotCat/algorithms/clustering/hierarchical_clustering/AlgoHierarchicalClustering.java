@@ -22,13 +22,19 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import knotCat.patterns.cluster.BitArray;
 import knotCat.patterns.cluster.Browser;
+import knotCat.patterns.cluster.ClusterKnot;
 import knotCat.algorithms.clustering.distanceFunctions.DistanceFunction;
 import knotCat.patterns.cluster.ClusterWithMean;
+import knotCat.patterns.cluster.FinalCluster;
 import knotCat.patterns.cluster.Knot;
+import knotCat.patterns.cluster.Node;
 import knotCat.tools.MemoryLogger;
 
 
@@ -53,6 +59,10 @@ public class AlgoHierarchicalClustering {
 	
 	private Browser browser;
 	
+	Node currentNode = new Node();
+	
+	Set<BitArray> clusterControl = new HashSet<BitArray>();
+	
 	// parameter
 	private double maxDistance =0;  // maximum distance allowed for merging two clusters
 	
@@ -76,13 +86,12 @@ public class AlgoHierarchicalClustering {
 
 	/**
 	 * Run the algorithm.
-	 * @param inputFile an input file containing vectors of doubles
 	 * @param maxDistance  the maximum distance allowed for merging two clusters
 	 * @param distanceFunction 
 	 * @return a list of Clusters
 	 * @throws IOException exception if error while reading the file
 	 */
-	public List<ClusterWithMean> runAlgorithm(String inputFile, double maxDistance, DistanceFunction distanceFunction, Browser browser) throws NumberFormatException, IOException {
+	public List<ClusterWithMean> runAlgorithm(double maxDistance, DistanceFunction distanceFunction, Browser browser) throws NumberFormatException, IOException {
 		// record start time
 		startTimestamp = System.currentTimeMillis();
 		
@@ -95,48 +104,21 @@ public class AlgoHierarchicalClustering {
 		// create an empty list of clusters
 		clusters = new ArrayList<ClusterWithMean>();
 		
-		
+		this.browser = browser;
 		
 		for(Knot k : browser.getKnotList()){
 			BitArray theVector = k.getFeatures().copy();
+			Map<Integer, BitArray> theVectorAtoms = k.getAtoms();
+			List<String> theVectorNames = k.getName();
 		
-		
-		
-		
-		// Read the vectors from the input file
-		// and add each vector to an individual cluster.
-/*		BufferedReader reader = new BufferedReader(new FileReader(inputFile));
-		String line;
-		// for each line until the end of file
-		while (((line = reader.readLine()) != null)) { 
-			// if the line is  a comment, is  empty or is a
-			// kind of metadata
-			if (line.isEmpty() == true ||
-					line.charAt(0) == '#' || line.charAt(0) == '%'
-							|| line.charAt(0) == '@') {
-				continue;
-			}
-			// split the line by spaces
-			String[] lineSplited = line.split(" ");
-			// convert the values to double values and put them in 
-			// a vector of doubles
-			double [] vector = new double[lineSplited.length];
-			
-			for (int i=0; i< lineSplited.length; i++) { 
-				double value = Double.parseDouble(lineSplited[i]);
-				vector[i] = value;
-//				System.out.println("val");
-			}*/
-			// create a BitArray object with the vector
-//			BitArray theVector = new BitArray(vector);
-			
 			// Initially we create a cluster for each vector
 			ClusterWithMean cluster = new ClusterWithMean(theVector.length());
 			cluster.addVector(theVector);
+			cluster.addNames(theVectorNames);
+			cluster.addAtomFeatures(theVectorAtoms);
 			cluster.setMean(theVector.copy());
 			clusters.add(cluster);
 		}
-//		reader.close(); // close the input file
 
 		// (2) Loop to combine the two closest clusters into a bigger cluster
 		// until no clusters can be combined.
@@ -147,6 +129,17 @@ public class AlgoHierarchicalClustering {
 			// record memory usage
 			MemoryLogger.getInstance().checkMemory();
 		} while (changed);
+		
+		//add clusters that haven't been merged to the dendrogram
+		for(int index = 0; index < clusters.size(); index++){
+			for(BitArray ba : clusters.get(index).getVectors()){
+				if(!clusterControl.contains(ba)){
+					ClusterKnot ck = new ClusterKnot(clusters.get(index).getNames(), maxDistance+100, clusters.get(index).getVectors().get(0), clusters.get(index).getAtoms());
+					browser.getFinalCluster().add(ck);
+					clusterControl.add(ba);
+				}
+			}
+		}
 
 		// record end time
 		endTimestamp = System.currentTimeMillis();
@@ -164,76 +157,45 @@ public class AlgoHierarchicalClustering {
 	 * @return a list of Clusters 
 	 * @throws IOException exception if error while reading the file
 	 */
-	public List<ClusterWithMean> runOnlyFeaturesAlgorithm(String inputFile, double maxDistance, DistanceFunction distanceFunction, Browser browser) throws NumberFormatException, IOException {
-		// record start time
-		startTimestamp = System.currentTimeMillis();
-		
-		// save the parameter
-		this.maxDistance = maxDistance;
-		
-		// save the distance function
-		this.distanceFunction = distanceFunction;
-		
-		// create an empty list of clusters
-		clusters = new ArrayList<ClusterWithMean>();
-		
-		for(Knot k : browser.getKnotList()){
-			BitArray theVector = k.getFeatures().copy();
-		
-		
-		
-		
-		// Read the vectors from the input file
-		// and add each vector to an individual cluster.
-/*		BufferedReader reader = new BufferedReader(new FileReader(inputFile));
-		String line;
-		// for each line until the end of file
-		while (((line = reader.readLine()) != null)) { 
-			// if the line is  a comment, is  empty or is a
-			// kind of metadata
-			if (line.isEmpty() == true ||
-					line.charAt(0) == '#' || line.charAt(0) == '%'
-							|| line.charAt(0) == '@') {
-				continue;
-			}
-			// split the line by spaces
-			String[] lineSplited = line.split(" ");
-			// convert the values to double values and put them in 
-			// a vector of doubles
-			double [] vector = new double[lineSplited.length];
-			
-			for (int i=0; i< lineSplited.length; i++) { 
-				double value = Double.parseDouble(lineSplited[i]);
-				vector[i] = value;
-//				System.out.println("val");
-			}*/
-			// create a BitArray object with the vector
-//			BitArray theVector = new BitArray(vector);
-			
-			// Initiallly we create a cluster for each vector
-			ClusterWithMean cluster = new ClusterWithMean(theVector.length());
-			cluster.addVector(theVector);
-			cluster.setMean(theVector.copy());
-			clusters.add(cluster);
-		}
-//		reader.close(); // close the input file
-
-		// (2) Loop to combine the two closest clusters into a bigger cluster
-		// until no clusters can be combined.
-		boolean changed = false;
-		do {
-			// merge the two closest clusters
-			changed = mergeTheClosestCluster();
-			// record memory usage
-			MemoryLogger.getInstance().checkMemory();
-		} while (changed);
-
-		// record end time
-		endTimestamp = System.currentTimeMillis();
-		
-		// return the clusters
-		return clusters;
-	}
+//	public List<ClusterWithMean> runOnlyFeaturesAlgorithm(String inputFile, double maxDistance, DistanceFunction distanceFunction, Browser browser) throws NumberFormatException, IOException {
+//		// record start time
+//		startTimestamp = System.currentTimeMillis();
+//		
+//		// save the parameter
+//		this.maxDistance = maxDistance;
+//		
+//		// save the distance function
+//		this.distanceFunction = distanceFunction;
+//		
+//		// create an empty list of clusters
+//		clusters = new ArrayList<ClusterWithMean>();
+//		
+//		for(Knot k : browser.getKnotList()){
+//			BitArray theVector = k.getFeatures().copy();
+//			
+//			// Initially we create a cluster for each vector
+//			ClusterWithMean cluster = new ClusterWithMean(theVector.length());
+//			cluster.addVector(theVector);
+//			cluster.setMean(theVector.copy());
+//			clusters.add(cluster);
+//		}
+//
+//		// (2) Loop to combine the two closest clusters into a bigger cluster
+//		// until no clusters can be combined.
+//		boolean changed = false;
+//		do {
+//			// merge the two closest clusters
+//			changed = mergeTheClosestCluster();
+//			// record memory usage
+//			MemoryLogger.getInstance().checkMemory();
+//		} while (changed);
+//
+//		// record end time
+//		endTimestamp = System.currentTimeMillis();
+//		
+//		// return the clusters
+//		return clusters;
+//	}
 	
 	
 	/**
@@ -241,14 +203,13 @@ public class AlgoHierarchicalClustering {
 	 * @return true if a merge was done, otherwise false.
 	 */
 	private boolean mergeTheClosestCluster() {
+		
 		// These variables will contain the two closest clusters that
 		// can be merged
-		
-		//TODO Verify how the merging is done, in order to present the final tree as a dendrogram.
-		
 		ClusterWithMean clusterToMerge1 = null;
 		ClusterWithMean clusterToMerge2 = null;
 		double minClusterDistance = Integer.MAX_VALUE;
+		
 
 		// find the two closest clusters with distance > threshold
 		// by comparing all pairs of clusters i and j
@@ -266,15 +227,62 @@ public class AlgoHierarchicalClustering {
 				}
 			}
 		}
-
+		
 		// if no close clusters were found, return false
 		if (clusterToMerge1 == null) {
 			return false;
 		}
 		
-		//Add the clusters to the dendrogram (browser.finalCluster), before the distance is lost and the clusters are merged
-		//browser.getFinalCluster().
 		
+		//Add the clusters to the dendrogram (browser.finalCluster), before the distance is lost and the clusters are merged
+		//It's a leaf if
+		if(clusterToMerge1.getVectors().size() == 1){
+			
+			List<FinalCluster> branches = new ArrayList<FinalCluster>();
+			Node n = new Node(minClusterDistance, branches);		
+			
+			List<String> names = clusterToMerge1.getNames();
+			Map<Integer, BitArray> atomFeatures = clusterToMerge1.getAtoms();
+			ClusterKnot ck = new ClusterKnot(names, 0, clusterToMerge1.getVectors().get(0), atomFeatures);
+			n.getFinalCluster().add(ck);
+			
+			names = clusterToMerge2.getNames();
+			atomFeatures = clusterToMerge2.getAtoms();
+			ck = new ClusterKnot(names, 0, clusterToMerge2.getVectors().get(0), atomFeatures);
+			n.getFinalCluster().add(ck);
+			
+			currentNode = n;
+			
+			clusterControl.add(clusterToMerge1.getVectors().get(0));
+			clusterControl.add(clusterToMerge2.getVectors().get(0));
+			
+			browser.getFinalCluster().add(n);
+			
+		}
+		else if(clusterToMerge1.getVectors().size() == 2){
+
+				List<FinalCluster> branches = new ArrayList<FinalCluster>();
+				Node n = new Node(minClusterDistance, branches);		
+
+				n.add(currentNode);
+				browser.getFinalCluster().remove(currentNode);
+				
+				
+				List<String> names = clusterToMerge2.getNames();
+				Map<Integer, BitArray> atomFeatures = clusterToMerge2.getAtoms();
+				ClusterKnot ck = new ClusterKnot(names, 0, clusterToMerge2.getVectors().get(0), atomFeatures);
+				n.getFinalCluster().add(ck);
+
+				currentNode = n;
+
+				clusterControl.add(clusterToMerge1.getVectors().get(0));
+				clusterControl.add(clusterToMerge1.getVectors().get(1));
+				clusterControl.add(clusterToMerge2.getVectors().get(0));
+				
+				browser.getFinalCluster().add(n);
+				
+		}
+
 		// else, merge the two closest clusters
 		for(BitArray vector : clusterToMerge2.getVectors()){
 			clusterToMerge1.addVector(vector);

@@ -2,42 +2,42 @@ package knotCat.patterns.cluster;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import com.google.common.collect.Multimap;
+import java.util.Map;
+import java.util.Map.Entry;
 
 public class ClusterKnot extends FinalCluster{
 
-	ArrayList<String> names;
+	List<String> names = new ArrayList<String>();
 	
-	int distance;
+	double distance;
 	
 	BitArray features;
 	
 	//atomFeatures where the Key is the feature Index,
 	//and the value is the BitArray of AtomFeatures for that feature
-	Multimap<Integer, BitArray> atomFeatures;
+	Map<Integer, BitArray> atomFeatures;
 	
 	public ClusterKnot() {}
 	
 	/**
-	 * @param names The names of the knot
-	 * @param distance The distance to the nearest knot
+	 * @param list The names of the knot
+	 * @param minClusterDistance The distance to the nearest knot
 	 * @param features The BitArray of features that characterize the knot
 	 * @param atomFeatures Multimap where I is the index number in the atomFeatures LinkedList and V is the atomFeatureBitarray 
 	 */
-	public ClusterKnot(ArrayList<String> names, int distance, BitArray features, Multimap<Integer, BitArray> atomFeatures) {
+	public ClusterKnot(List<String> names, double minClusterDistance, BitArray features, Map<Integer, BitArray> atomFeatures) {
 		this.names = names;
-		this.distance = distance;
+		this.distance = minClusterDistance;
 		this.features = features;
 		this.atomFeatures = atomFeatures;
 	}
 
 	
-	public ArrayList<String> getName() {
+	public List<String> getName() {
 		return names;
 	}
 
-	public int getDistance() {
+	public double getDistance() {
 		return distance;
 	}
 
@@ -45,7 +45,7 @@ public class ClusterKnot extends FinalCluster{
 		return features;
 	}
 
-	public Multimap<Integer, BitArray> getAtomFeatures() {
+	public Map<Integer, BitArray> getAtomFeatures() {
 		return atomFeatures;
 	}
 
@@ -72,19 +72,17 @@ public class ClusterKnot extends FinalCluster{
 	@Override
 	public void print() {
 		for(String n : this.getNames()){
-			System.out.println("Knot: " + n);
+			System.out.println("\tKnot: " + n);
 		}
-		
-		System.out.println("Features: " + this.getFeatures());
-		
+
+		System.out.println("\tFeatures: " + this.getFeatures());
+
 		//TODO review this "for each" search
-		for(Integer i : this.getAtomFeatures().keySet()){
+		for(Entry<Integer, BitArray> i : this.getAtomFeatures().entrySet()){
 			//TODO Get the name of the feature 
-			for(BitArray b : this.getAtomFeatures().get(i)){
-				System.out.println("Atom Features: " + b);
-			}
+			System.out.println("\tThe feature in the index \"" + i.getKey() + "\" has the AtomFeatures " + i.getValue());
 		}
-		
+
 	}
 
 }
