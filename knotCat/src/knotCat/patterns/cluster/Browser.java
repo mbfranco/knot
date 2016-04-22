@@ -17,8 +17,10 @@ import java.util.Vector;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Iterators;
+import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.LinkedListMultimap;
 import com.google.common.collect.ListMultimap;
+import com.google.common.collect.SetMultimap;
 
 import knotCat.algorithms.clustering.distanceFunctions.DistanceEuclidian;
 import knotCat.algorithms.clustering.distanceFunctions.DistanceFunction;
@@ -64,7 +66,7 @@ public class Browser {
 	 * String - AtomFeature name
 	 * Integer - index of the Feature
 	 */
-	ListMultimap<String, Integer> atomFeatureNames;
+	SetMultimap<String, Integer> atomFeatureNames = LinkedHashMultimap.<String, Integer>create();
 	
 	/**
 	 * List with all the knots. All knots are different.
@@ -88,7 +90,7 @@ public class Browser {
 	}
 
 
-	public ListMultimap<String, Integer> getAtomFeatureNames() {
+	public SetMultimap<String, Integer> getAtomFeatureNames() {
 		return atomFeatureNames;
 	}
 	
@@ -291,6 +293,8 @@ public class Browser {
 			
 			getAtomFeatureNames().put(name, index);
 			
+			System.out.println("Put Atom " + name + " in the feature " + getFeatureNames().get(index).getName() + " (index = " + index + ")");
+			
 		}catch(Exception e){
 			e.getMessage();
 		}
@@ -342,7 +346,10 @@ public class Browser {
 			getFeatureNames().get(index).getAtomFeatures().addLast(a);
 			
 			//Updates the LinkedList of AtomFeatures
-			addAtomFeatureToList(f.getName(), index);
+			//addAtomFeatureToList(f.getName(), index);
+			
+			//TODO probably is
+			addAtomFeatureToList(atom, index);
 			
 		}catch(Exception e){
 			e.getMessage();
