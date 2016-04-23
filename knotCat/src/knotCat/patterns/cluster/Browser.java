@@ -37,10 +37,10 @@ public class Browser {
 	
 	//Maximum number of supported features for one knot. Because in each knot the BitArray of features has a static length.
 	//Should the feature array length be static? Because in each knot the array of features' length is static..
-	static final int NUMFEATURES = 40;
+	static final int NUMFEATURES = 70;
 	
 	//Maximum number of atom features for each knot
-	static final int NUMATOMS = 25;
+	static final int NUMATOMS = 40;
 		
 	/**
 	 * Tree Cluster of Knots
@@ -348,7 +348,6 @@ public class Browser {
 			//Updates the LinkedList of AtomFeatures
 			//addAtomFeatureToList(f.getName(), index);
 			
-			//TODO probably is
 			addAtomFeatureToList(atom, index);
 			
 		}catch(Exception e){
@@ -468,7 +467,7 @@ public class Browser {
         		}
         		j++;
         	}
-			
+			atomContent="";
 			//creating the knot..
 			browser.addNewKnot(references, names, features, atomsF, atomsA);
 
@@ -522,8 +521,10 @@ public class Browser {
         
         Search s = new Search(outputFile, browser);
         
-        s.searchForKnot("tie", 0);
+        ArrayList<ClusterSearchResult> result = s.searchForKnot("best-for-purpose trim offer-resistance tie use untie slip secure", 0);
         
+        if(result.isEmpty()){System.out.println("Está vazio...");}
+        else{System.out.println("Preencheu!!!");}
         
 //        while(true){
 //        	

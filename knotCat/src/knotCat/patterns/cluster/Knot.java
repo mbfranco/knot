@@ -32,7 +32,8 @@ public class Knot {
 	 * @param references The references to the ABOK knot entry (a knot may have different entries)
 	 * @param names The names of the Knot (a knot may have different names)
 	 * @param features Knot's present features in the form of a binary representation
-	 * @param atm Knot's present atomic features. Atoms are associated to present Features. The key is the index of a present feature and the in a binary representation. 
+	 * @param atm Knot's present atomic features. Atoms are associated to present Features.
+	 * The key is the index of a present feature and the in a binary representation. 
 	 */
 	public Knot(List<Integer> references, List<String> names, BitArray features, Map<Integer, BitArray> atm) {
 		this.references = references;
