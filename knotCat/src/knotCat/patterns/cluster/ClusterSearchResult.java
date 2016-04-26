@@ -10,18 +10,21 @@ import knotCat.patterns.cluster.Exceptions.ProbabilityOutOfBoundsException;
  */
 public class ClusterSearchResult {
 
-	List<String> knot; // name of the knot
+	List<ClusterKnot> knot; //the knot
 	
 	double probability; //certainty of being this knot
 	
+	FinalCluster treeClusterResult; //the children of this tree cluster
+	
 	public ClusterSearchResult() {}
 	
-	public ClusterSearchResult(List<String> knotNames, double probability) {
-		this.knot = knotNames;
+	public ClusterSearchResult(List<ClusterKnot> knot, double probability, FinalCluster treeClusterResult) {
+		this.knot = knot;
 		this.probability = probability;
+		this.treeClusterResult = treeClusterResult;
 	}
 	
-	public List<String> getKnot() {
+	public List<ClusterKnot> getKnot() {
 		return knot;
 	}
 	
@@ -29,8 +32,16 @@ public class ClusterSearchResult {
 		return probability;
 	}
 	
-	public void setKnot(List<String> knot) {
+	public FinalCluster getTreeClusterResult() {
+		return treeClusterResult;
+	}
+	
+	public void setKnot(List<ClusterKnot> knot) {
 		this.knot = knot;
+	}
+	
+	public void setTreeClusterResult(FinalCluster treeClusterResult) {
+		this.treeClusterResult = treeClusterResult;
 	}
 	
 	public void setProbability(double probability) {
@@ -38,10 +49,9 @@ public class ClusterSearchResult {
 			try {
 				throw new ProbabilityOutOfBoundsException(probability);
 			} catch (ProbabilityOutOfBoundsException e) {
-				e.getMessage();
+				System.err.println(e.getMessage());
 			}
 		}
 		this.probability = probability;
 	}
-	
 }

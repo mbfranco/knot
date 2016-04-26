@@ -136,9 +136,11 @@ foothold
 
 
 
+CHAPTER 14: knots tied in the bight
+1140 to 1170
 
-
-
+end, end.not
+tie, tie.end-not tie.in-bight tie.trick tie.trick
 
 
 

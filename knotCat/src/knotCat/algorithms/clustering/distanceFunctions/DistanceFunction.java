@@ -48,20 +48,20 @@ public abstract class DistanceFunction {
 	
 	/**
 	 * This method returns the distance function having a given name
-	 * @param name the name  (euclidian, Hamming, cosine, correlation,...)
+	 * @param name the name  (euclidian, hamming, cosine, correlation,...)
 	 * @return the distance function
 	 */
 	public static DistanceFunction getDistanceFunctionByName(String name){
-//		}else if(DistanceCosine.NAME.equals(name)) {
-//			return new DistanceCosine();
-		if(DistanceEuclidian.NAME.equals(name)) {
+		if(DistanceCosine.NAME.equals(name)) {
+			return new DistanceCosine();
+		}else if(DistanceEuclidian.NAME.equals(name)) {
 			return new DistanceEuclidian();
-//		}else if(DistanceCorrelation.NAME.equals(name)) {
-//			return new DistanceCorrelation();
+		}else if(DistanceCorrelation.NAME.equals(name)) {
+			return new DistanceCorrelation();
 		}else if(DistanceHamming.NAME.equals(name)) {
 			return new DistanceHamming();
-//		}else if(DistanceJaccard.NAME.equals(name)) {
-//			return new DistanceJaccard();
+		}else if(DistanceJaccard.NAME.equals(name)) {
+			return new DistanceJaccard();
 		}
 		return null;
 	}

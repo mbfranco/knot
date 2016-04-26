@@ -11,7 +11,9 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.TreeMap;
 import java.util.Vector;
 
@@ -22,9 +24,11 @@ import com.google.common.collect.LinkedListMultimap;
 import com.google.common.collect.ListMultimap;
 import com.google.common.collect.SetMultimap;
 
+import knotCat.algorithms.clustering.distanceFunctions.DistanceCosine;
 import knotCat.algorithms.clustering.distanceFunctions.DistanceEuclidian;
 import knotCat.algorithms.clustering.distanceFunctions.DistanceFunction;
 import knotCat.algorithms.clustering.distanceFunctions.DistanceHamming;
+import knotCat.algorithms.clustering.distanceFunctions.DistanceJaccard;
 import knotCat.algorithms.clustering.hierarchical_clustering.AlgoHierarchicalClustering;
 import knotCat.patterns.cluster.Exceptions.AtomNameAlreadyExistsException;
 import knotCat.patterns.cluster.Exceptions.FeatureAlreadyExistsException;
@@ -82,7 +86,6 @@ public class Browser {
 		this.knotList = knotList;
 		this.knotNames = knotNames;
 	}
-
 	
 	
 	public LinkedList<Feature> getFeatureNames() {
@@ -498,8 +501,10 @@ public class Browser {
         
         
         AlgoHierarchicalClustering hc = new AlgoHierarchicalClustering();
-        //DistanceFunction distanceFunction = new DistanceEuclidian();
+//		  DistanceFunction distanceFunction = new DistanceEuclidian();
         DistanceFunction distanceFunction = new DistanceHamming();
+//        DistanceFunction distanceFunction = new DistanceJaccard();
+//        DistanceFunction distanceFunction = new DistanceCosine();
         
         for(int i=0;i<browser.getKnotList().size()-1;i++){
         	System.out.println(browser.getKnotList().get(i).getName().toString());
@@ -519,13 +524,26 @@ public class Browser {
         	fc.print();
         }
         
-        Search s = new Search(outputFile, browser);
+        //Search s = new Search(outputFile, browser);
+        Search s = new Search(browser);
         
-        ArrayList<ClusterSearchResult> result = s.searchForKnot("best-for-purpose trim offer-resistance tie use untie slip secure", 0);
         
+        //ArrayList<ClusterSearchResult> result = s.searchForKnot("?best-for-purpose trim offer-resistance tie use untie slip slip.not ?secure ?low.gravity ?secure.not ?hang.at-sea ?secure.add-crossing-turns-to-seizings", 1);
+        //Set<ClusterSearchResult> result = s.searchForKnot("hang.at-sea", 1);
+        List<ClusterSearchResult> result = s.searchForKnot("best-for-purpose.leader best-for-purpose.small-line best-for-purpose.stiff-line best-for-purpose.slip-line trim.end trim.short offer-resistance.wet-not tie.additional-turns-unnecessary tie.opposite-twists tie.end-opposite-side use.piano-wire-not untie.not slip.not secure.very secure.most", 0.3, "euclidean");
+//        List<ClusterSearchResult> result = s.searchForKnot("tie.bight use.hand-hold use.shoulder-hold haul.gun-to-position", 1, "hamming");
+
         if(result.isEmpty()){System.out.println("Está vazio...");}
-        else{System.out.println("Preencheu!!!");}
-        
+        else{
+        	System.out.println("Preencheu!!!");
+
+        	for(ClusterSearchResult r : result){
+        		for(ClusterKnot k : r.getKnot()){
+        			System.out.println(k.getNames() + " " + k.getDistance());
+        		}
+        	}
+        }
+
 //        while(true){
 //        	
 //        	System.out.println("Enter the 'features' to search separated by a \"space\": ");
