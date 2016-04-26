@@ -530,8 +530,8 @@ public class Browser {
         
         //ArrayList<ClusterSearchResult> result = s.searchForKnot("?best-for-purpose trim offer-resistance tie use untie slip slip.not ?secure ?low.gravity ?secure.not ?hang.at-sea ?secure.add-crossing-turns-to-seizings", 1);
         //Set<ClusterSearchResult> result = s.searchForKnot("hang.at-sea", 1);
-        List<ClusterSearchResult> result = s.searchForKnot("best-for-purpose.leader best-for-purpose.small-line best-for-purpose.stiff-line best-for-purpose.slip-line trim.end trim.short offer-resistance.wet-not tie.additional-turns-unnecessary tie.opposite-twists tie.end-opposite-side use.piano-wire-not untie.not slip.not secure.very secure.most", 0.3, "euclidean");
-//        List<ClusterSearchResult> result = s.searchForKnot("tie.bight use.hand-hold use.shoulder-hold haul.gun-to-position", 1, "hamming");
+//        List<ClusterSearchResult> result = s.searchForKnot("best-for-purpose.leader best-for-purpose.small-line best-for-purpose.stiff-line best-for-purpose.slip-line trim.end trim.short offer-resistance.wet-not tie.additional-turns-unnecessary tie.opposite-twists tie.end-opposite-side use.piano-wire-not untie.not slip.not secure.very secure.most", 0.3, "euclidean");
+        List<ClusterSearchResult> result = s.searchForKnot("tie.bight use.hand-hold use.shoulder-hold haul.gun-to-position", 0.05, "hamming");
 
         if(result.isEmpty()){System.out.println("Está vazio...");}
         else{

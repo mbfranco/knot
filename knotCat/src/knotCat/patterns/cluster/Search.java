@@ -384,7 +384,7 @@ public class Search {
 				knotsToReturn.add(knotToAdd);
 
 			}
-
+			//instance of Node
 			else{
 
 				//lastVisitedNode.push(fc);
@@ -429,7 +429,7 @@ public class Search {
 
 		knotNames.add((ClusterKnot) fc);
 		//the probability may simply be the number of presentFeatures / number of features in the knot to search
-		probability = nPresentFeatures/nFeaturesCurerntKnot;
+		probability = (double)nPresentFeatures/(double)nFeaturesCurerntKnot;
 
 		//or the probability = similarity function = (2/|Ca|)(Ca and B) - 1, [-1, 1]
 		//probability = (2/nFeaturesCurerntKnot)*(nPresentFeatures) - 1;
