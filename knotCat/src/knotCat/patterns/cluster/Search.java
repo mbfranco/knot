@@ -289,10 +289,10 @@ public class Search {
 
 		List<ClusterSearchResult> knotsToReturn = new ArrayList<ClusterSearchResult>();
 
-		List<ClusterKnot> knotNames = new ArrayList<ClusterKnot>();
+		ClusterKnot cKnot = new ClusterKnot();
 		double probability = -1;
 		FinalCluster cluster = null;
-		ClusterSearchResult knotToAdd = new ClusterSearchResult(knotNames, probability, cluster);
+		ClusterSearchResult knotToAdd = new ClusterSearchResult(cKnot, probability, cluster);
 
 		Stack<FinalCluster> lastVisitedNode = new Stack<FinalCluster>();		
 
@@ -314,8 +314,8 @@ public class Search {
 
 						@Override
 						public int compare(ClusterSearchResult o1, ClusterSearchResult o2) {
-							if(o1.getProbability() < o2.getProbability()) return -1;
-							if(o1.getProbability() > o2.getProbability()) return 1;
+							if(o1.getProbability() > o2.getProbability()) return -1;
+							if(o1.getProbability() < o2.getProbability()) return 1;
 							return 0;
 						}
 
@@ -339,8 +339,8 @@ public class Search {
 
 						@Override
 						public int compare(ClusterSearchResult o1, ClusterSearchResult o2) {
-							if(o1.getProbability() < o2.getProbability()) return -1;
-							if(o1.getProbability() > o2.getProbability()) return 1;
+							if(o1.getProbability() > o2.getProbability()) return -1;
+							if(o1.getProbability() < o2.getProbability()) return 1;
 							return 0;
 						}
 					});
@@ -368,10 +368,10 @@ public class Search {
 
 		for(FinalCluster fic : ((Node) fc).getBranches()){
 
-			List<ClusterKnot> knotNames = new ArrayList<ClusterKnot>();
+			ClusterKnot cKnot = new ClusterKnot();
 			double probability = -1;
 			FinalCluster cluster = null;
-			ClusterSearchResult knotToAdd = new ClusterSearchResult(knotNames, probability, cluster);
+			ClusterSearchResult knotToAdd = new ClusterSearchResult(cKnot, probability, cluster);
 
 			if(fic instanceof ClusterKnot){
 
@@ -418,7 +418,7 @@ public class Search {
 	private ClusterSearchResult checkClusterKnot(Knot currentKnot, FinalCluster fc, double threshold,
 			String distanceFunction) {
 
-		List<ClusterKnot> knotNames = new ArrayList<ClusterKnot>();
+		ClusterKnot knotNames = new ClusterKnot();
 		double probability = -1;
 		FinalCluster cluster = null;
 		ClusterSearchResult knotToAdd = new ClusterSearchResult(knotNames, probability, cluster);
@@ -427,7 +427,7 @@ public class Search {
 		BitArray presentFeatures = currentKnot.getFeatures().and(fc.getFeatures());
 		int nPresentFeatures = presentFeatures.count();
 
-		knotNames.add((ClusterKnot) fc);
+		knotNames = ((ClusterKnot) fc);
 		//the probability may simply be the number of presentFeatures / number of features in the knot to search
 		probability = (double)nPresentFeatures/(double)nFeaturesCurerntKnot;
 

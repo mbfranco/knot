@@ -10,7 +10,7 @@ import knotCat.patterns.cluster.Exceptions.ProbabilityOutOfBoundsException;
  */
 public class ClusterSearchResult {
 
-	List<ClusterKnot> knot; //the knot
+	ClusterKnot knot; //the knot
 	
 	double probability; //certainty of being this knot
 	
@@ -18,13 +18,13 @@ public class ClusterSearchResult {
 	
 	public ClusterSearchResult() {}
 	
-	public ClusterSearchResult(List<ClusterKnot> knot, double probability, FinalCluster treeClusterResult) {
+	public ClusterSearchResult(ClusterKnot knot, double probability, FinalCluster treeClusterResult) {
 		this.knot = knot;
 		this.probability = probability;
 		this.treeClusterResult = treeClusterResult;
 	}
 	
-	public List<ClusterKnot> getKnot() {
+	public ClusterKnot getKnot() {
 		return knot;
 	}
 	
@@ -36,7 +36,7 @@ public class ClusterSearchResult {
 		return treeClusterResult;
 	}
 	
-	public void setKnot(List<ClusterKnot> knot) {
+	public void setKnot(ClusterKnot knot) {
 		this.knot = knot;
 	}
 	
