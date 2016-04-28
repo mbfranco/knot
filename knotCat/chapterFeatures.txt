@@ -5,16 +5,12 @@ knob
 single-strand
 stopper
 terminal
-tie, tie, end tie, running-to-rigging
-bunch
+tie, tie.end tie.running-to-rigging tie.bunch
 unreeving, unreeving.prevent
 unlaying, unlaying.prevent-not 
 fraying, fraying.prevent-not fraying.prevent-small-cord fraying.prevent-twine
 secure, secure.sewing-thread-end
-handhold, handhold.bell-rope handhold.foothold
-footrope, footrope.bell-rope footrope.foothold
-bell-rope, bell-rope.handhold bell-rope.foothold
-footrope, footrope.handhold footrope.foothold
+use, use.handhold use.handhold-bell-rope use.handhold-foothold use.footrope-bell-rope use.footrope-foothold
 add-weight, add-weight.heaving-line add-weight.end
 decorative
 practical
@@ -28,7 +24,7 @@ knob
 single-strand
 lanyard
 decorative
-attach, attach.marlinspike attach.fid. attach.paint-can attach.slush-bucket attach.eyeglass attach.pencil attach.hat attach.snuffbox attach.jackknife attach.tobacco-pouch attach.amulet attach.money-pouch attach.bosun-whistle attach.watch attach.binoculars attach.pipe attach.key attach.buttonhole attach.belt attach.suspender
+attach, attach.marlingspike attach.fid attach.paint-can attach.slush-bucket attach.eyeglass attach.pencil attach.hat attach.snuffbox attach.jackknife attach.tobacco-pouch attach.amulet attach.money-pouch attach.bosun-whistle attach.watch attach.binoculars attach.pipe attach.key attach.buttonhole attach.belt attach.suspender
 tie, tie.neck tie.shoulder tie.wrist tie.bight tie.movable-object
 symmetric
 opposite, opposite.working-end-to-running-end
@@ -83,7 +79,7 @@ CHAPTER 8: knob two-strand lanyard knots
 
 knob
 lanyard, lanyard.ornament
-tie, tie.two-chords
+tie, tie.two-chords tie.two-ropes
 top, top.enter
 bottom, bottom.enter
 depart, depart.other-end
@@ -132,7 +128,30 @@ foothold
 
 
 
+CHAPTER 12: double-loop knots
+1068 to 1113
 
+loop, loop.double
+tie, tie.bight
+
+
+
+CHAPTER 13: noose
+1114 to 1139
+
+noose
+snare
+run
+tie, tie.hand tie.around-object tie.object tie.end tie.parcel tie.package tie.running-end
+tight, tight.pulled tight.object tight.lassoing tight.snare tight.snaring
+lashing, lashing.package
+render, render.object
+constrict, constrict.object
+snare, snare.animal snare.bird
+commence, commence.parcel-lashing
+loop
+loose, loose.with-slack
+bight, bight.through-loop
 
 
 
@@ -144,18 +163,303 @@ tie, tie.end-not tie.in-bight tie.trick tie.trick
 
 
 
+CHAPTER 15: clove hitch and other crossing
+1171 to 1201
+
+fast, fast.around-object
+tie, tie.two-chords tie.two-ropes tie.two-parts-same-rope tie.around-stake tie.around-post
+hold, hold.two-chords hold.two-ropes hold.two-parts-same-rope
+secure, secure.bight-to-cylindrical-object
+lashing, lashing.object
+temporary, temporary.fence
+lashing, lashing.chest lashing.trunk lashing.bale lashing.bundle lashing.parcel
+standing, standing.rigging standing.scaffolding standing.stanchion standing.rope-ladder
 
 
 
-Nota: hitch -> fast.around-object
+CHAPTER 16: binding
+1202 to 1277
+
+tie, tie.around-object
+confine, confine.object
+constrict, constrict.object
+hold, hold.two-or-more-objects hold.many-objects hold.two-objects
 
 
 
+CHAPTER 17: turk's-head
+1278 to 1401
+
+tubular
+tie, tie.around-cylindrical-object tie.around-rope tie. around-stanchion tie.around-rail tie.rattan tie.black-whalebone tie.stiff-fishline
+decorative
+fancy
+use, use.foothold use.footrope use.spoke use.handhold use.manrope use.yoke-rope use gymnasium-climbing-rope use.guardrail use.life-line use.substitute, substitute.whip substitute.seizing use.gathering-hoop, gathering-hoop.dirty-bag gathering-hoop.neckerchief gathering-hoop.brindle-reins use.napkin-ring use.bracelet use.anklet use.hand-guard use.drip-guard
+cover, cover.loose-end cover.loose-end-splice cover.loose-end-sinnet use.furnish, furnish.handgrip furnish.hand-grip furnish.grip furnish.handgrip furnish.bow furnish.rod furnish.pole
+stiff, stiff.spar stiff.oar stiff.paddle stiff.rod stiff.pole
+prevent, prevent.splice
+decorate, decorate.whip	decorate.lanyard decorate.telescope decorate.hatband decorate.leash decorate.quirt decorate.harness decorate.chair decorate.basket decorate.bell-rope decorate.tassel
+general-utility
 
 
 
+CHAPTER 18: bend
+1402 to 1559
+
+unite, unite.two-ropes unite.two-ends unite.ropes-same-material
+lengthen, lengthen.rope
+temporary, temporary.generally
 
 
 
+CHAPTER 19: shroud multi-strand
+1560 to 1593
+
+unite, unite.two-ropes unite.two-ends unite.ropes-same-material
+lengthen, lengthen.rope
+temporary, temporary.generally
+repair, repair.emergency repair.injured-hemp-rigging
+tie, tie.quicker-than-splice tie.less-material-than-splice tie.shroud-laid-rope
+decorative
+decorate, decorate.lanyard decorate.umbrella decorate.chest decorate.handle decorate.curtain-holdback
 
 
+
+CHAPTER 20: belaying make-fast
+1594 to 1662
+
+hitch, hitch.peg hitch.cleat hitch.belaying-pin hitch.bitt hitch.kevel hitch.timberhead
+fast, fast.around-object fast.rope-to-rope
+secure, secure.rope-to-object secure.rope-to-rope
+belay
+hold, hold.end-to-object
+
+
+
+CHAPTER 21: hitch to spar and rail (right-angle pull)
+1663 to 1732
+
+hitch, hitch.cylindrical-object hitch.spar hitch.rail
+fast, fast.around-object fast.cylindrical-object
+pull, pull.angle pull.right-angle
+secure, secure.rope-to-object secure.rope-to-rope
+belay
+hold, hold.end-to-object
+tie, tie.cylindrical-object tie.spar tie.rail
+
+
+
+CHAPTER 22: hitch to mast rigging cable (lengthwise pull)
+1733 to 1772
+
+hitch, hitch.cylindrical-object hitch.mast hitch.rigging hitch.cable
+fast, fast.around-object fast.cylindrical-object
+pull, pull.angle-not pull.lengthwise
+slip, slip-not
+tie, tie.with-care tie.many-turns tie.cylindrical-object tie.mast tie.rigging tie.cable
+
+
+
+CHAPTER 23: hitch to stake post pile bollard
+1773 to 1820
+
+hitch, hitch.cylindrical-object hitch.stake hitch.post hitch.pile hitch.bollard
+fast, fast.around-object fast.cylindrical-object
+slip, slip-not
+tie, tie.wharf tie.many-turns tie.cylindrical-object tie.stake tie.post tie.pile tie.bollard tie.tent tie.fence tie.guy-rope tie.quick
+
+
+CHAPTER 24: ring hitches
+1821 to 1874
+
+hitch, hitch.cylindrical-object hitch.ring hitch.parcel hitch.horse-to-ring hitch.horse-to-hook hitch.boat-float hitch.boat-wharf
+fast, fast.around-object fast.cylindrical-object fast.parcel fast.horse-to-ring fast.horse-to-hook fast.boat-float fast.boat-wharf
+tie, tie.cylindrical-object tie.ring
+use, use.half-rope-size
+temporary
+permanent
+parcel, parcel.rope
+
+
+
+CHAPTER 25: hooks, beckets and toggles
+1875 to 1943
+
+hook
+becket
+toggle
+tie, tie.simple tie.becket tie.thimble tie.hook tie.eye
+untie, untie.simple
+loose, loose-not
+trustworthy, trustworthy.not
+secure, secure.becket secure.thimble secure.hook secure.eye
+
+
+
+CHAPTER 26: miscellaneous holdfasts
+1944 to 1984
+
+holdfast
+grip, grip.rope
+tie, tie.easy tie.quick tie.simple tie.hook
+easy
+general-utility
+use, use.horseman use.housewife use.balloon use.parachute
+
+
+
+CHAPTER 27: occasional knots
+1985 to 2065
+
+individual-purpose, individual-purpose.various
+
+
+
+CHAPTER 28: lashings and slings
+2066 to 2199
+
+lashing
+sling
+bind, bind.multiple-turns bind.multiple-turns-bale bind.multiple-turns-parcel bind.multiple-turns-box bind.multiple-turns-chest bind.multiple-turns-container
+use, use.transportation use.storage use.lashing use.sling use.wrap 
+secure, secure.movable-object-to-fixed-object secure.with-turns
+tie, tie.ring-to-lanyard tie.frapping-turns tie.racking-turns
+resembles, resembles.lashing
+
+
+
+CHAPTER 29: the monkey's fist and other knot coverings
+2200 to 2241
+
+monkey's-fist
+stopper
+spherical, spherical.six-surface
+rectangular
+weave, weave.cover weave.over-one-and-under-one weave.doubled weave.tripled 
+resemble, resembles.turk's-head
+tie, tie.single-strand tie.double tie.triple tie.over-small-heavy-ball-of-stone tie.over-small-ball tie.over-iron tie.over-tinfoil tie.over-lead tie.over-marble tie.over-glass
+use, use.end use.end-heaving-line use.cast-coil use.cast-coil-from-ship-to-wharf use.cast-coil-from-ship-to-towboat use.cast-coil-from-ship-to-lighter.
+coil, coil.ship-to-wharf coil.ship-to-towboat coil.ship-to-lighter
+cover, cover.balls cover.knobs cover.cane-heads cover.doorstops cover.book-stops cover.paperweights
+molds
+stretches
+
+
+CHAPTER 30: flat or two-dimensional knots
+2241 to 2401
+
+frog
+flat
+two-dimensional
+mat
+use, use.mat use.chafe-gear use.take-thump-jib-sheet use.traveler-block use.hot-pad use.stove-lifter use.cushion-cover use.hard-seated-chair use.kitchen use.table use.overcoat use.pajama use.uniform use.uniform use.band-master-uniform use.ringmaster-uniform use.college-drum-majorette-uniform
+tie, tie.mat tie.gold-braid tie.colored-rope
+
+
+
+CHAPTER 31: fancy knots
+2402 to 2484
+
+decorative
+fancy
+ornamental
+use, use.necktie
+resembles, resembles.button resembles.lanyard resembles.masthead resembles.sheepshank resembles.shroud resembles.monkey's-fist resembles.turk's-head resembles.mat resembles.sinnet resembles.bowknots resembles.necktie resembles.chinese resembles.butterfly resembles.insect-wings
+
+
+
+CHAPTER 32: square knotting
+2485 to 2533
+
+square
+macramé
+fringe
+use, use.cover use.sea-chest-cover use.tablecloth use.shelf-cover use.binnacle use.sky-light use.capstan use.wheel-cover use.bell-cover use.whaler use.line-tub-cover 
+cover
+lacemaking
+  
+
+
+CHAPTER 33: tricks and puzzles
+2534 to 2620
+
+trick
+puzzle
+use, use.indoor-entertainment use.puzzle use.trick
+
+
+
+CHAPTER 34: long and short splices (multi-strand bends)
+2621 to 2724
+
+splice, splice.long splice.short
+fasten, fasten.two-ends-together
+easy
+
+
+
+CHAPTER 35: eye splice (multi-strand loops)
+2725 to 2812
+
+splice, splice.eye
+fasten, fasten.two-ends-together
+easy
+tie, tie.eye
+eye
+
+
+
+CHAPTER 36: odd splices
+2813 to 2867
+
+splice, splice.odd
+fasten, fasten.two-ends-together
+easy
+tie, tie.end
+end
+
+CHAPTER 37: chain and crown sinnets
+2868 to 2958
+
+sinnet, sinnet.chain sinnet.crown sinnet.synet sinnet.sennet sinnet.sennett sinnet.sennit sinnet.sinnit sinnet.braid
+flat, flat.maybe
+use, use.chafing-gear use.service-point use.reef-point use.gaskets use.roband use.earing use.lashing use.crochet use.knitting
+loop, loop.one-strand loop.several-strands 
+
+
+
+CHAPTER 38: plat sinnets 
+2960 to 3034
+
+sinnet, sinnet.plat sinnet.hard-platted
+torsion, torsion.not torsion.little
+flat, flat.maybe
+tubular, tubular.maybe
+use, use.belting use.surface-wear use.hangings use.upholstery use.hat-trimming use.dress-trimming
+decorative
+tie, tie.strands-together
+
+
+
+CHAPTER 39: solid sinnets 
+3035 to 3082
+
+sinnet, sinnet.solid sinnet.with-core sinnet.large
+tubular, tubular.maybe
+use, use.belting use.surface-wear use.hangings use.upholstery use.hat-trimming use.dress-trimming
+decorative
+tie, tie.strands-together
+
+
+
+CHAPTER 40: practical marlingspike seamanship
+3083 to 3462
+
+marlingspike, marlingspike.practical
+
+
+
+CHAPTER 41: decorative marlingspike seamanship (applied knots)
+3463 to 3854
+
+marlingspike, marlingspike.decorative 

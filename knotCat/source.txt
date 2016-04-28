@@ -3,7 +3,7 @@
 1010, bowline, important hold take tie capsize important hitch loop, hold.weather-leech hold.forward hold.square-sail take.sail-aback-not capsize.not tie.boat-pointer-to-ring tie.monkey-rope tie.firm tie.bridle-to-cringle
 1204, square reef, important untie reef furl use, untie.easy use.parcel use.roll use.bundle reef.sail furl.sail use.drying-clothes-not
 1171, crossing, important make use hold cross, make.parcel use.parcel hold.lashing hold.firm cross.itself
-1176, clove-hitch, important use tie, use.shrouds tie.heavy-bundle tie.around-post
+1176, clove-hitch, important use tie general-utility, use.shrouds tie.heavy-bundle tie.around-post tie.generally tie.general
 1734 1735 1736, rolling-hitch magnus-hitch, best-for-purpose attach relieve tie untie bind use, attach.rope-to-rope attach.rope-to-parallel-pole relieve.strain-hawser tie.under-load untie.under-load bind.not use.winch
 532 1053, alpine-loop lineman's-loop harness-loop, secure load untie loop, load.apply untie.easy loop.middle-rope
 343 344 1412, water waterman's english fisherman's, strong use bulky bend secure loose snag, strong.very use.often loose.around-snell
@@ -20,7 +20,7 @@
 1144 1145 2559 2868, chain-sinnet monkey-chain monkey-braid single-trumpet-cord single-bugle-cord chain-stitch crochet-stitch chain-braid chain-shortening, bight secure shortening jam stitch pull sinnet use, secure.rope-end-over-final-loop stitch.crochet-chain shortening.window-shade jam.not shortening.electric-light sinnet.universal use.uniforms use.circus
 1146, knot-shortening, shortening, shortening.rope
 172 1147 1148, bell-ringer's, old keep use, keep.end-from-lying use.sail use.rigging use.ship-chandler
-1149, yardarm, hang, hang.at-sea
+1149, yardarm, hang length, hang.at-sea length.six-feet
 1150, bowline-shortening, shortening, shortening.long-rope
 1151, seized-shortening, shortening, shortening.weathered-rope-not
 6 202 1152 1153 1154 1158 1159 1160 1161 1162 2297, sheepshank dogshank, use sling shortening tie temporary dependable stop secure toggle practical jam slip, jam.not slip.not use.large-rope sling.ladder tie.three-hitches dependable.under-load dependable.under-tension stop.when-permanent secure.add-crossing-turns-to-seizings toggle.under-heavy-load shortening.long-rope
@@ -31,4 +31,4 @@
 1163, sheepshank-with-sword navy-sheepshank man-o'-war-sheepshank, irregular unprepossessing sling shortening temporary tie practical jam slip, jam.not slip.not sling.ladder tie.four-hitches
 1166, two-hearts-that-beat-as-one, irregular unprepossessing sling shortening temporary tie practical jam slip, jam.not slip.not sling.ladder tie.five-hitches
 1167 1168 1169 2295 2296, masthead jury-mast pitcher, use best-for-purpose symmetrical decorative practical temporary bind loop carry, temporary.around-masthead bind.well loop.provides-several loop.provides carry.shot-about-ship use.unsupported-not 
-1170, french-masthead, loop symmetrical bind loop carry, loop.two bind.well loop.provides-two loop.provides  
+1170, french-masthead, loop symmetrical bind loop carry, loop.two bind.well loop.provides-two loop.provides

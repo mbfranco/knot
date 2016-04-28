@@ -39,7 +39,7 @@ public class FeatureDoesNotExistExcetion extends Exception {
 			msg = "The feature " + getM2() + " does not exist.";
 		}
 		else{
-			msg = "This shouldn't be the error messasge.....";
+			msg = "This shouldn't be the error message..... You cannot insert a Feature with a negative index (-1)";
 		}
 		
 		return msg;
