@@ -82,5 +82,26 @@ public class ClusterKnot extends FinalCluster{
 
 	}
 
+	
+	public void printDendrogram(){
+		printDendrogram("", true);
+	}
+	
+	@Override
+	public void printDendrogram(String prefix, boolean isTail) {
+		System.out.println(prefix + (isTail ? "'--- " : "|--- ") + this.getNames().get(0));
+    }
+	
+	public StringBuilder toString(StringBuilder prefix, boolean isTail, StringBuilder sb) {
+	    
+	    sb.append(prefix).append(isTail ? "'--- " : "+--- ").append(this.getNames().get(0).toString()).append("\n");
+	    
+	    return sb;
+	}
+
+	@Override
+	public String toString() {
+	    return this.toString(new StringBuilder(), true, new StringBuilder()).toString();
+	}
 
 }

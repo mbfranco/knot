@@ -357,6 +357,7 @@ public class Browser {
 			e.getMessage();
 		}
 	}
+	
 
 	public static void main(String[] args) throws Exception{
 		
@@ -516,12 +517,20 @@ public class Browser {
 //        	System.out.println("Atom Features: " + s);
 //        }	
         
-        hc.runAlgorithm(6, distanceFunction, browser);
+        hc.runAlgorithm(12, distanceFunction, browser);
         hc.printStatistics();
         hc.saveToFile(outputFileName);
         //TODO print não está a ser bem feito
         for(FinalCluster fc : browser.getFinalCluster()){
         	fc.print();
+        }
+        
+        for(FinalCluster f : browser.getFinalCluster()){
+        	f.printDendrogram("", true);
+        }
+        
+        for(FinalCluster f : browser.getFinalCluster()){
+        	System.out.println(f.toString());
         }
         
         //Search s = new Search(outputFile, browser);

@@ -78,6 +78,40 @@ public class Node extends FinalCluster {
 //		}
 	}
 	
+	
+	public void printDendrogram(){
+		printDendrogram("", true);
+	}
+	
+	@Override
+	public void printDendrogram(String prefix, boolean isTail) {
+		System.out.println(prefix + (isTail ? "'--- " : "|--- ") );
+        for (int i = 0; i < branches.size() - 1; i++) {
+        	branches.get(i).printDendrogram(prefix + (isTail ? "    " : "|   "), false);
+        }
+        if (branches.size() > 0) {
+        	branches.get(branches.size() - 1).printDendrogram(prefix + (isTail ?"    " : "|   "), true);
+        }
+    }
+	
+	
+	public StringBuilder toString(StringBuilder prefix, boolean isTail, StringBuilder sb) {
+	    if(this.branches.get(0)!=null) {
+	    	this.branches.get(0).toString(new StringBuilder().append(prefix).append(isTail ? "|   " : "    "), false, sb);
+	    }
+	    sb.append(prefix).append(isTail ? "'--- " : "+--- ").append("\n");
+	    if(this.branches.get(1)!=null) {
+	    	this.branches.get(1).toString(new StringBuilder().append(prefix).append(isTail ? "    " : "|   "), true, sb);
+	    }
+	    return sb;
+	}
+
+	@Override
+	public String toString() {
+	    return this.toString(new StringBuilder(), true, new StringBuilder()).toString();
+	}
+	
+	
 	public void add(FinalCluster branch){
 		if(this.getBranches().size() >= 2){
 			String msg = "";
