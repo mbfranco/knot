@@ -40,7 +40,7 @@ public class Browser {
 	
 	//Maximum number of supported features for one knot. Because in each knot the BitArray of features has a static length.
 	//Should the feature array length be static? Because in each knot the array of features' length is static..
-	static final int NUMFEATURES = 250;
+	static final int NUMFEATURES = 147;
 
 	//Maximum number of atom features for each knot
 	static final int NUMATOMS = 30;
@@ -526,6 +526,9 @@ public class Browser {
 				//BitArray ba = new BitArray(NUMFEATURES);
 				Map<Integer, BitArray> at = new TreeMap<Integer, BitArray>();
 				
+				
+				browser.ba = new BitArray(NUMFEATURES);
+				
 				Knot knot = new Knot(numbersList, namesList, browser.ba, at);
 				
 				browser.insertKnot(knot);
@@ -609,7 +612,7 @@ public class Browser {
 						for(int ref : k.getReference()){
 							if(ref == knotNumber){
 
-								//actualizar features
+//								actualizar features
 								if(!features.isEmpty()){
 									for(String feature : features){
 										browser.insertFeature(feature);
