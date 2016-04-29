@@ -36,15 +36,14 @@ import knotCat.patterns.cluster.Exceptions.FeatureDoesNotExistExcetion;
 
 public class Browser {
 
-
-
-
+	BitArray ba = new BitArray(NUMFEATURES);
+	
 	//Maximum number of supported features for one knot. Because in each knot the BitArray of features has a static length.
 	//Should the feature array length be static? Because in each knot the array of features' length is static..
-	static final int NUMFEATURES = 150;
+	static final int NUMFEATURES = 131;
 
 	//Maximum number of atom features for each knot
-	static final int NUMATOMS = 90;
+	static final int NUMATOMS = 30;
 
 	/**
 	 * Tree Cluster of Knots
@@ -61,7 +60,6 @@ public class Browser {
 	 * List with all the features' names. All features have different names.
 	 */
 	LinkedList<Feature> featureNames;
-
 
 	/**
 	 * Inverted index of all the atomFeature names. Each entry is
@@ -361,7 +359,10 @@ public class Browser {
 
 	public static void main(String[] args) throws Exception{
 
+		
+		BitArray ba = new BitArray(NUMFEATURES);
 
+		
 		LinkedList<Feature> featureNa = new LinkedList<Feature>();
 		LinkedList<Knot> knotLi = new LinkedList<Knot>();
 		LinkedList<String> knotNam = new LinkedList<String>();
@@ -376,6 +377,9 @@ public class Browser {
 		Path knotsPath = Paths.get(knotsFileName);
 		String outputFileName = "output.txt";
 		File outputFile = new File(outputFileName );
+		
+		String fileIterator = "C:\\Users\\miguel\\Desktop\\Test\\file";
+		Path fiPath;
 
 		//content to be written to file
 		String numberContent = "";
@@ -483,43 +487,89 @@ public class Browser {
 			browser.addNewKnot(references, names, features, atomsF, atomsA);
 		}
 
-		/////////////////////////////KNOTS FROM INDEX
+		////////////////////////////KNOTS FROM INDEX
 		
-		@SuppressWarnings("resource")
-		Scanner scanKnots = new Scanner(knotsPath);
 		
-		while(scanKnots.hasNext()){
-			
-			String line = scanKnots.nextLine();
-			
-			if(!line.matches("[0-9 ]+, [0-9a-z\\'\\- ]+")){
-				System.out.println("Linha errada: " + line);
-			}
-			
-			String[] num_name = line.split("\\,");
-			
-			String[] numbers = num_name[0].split(" ");
-			String[] names = num_name[1].split(" ");
-			
-			LinkedList<Integer> numbersList = new LinkedList<Integer>();
-			LinkedList<String> namesList = new LinkedList<String>();
-			
-			for(int i = 0; i < numbers.length; i++){
-				numbersList.add(Integer.parseInt(numbers[i]));
-			}
-			
-			for(int j = 0; j < names.length; j++){
-				namesList.add(names[j]);
-			}
-			
-			BitArray ba = new BitArray(NUMFEATURES);
-			Map<Integer, BitArray> at = new TreeMap<Integer, BitArray>();
-			
-			Knot knot = new Knot(numbersList, namesList, ba, at);
-			
-			browser.insertKnot(knot);
-
-		}
+//		//fileIterator = "file:///Users/miguel/Dektop/Test/";
+//		int nu = 1;
+//		
+//		for(;nu < 75; nu++){
+//			String fi = fileIterator + nu + ".txt";
+//			fiPath = Paths.get(fi);
+//			
+//			@SuppressWarnings("resource")
+//			Scanner scanKnots = new Scanner(fiPath);
+//			
+//			while(scanKnots.hasNext()){
+//				
+//				String line = scanKnots.nextLine();
+//				
+//				if(!line.matches("[0-9 ]+, [0-9a-z\\'\\- ]+")){
+//					System.out.println("Linha errada: " + line);
+//				}
+//				
+//				String[] num_name = line.split("\\,");
+//				
+//				String[] numbers = num_name[0].split(" ");
+//				String[] names = num_name[1].split(" ");
+//				
+//				LinkedList<Integer> numbersList = new LinkedList<Integer>();
+//				LinkedList<String> namesList = new LinkedList<String>();
+//				
+//				for(int i = 0; i < numbers.length; i++){
+//					numbersList.add(Integer.parseInt(numbers[i]));
+//				}
+//				
+//				for(int j = 0; j < names.length; j++){
+//					namesList.add(names[j]);
+//				}
+//				
+//				//BitArray ba = new BitArray(NUMFEATURES);
+//				Map<Integer, BitArray> at = new TreeMap<Integer, BitArray>();
+//				
+//				Knot knot = new Knot(numbersList, namesList, browser.ba, at);
+//				
+//				browser.insertKnot(knot);
+//				
+//			}
+//			
+//		}
+		
+//		@SuppressWarnings("resource")
+//		Scanner scanKnots = new Scanner(knotsPath);
+//		
+//		while(scanKnots.hasNext()){
+//			
+//			String line = scanKnots.nextLine();
+//			
+//			if(!line.matches("[0-9 ]+, [0-9a-z\\'\\- ]+")){
+//				System.out.println("Linha errada: " + line);
+//			}
+//			
+//			String[] num_name = line.split("\\,");
+//			
+//			String[] numbers = num_name[0].split(" ");
+//			String[] names = num_name[1].split(" ");
+//			
+//			LinkedList<Integer> numbersList = new LinkedList<Integer>();
+//			LinkedList<String> namesList = new LinkedList<String>();
+//			
+//			for(int i = 0; i < numbers.length; i++){
+//				numbersList.add(Integer.parseInt(numbers[i]));
+//			}
+//			
+//			for(int j = 0; j < names.length; j++){
+//				namesList.add(names[j]);
+//			}
+//			
+//		//	BitArray ba = new BitArray(NUMFEATURES);
+//			Map<Integer, BitArray> at = new TreeMap<Integer, BitArray>();
+//			
+//			Knot knot = new Knot(numbersList, namesList, browser.ba, at);
+//			
+//			browser.insertKnot(knot);
+//			
+//		}
 		
 		///////////////CHAPTER FEATURES PARSER
 
@@ -677,7 +727,7 @@ public class Browser {
 		//        	System.out.println("Atom Features: " + s);
 		//        }	
 
-		hc.runAlgorithm(12, distanceFunction, browser);
+		hc.runAlgorithm(10, distanceFunction, browser);
 		hc.printStatistics();
 		hc.saveToFile(outputFileName);
 		//TODO print não está a ser bem feito
@@ -700,7 +750,7 @@ public class Browser {
 		//ArrayList<ClusterSearchResult> result = s.searchForKnot("?best-for-purpose trim offer-resistance tie use untie slip slip.not ?secure ?low.gravity ?secure.not ?hang.at-sea ?secure.add-crossing-turns-to-seizings", 1);
 		//Set<ClusterSearchResult> result = s.searchForKnot("hang.at-sea", 1);
 		//        List<ClusterSearchResult> result = s.searchForKnot("best-for-purpose.leader best-for-purpose.small-line best-for-purpose.stiff-line best-for-purpose.slip-line trim.end trim.short offer-resistance.wet-not tie.additional-turns-unnecessary tie.opposite-twists tie.end-opposite-side use.piano-wire-not untie.not slip.not secure.very secure.most", 0.3, "euclidean");
-		List<ClusterSearchResult> result = s.searchForKnot("tie.bight use.hand-hold use.shoulder-hold haul.gun-to-position", 0.5, "hamming");
+		List<ClusterSearchResult> result = s.searchForKnot("tie.bight use.hand-hold use.shoulder-hold haul.gun-to-position", -1, "hamming");
 
 		if(result.isEmpty()){System.out.println("Está vazio...");}
 		else{

@@ -1101,8 +1101,7 @@
 205, wet-wheather-hitch take-up-hitch
 845, whale
 1208, what
-1408 1409, whatnot
-1406 1407, whatnot
+1406 1407 1408 1409, whatnot
 2248, wide-basket-weave
 1284 1285, wide-standing-turk's-head
 150 1320, wide-turk's-head
