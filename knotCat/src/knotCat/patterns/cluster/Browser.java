@@ -527,8 +527,6 @@ public class Browser {
 				Map<Integer, BitArray> at = new TreeMap<Integer, BitArray>();
 				
 				
-				browser.ba = new BitArray(NUMFEATURES);
-				
 				Knot knot = new Knot(numbersList, namesList, browser.ba, at);
 				
 				browser.insertKnot(knot);
@@ -617,7 +615,9 @@ public class Browser {
 									for(String feature : features){
 										browser.insertFeature(feature);
 										int indexFeature = browser.getFeatureIndex(feature);
-										k.getFeatures().set(indexFeature);
+										BitArray bArray = (BitArray)k.getFeatures().clone();
+										bArray.set(indexFeature);
+										k.setFeatures(bArray);
 									}
 								}
 

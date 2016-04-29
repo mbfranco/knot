@@ -206,5 +206,10 @@ public class Knot {
 
 	}
 
+	public void setFeatures(BitArray bitArray) {
+		this.features=bitArray;
+		
+	}
+
 }
 
