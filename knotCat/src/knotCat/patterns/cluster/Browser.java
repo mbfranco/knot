@@ -40,7 +40,7 @@ public class Browser {
 	
 	//Maximum number of supported features for one knot. Because in each knot the BitArray of features has a static length.
 	//Should the feature array length be static? Because in each knot the array of features' length is static..
-	static final int NUMFEATURES = 131;
+	static final int NUMFEATURES = 250;
 
 	//Maximum number of atom features for each knot
 	static final int NUMATOMS = 30;
@@ -490,50 +490,49 @@ public class Browser {
 		////////////////////////////KNOTS FROM INDEX
 		
 		
-//		//fileIterator = "file:///Users/miguel/Dektop/Test/";
-//		int nu = 1;
-//		
-//		for(;nu < 75; nu++){
-//			String fi = fileIterator + nu + ".txt";
-//			fiPath = Paths.get(fi);
-//			
-//			@SuppressWarnings("resource")
-//			Scanner scanKnots = new Scanner(fiPath);
-//			
-//			while(scanKnots.hasNext()){
-//				
-//				String line = scanKnots.nextLine();
-//				
-//				if(!line.matches("[0-9 ]+, [0-9a-z\\'\\- ]+")){
-//					System.out.println("Linha errada: " + line);
-//				}
-//				
-//				String[] num_name = line.split("\\,");
-//				
-//				String[] numbers = num_name[0].split(" ");
-//				String[] names = num_name[1].split(" ");
-//				
-//				LinkedList<Integer> numbersList = new LinkedList<Integer>();
-//				LinkedList<String> namesList = new LinkedList<String>();
-//				
-//				for(int i = 0; i < numbers.length; i++){
-//					numbersList.add(Integer.parseInt(numbers[i]));
-//				}
-//				
-//				for(int j = 0; j < names.length; j++){
-//					namesList.add(names[j]);
-//				}
-//				
-//				//BitArray ba = new BitArray(NUMFEATURES);
-//				Map<Integer, BitArray> at = new TreeMap<Integer, BitArray>();
-//				
-//				Knot knot = new Knot(numbersList, namesList, browser.ba, at);
-//				
-//				browser.insertKnot(knot);
-//				
-//			}
-//			
-//		}
+		int nu = 1;
+		
+		for(;nu < 75; nu++){
+			String fi = fileIterator + nu + ".txt";
+			fiPath = Paths.get(fi);
+			
+			@SuppressWarnings("resource")
+			Scanner scanKnots = new Scanner(fiPath);
+			
+			while(scanKnots.hasNext()){
+				
+				String line = scanKnots.nextLine();
+				
+				if(!line.matches("[0-9 ]+, [0-9a-z\\'\\- ]+")){
+					System.out.println("Linha errada: " + line);
+				}
+				
+				String[] num_name = line.split("\\, ");
+				
+				String[] numbers = num_name[0].split(" ");
+				String[] names = num_name[1].split(" ");
+				
+				LinkedList<Integer> numbersList = new LinkedList<Integer>();
+				LinkedList<String> namesList = new LinkedList<String>();
+				
+				for(int i = 0; i < numbers.length; i++){
+					numbersList.add(Integer.parseInt(numbers[i]));
+				}
+				
+				for(int j = 0; j < names.length; j++){
+					namesList.add(names[j]);
+				}
+				
+				//BitArray ba = new BitArray(NUMFEATURES);
+				Map<Integer, BitArray> at = new TreeMap<Integer, BitArray>();
+				
+				Knot knot = new Knot(numbersList, namesList, browser.ba, at);
+				
+				browser.insertKnot(knot);
+				
+			}
+			
+		}
 		
 //		@SuppressWarnings("resource")
 //		Scanner scanKnots = new Scanner(knotsPath);

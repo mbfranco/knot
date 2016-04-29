@@ -451,8 +451,9 @@ public class Search {
 	 */
 	private ClusterSearchResult checkClusterKnot(Knot currentKnot, FinalCluster fc, double threshold,
 			String distanceFunction) {
-
 		
+		//Choose if you want to use SIMILARITY FUNCTION or AND FUNCTION
+		boolean chooseSimilarityFuntion = false;
 		
 		ClusterKnot knotNames = new ClusterKnot();
 		double probability = -1;
@@ -460,7 +461,7 @@ public class Search {
 		ClusterSearchResult knotToAdd = new ClusterSearchResult(knotNames, probability, cluster);
 
 		//the value should be [-1, 1]
-		double similarity = calculateSimilarity(currentKnot.getFeatures(), fc.getFeatures());
+		double similarity = calculateSimilarity(currentKnot.getFeatures(), fc.getFeatures(), chooseSimilarityFuntion);
 
 		System.out.println("Similarity: " + similarity);
 		
@@ -494,8 +495,14 @@ public class Search {
 			return null;
 		}
 
+		double prob;
 		//normalize similarity to be between 0 and 1
-		double prob = (similarity + 1.0) / 2.0;
+		if(chooseSimilarityFuntion){
+			prob = (similarity + 1.0) / 2.0;
+		}
+		else{
+			prob = similarity;
+		}
 		
 		System.out.println("Similarity: " + similarity);
 		System.out.println("Probability: " + prob);
@@ -515,25 +522,40 @@ public class Search {
 	/** Measures the similarity between two BitArrays [-1,1]
 	 * @param currentKnot Search knot
 	 * @param clusterKnot Category
+	 * @param chooseSimilarityFuntion2 
 	 * @return
 	 */
-	private double calculateSimilarity(BitArray currentKnot, BitArray clusterKnot) {
-		//similarity value should be [-1, 1]
-		double similarity = -2;
-
-		int clusterKnotModule = clusterKnot.count();
-		BitArray sharedFeatures = clusterKnot.and(currentKnot);
-		int sharedFeaturesModule = sharedFeatures.count();
+	private double calculateSimilarity(BitArray currentKnot, BitArray clusterKnot, boolean chooseSimilarityFuntion) {
 		
-		System.out.println("clusterKnotModule: " + clusterKnotModule);
-		System.out.println("sharedFeatureModule: " + sharedFeaturesModule);
+		if(chooseSimilarityFuntion){
+			//similarity value should be [-1, 1]
+			double similarity = -2;
+	
+			int clusterKnotModule = clusterKnot.count();
+			BitArray sharedFeatures = clusterKnot.and(currentKnot);
+			int sharedFeaturesModule = sharedFeatures.count();
+			
+			System.out.println("clusterKnotModule: " + clusterKnotModule);
+			System.out.println("sharedFeatureModule: " + sharedFeaturesModule);
+	
+			similarity = (2.0 / (double)clusterKnotModule) * (double)sharedFeaturesModule - 1.0;
+	
+			System.out.println("smilarity: " + similarity);
 
-		similarity = (2.0 / (double)clusterKnotModule) * (double)sharedFeaturesModule - 1.0;
-
-		System.out.println("smilarity: " + similarity);
-
-		
-		return similarity;
+			return similarity;
+		}
+		else{
+			//AND similarity
+			int currentKnotKnotModule = currentKnot.count();
+			BitArray sharedFeatures = clusterKnot.and(currentKnot);
+			int sharedFeaturesModule = sharedFeatures.count();
+			BitArray bothFeatures = clusterKnot.or(currentKnot);
+			int bothFeaturesModule = bothFeatures.count();
+			
+			double similarity = (double)sharedFeaturesModule/(double)bothFeaturesModule;
+			
+			return similarity;
+		}
 	}
 
 }
