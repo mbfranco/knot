@@ -58,8 +58,8 @@ public class Search {
 		 * Pre-set the Data. Prepare a set of arrays to be searched in the cluster
 		 *
 		 */
-		
-		
+
+
 		if(uncertaintyThreshold > 1 || uncertaintyThreshold < -1){
 			try {
 				throw new ProbabilityOutOfBoundsException(uncertaintyThreshold);
@@ -90,13 +90,10 @@ public class Search {
 		//create the knots to search
 		for(String word : wordsToSearch){
 
-			System.out.println("Looking for Word: " + word);
-
 			//(0) Check if the word stands for uncertainty
 			int u = word.indexOf('?');
 			if(u > -1){
 				word = word.replace("?", "");
-				System.out.println("Looking for Uncertainty: " + word);
 
 				uncertaintyFlag = true;
 			}
@@ -105,7 +102,6 @@ public class Search {
 			int index = getBrowser().getFeatureIndex(word);
 			//If the feature doesn't exist, getFeatureIndex(name) returns -1
 			if(index > -1){
-				System.out.println("\tLooking for Feature: " + word);
 				if(uncertaintyFlag){
 					List<Knot> tempKnotList = new ArrayList<>();
 					for(Knot k : knotsToSearch){
@@ -131,7 +127,6 @@ public class Search {
 			//TODO make the string to match the form (word1 word2 word3 ... wordN)
 			else if(word.matches("[a-zA-Z\\'\\-]+\\.[a-zA-Z\\'\\-]+")){
 
-				System.out.println("\tLooking for Atom: " + word);
 				String[] words1and2 = word.split("\\.");
 
 				index = getBrowser().getFeatureIndex(words1and2[0]);
@@ -151,8 +146,6 @@ public class Search {
 								Knot k1 = new Knot(null, null, k.getFeatures(), k.getAtoms());
 								tempKnotList.add(k1);
 
-								System.out.println("(W1A)Knot prior to set(index): index=" + index + "\n\tF:" + k.getFeatures() + "\n\tA:" + k.getAtoms());
-
 								//update feature BitArray
 								k.getFeatures().set(index);
 
@@ -167,8 +160,6 @@ public class Search {
 									atomBA.set(atomId);
 									k.getAtoms().put(index, atomBA);
 								}
-								
-								System.out.println("(W1A)Knot after to set(index): index=" + index + "\n\tF:" + k.getFeatures() + "\n\tA:" + k.getAtoms());
 							}
 							//Double the number of knots because of the uncertainty
 							for(Knot k : tempKnotList){
@@ -179,8 +170,6 @@ public class Search {
 						else{
 							for(Knot k : knotsToSearch){
 
-								System.out.println("(W1B)Knot prior to set(index): index=" + index + "\n\tF:" + k.getFeatures() + "\n\tA:" + k.getAtoms());
-
 								//update feature BitArray
 								k.getFeatures().set(index);
 
@@ -195,18 +184,15 @@ public class Search {
 									atomBA.set(atomId);
 									k.getAtoms().put(index, atomBA);
 								}
-								
-								System.out.println("(W1B)Knot after to set(index): index=" + index + "\n\tF:" + k.getFeatures() + "\n\tA:" + k.getAtoms());
 							}
-							
 						}
 					}
 				}
 
 				//check if word2 is a feature
-					//this "else" impedes the knotsToSearch to have
-					//both feature1 and feature2 (if both word1 and word2
-					//are features) in the same BitArray
+				//this "else" impedes the knotsToSearch to have
+				//both feature1 and feature2 (if both word1 and word2
+				//are features) in the same BitArray
 				else if(index2 > -1){
 					//word1 is an atomFeature of word2 (word2.word1)
 					if(getBrowser().getAtomFeatureNames().containsEntry(words1and2[0], index2)){
@@ -216,8 +202,6 @@ public class Search {
 								Knot k1 = k;
 								knotsToSearch.add(k1);
 
-								System.out.println("(W2A)Knot prior to set(index): index=" + index2 + "\n\tF:" + k.getFeatures() + "\n\tA:" + k.getAtoms());
-
 								//update feature BitArray
 								k.getFeatures().set(index2);
 
@@ -232,16 +216,12 @@ public class Search {
 									atomBA.set(atomId);
 									k.getAtoms().put(index2, atomBA);
 								}
-								
-								System.out.println("(W2A)Knot after to set(index): index=" + index2 + "\n\tF:" + k.getFeatures() + "\n\tA:" + k.getAtoms());
 							}
 						}
 						//There is no uncertainty
 						else{
 							for(Knot k : knotsToSearch){
 
-								System.out.println("(W2B)Knot prior to set(index): index=" + index2 + "\n\tF:" + k.getFeatures() + "\n\tA:" + k.getAtoms());
-
 								//update feature BitArray
 								k.getFeatures().set(index2);
 
@@ -256,9 +236,6 @@ public class Search {
 									atomBA.set(atomId);
 									k.getAtoms().put(index2, atomBA);
 								}
-								
-								System.out.println("(W2B)Knot after to set(index): index=" + index2 + "\n\tF:" + k.getFeatures() + "\n\tA:" + k.getAtoms());
-
 							}
 						}
 					}
@@ -279,7 +256,9 @@ public class Search {
 
 		//Search in the cluster for knots the are similar and are above the minimum similarity threshold
 		List<ClusterSearchResult> knotResult = searchCluster(knotsToSearch, uncertaintyThreshold, distanceFunction);
-		
+
+		knotResult = bayesRule(knotResult);
+
 		return knotResult;
 	}
 
@@ -315,19 +294,17 @@ public class Search {
 
 			//Search the TreeCluster
 			for(FinalCluster fc : browser.getFinalCluster()){
-				
+
 				//If it is a leaf of the TreeCluster
 				if(fc instanceof ClusterKnot){
 					knotToAdd = checkClusterKnot(currentKnot, fc, threshold, distanceFunction);
 
-					
-					
+
+
 					if(knotToAdd == null){
 						break;
 					}
 
-					System.out.println("Knot: " + knotToAdd.getKnot().getNames() + "  " + knotToAdd.getProbability());
-					
 					knotsToReturn.add(knotToAdd);
 
 					//sort the knots to return. The 1st element has the best probability of being the right knot
@@ -342,26 +319,20 @@ public class Search {
 					});
 
 				}
-				
+
 				//If it is a Node in the TreeCluster
 				if(fc instanceof Node){
 
 					List<ClusterSearchResult> k2Add = checkNode(currentKnot, fc, threshold, distanceFunction);
 
-//					for(ClusterSearchResult ksr : k2Add){
-//						knotsToReturn.add(ksr);
-//					}
-					
+					//					for(ClusterSearchResult ksr : k2Add){
+					//						knotsToReturn.add(ksr);
+					//					}
+
 					if(!k2Add.isEmpty()){
 						knotsToReturn.addAll(k2Add);
 					}
 
-					if(!k2Add.isEmpty()){
-						for(ClusterSearchResult s : k2Add){
-							System.out.println("Knot: " + s.getKnot().getNames() + "  " + s.getProbability());
-						}
-					}
-					
 					Collections.sort(knotsToReturn, new Comparator<ClusterSearchResult>() {
 
 						@Override
@@ -395,10 +366,6 @@ public class Search {
 			FinalCluster cluster = null;
 			ClusterSearchResult knotToAdd = new ClusterSearchResult(cKnot, probability, cluster);
 
-			
-			System.out.println("CHECK NODE");
-			
-			
 			if(fic instanceof ClusterKnot){
 
 				knotToAdd = checkClusterKnot(currentKnot, fic, threshold, distanceFunction);
@@ -407,9 +374,6 @@ public class Search {
 					break;
 				}
 
-				
-				System.out.println("Leaf In the Node: " + knotToAdd.getKnot().getNames() + "   " + knotToAdd.getProbability());
-				
 				knotsToReturn.add(knotToAdd);
 
 			}
@@ -419,7 +383,6 @@ public class Search {
 				for(FinalCluster finClu : ((Node) fic).getBranches()){
 
 					if(finClu instanceof Node){
-						System.out.println("RECHECK NODE");
 						List<ClusterSearchResult> knotsToReturn1 = checkNode(currentKnot, finClu, threshold, distanceFunction);
 						if(knotsToReturn1 != null){
 							knotsToReturn.addAll(knotsToReturn1);
@@ -427,8 +390,7 @@ public class Search {
 					}
 
 					else if(finClu instanceof ClusterKnot){
-						
-						System.out.println("RECHECK LEAF");
+
 						knotToAdd = checkClusterKnot(currentKnot, finClu, threshold, distanceFunction);
 						if(knotToAdd != null){
 							knotsToReturn.add(knotToAdd);
@@ -451,10 +413,10 @@ public class Search {
 	 */
 	private ClusterSearchResult checkClusterKnot(Knot currentKnot, FinalCluster fc, double threshold,
 			String distanceFunction) {
-		
+
 		//Choose if you want to use SIMILARITY FUNCTION or AND FUNCTION
 		boolean chooseSimilarityFuntion = false;
-		
+
 		ClusterKnot knotNames = new ClusterKnot();
 		double probability = -1;
 		FinalCluster cluster = null;
@@ -463,15 +425,14 @@ public class Search {
 		//the value should be [-1, 1]
 		double similarity = calculateSimilarity(currentKnot.getFeatures(), fc.getFeatures(), chooseSimilarityFuntion);
 
-		System.out.println("Similarity: " + similarity);
-		
+
 		//		int nFeaturesCurerntKnot = currentKnot.getFeatures().count();
 		//		BitArray presentFeatures = currentKnot.getFeatures().and(fc.getFeatures());
 		//		int nPresentFeatures = presentFeatures.count();
 
 		knotNames = ((ClusterKnot) fc);
-		
-		
+
+
 		//the probability may simply be the number of presentFeatures / number of features in the knot to search
 		//		probability = (double)nPresentFeatures/(double)nFeaturesCurerntKnot;
 
@@ -490,7 +451,7 @@ public class Search {
 			e.getMessage();
 			return null;
 		}
-		
+
 		if(similarity < threshold){
 			return null;
 		}
@@ -503,18 +464,12 @@ public class Search {
 		else{
 			prob = similarity;
 		}
-		
-		System.out.println("Similarity: " + similarity);
-		System.out.println("Probability: " + prob);
-		
+
 		knotToAdd.setKnot(knotNames);
 		knotToAdd.setProbability(prob);
 		knotToAdd.setTreeClusterResult(fc);
 
-		System.out.println("HERE!!");
-		System.out.println("KnotToAdd: " + knotToAdd.getKnot().getNames());
-		System.out.println("KnotToAdd: " + knotToAdd.getProbability());
-		
+
 		return knotToAdd;
 
 	}
@@ -526,21 +481,16 @@ public class Search {
 	 * @return
 	 */
 	private double calculateSimilarity(BitArray currentKnot, BitArray clusterKnot, boolean chooseSimilarityFuntion) {
-		
+
 		if(chooseSimilarityFuntion){
 			//similarity value should be [-1, 1]
 			double similarity = -2;
-	
+
 			int clusterKnotModule = clusterKnot.count();
 			BitArray sharedFeatures = clusterKnot.and(currentKnot);
 			int sharedFeaturesModule = sharedFeatures.count();
-			
-			System.out.println("clusterKnotModule: " + clusterKnotModule);
-			System.out.println("sharedFeatureModule: " + sharedFeaturesModule);
-	
+
 			similarity = (2.0 / (double)clusterKnotModule) * (double)sharedFeaturesModule - 1.0;
-	
-			System.out.println("smilarity: " + similarity);
 
 			return similarity;
 		}
@@ -551,11 +501,29 @@ public class Search {
 			int sharedFeaturesModule = sharedFeatures.count();
 			BitArray bothFeatures = clusterKnot.or(currentKnot);
 			int bothFeaturesModule = bothFeatures.count();
-			
+
 			double similarity = (double)sharedFeaturesModule/(double)bothFeaturesModule;
-			
+
 			return similarity;
 		}
 	}
 
+
+
+	private List<ClusterSearchResult> bayesRule(List<ClusterSearchResult> knotResult) {
+
+		//if there is only one element on the list that has a certainty > 1, than calculate Bayes Rule
+
+
+		if(!knotResult.isEmpty()){
+			if(knotResult.get(1).getProbability() == 0.0){
+
+				ClusterSearchResult element = knotResult.get(0);
+				element.setProbability(1);
+				knotResult.clear();
+				knotResult.add(0, element);
+			}
+		}
+		return knotResult;
+	}
 }

@@ -1,1115 +1,1237 @@
-1328 1330 1332 1333 1334, 2lx3b 4lx5b 6lx7b
-1323, 3lx2b 3lx4b 4lx5b 2lx3b
-1325 1329 1331, 3lx2b 5lx4b 7lx6b
-1479, 4lx3b-turk's-head whistle knife-lanyard
-905, acorn
-634, adaptation-of-the-butterfly
-1472, adjustable-bend rolling-hitch
-1030, adjustable-bowstring-loop
-1800, adjustable-hitch magnus rolling-hitch midshipman's
-1801, adjustable-hitch
-1994, adjustable-jam-hitch midshipman's-hitch half-hitch
-2073, adjustable-jam-hitch
-1021, adjustable-loop
-1181, african-rafter-lashing
-1843, anchor-bend fisherman's-bend
-1849, anchor-hitch portuguese-bowline
-286, angler's-loop leader-loop
-1017 1035 3091, angler's-loop
-2067, angler's-loop bowline
-1615, anti-galligan-hitch belaying-pin-hitch
-1744, arboreal-hitch-or-tree-surgeon's
-987, arched-disk
-153, artillery-loop man-harness harness-loop
-3520, automobile-tire-scotchmen
-83, awning
-1798 1854, awning midshipman's-hitch stake-hitch
-1995, awning post-hitch stake-hitch
-162, axle-hitch
-2758, backhanded-eye-splice
-1690 1725 1851 1852, backhanded-hitch
-1797, backhanded-hitch sliped-half-hitch two-half-hitches
-1271 1273, back-handed-hitch clove-hitch
-1726, backhanded-hitch-and-bowline towrope-hitch bowline
-1853, backhanded-hitch-and-bowline
-1795, backhanded-mooring-hitch
-892, back-spliced-wall-and-crown
-1244, bag
-736, bag-lanyard
-2282, baker's cowboy's-pretzel
-84, balance-pole-hicth
-218, balancing-pole-hitch
-2163, bale barrel-sing
-2199, bale-hitch
-2164, bale-sling cat's-paw hook-hitches
-5, bale-sling-hitch ring-hitch lark's-head
-59, bale-sling-hitch ring-hitch tag
-165 2020 2111 3241 3337, bale-sling-hitch
-1759, bale-sling-hitch strap
-3267, bale-sling-hitch reef
-295 345, barrel
-1413, barrel blood
-629, based-on-chinese-butterfly
-743 746, based-on-footrope
-669, basket
-960, basket-shaped
-824 2251 2253, basket-weave
-490, bastard-weaver's left-hand-sheet-bend
-556, bead button
-567, bead
-73 250 297 334 1903 1907 1984 2008 2152 3176, becket-hitch
-1475, becket-hitch drawing-bend bowline
-1928 3146, becket-hitches
-679, beckets
-172 1037 1147, bell-ringer
-3093, bell-ringer's
-2126, bell-ringer's-not
-13, bend
-720, bended-buoy-rope
-238, bight lineman's
-1921, bight-and-eye
-1816, bight-hitch cow-hitch single-hitches bight-hitches
-1817, bight-hitch cow-hitch
-2018, bight-hitch
-1055, bight-loop
-1879, bill-hitch becket-hitch marlingspike-hitch
-245 1235, binder
-1254, binding
-1601, blackwall-hitch single-hitch
-1875 2045 2166 3237, blackwall-hitch
-177, bookbinder
-834 835, bosun
-1212, bow double-bow
-1214, bow
-3503, bow-fender
-71 155 287 332 1012 1015 1074 1075 1080 1081 1082 1499 2066, bowline
-266, bowline forked-stick-hitch
-1010, bowline bowling bolin
-1509, bowline eye-splices
-1788, bowline marlingspike-hitch bowline
-1846, bowline round-turn-and-bowline anchor-bend
-1917, bowline inside-clinches
-1476, bowline-and-two-half-hitches drawing-bends
-1507, bowline-bridles
-1716, bowline-hitch half-hitch
-1926, bowlines
-471 1916, bowline-s
-1150, bowline-shortening
-1882, bowline-with-a-bight
-1874, bowline-with-a-bight slip-loop
-151, bowstring loop
-1024, bowstring honda
-152, bowstring-doubled
-2314, bumblebee
-55 1229 1847 1918, buntline-hitch
-1711, buntline-hitch two-half-hitches half-hitch
-719 3323, buoy-rope
-3324, buoy-rope running-eye-splice splice-hitch
-164 273 1682 2056, buoy-rope-hitch
-183, butcher
-2169, butt hogshead-sling noose two-half-hitches
-20 23, button knob
-236, button flat two-dimensional
-881, button
-608, button-based-on-a-triangular-turk's-head
-662 663 664 665 666 667 668, button-ends
-555, button-molds
-658, button-on-a-single-lanyard
-631, button-s
-2147, buuy-rope-hitch
-2763, cable-eye
-718, cable-stopper
-215 1741, camel-hitch
-1831, capstan
-758, captain-charles-w-smith's-sinnet
-1451, carrich-bend
-1546, carrick
-1428, carrick-bend full-carrick-bend josephine carrick-bend
-1429 1545 1551 2246 2247 2388 2397, carrick-bend
-1439, carrick-bend full-carrick-bend sailor's anchor-bend
-2370, carrick-bend priest-cord
-2400, carrick-bends
-1033, carrick-loop
-642, casket-shaped-kont
-2167, cask-seing splice
-1891, cat's-paw hook-hitch bale-sling-hitch racking-hitch
-2157, cat's-paw
-698, cat-stopper
-613 614, cattail
-901, cauliflower
-214, center-pole-hitch
-565, chain-of-figure-eight-s
-1374, chain-sinnet-turk's-head constrictor monkey-chain single-trunpet-cord
-1827, chain-slip chain-sinnet
-1559, check delay shroud
-1547, chinese harness-bend englishman's carrick reef
-1555, chinese carrick double-weaver's
-2367, chinese flat-knife-lanyard priest-cord
-660 661, chinese-adjust-pieces
-811 813, chinese-butterfly
-599 600 601 604 2214, chinese-button
-808 1102, chinese-crown
-1066, chinese-crown-loop
-2267, chinese-frog
-1032, chinese-loop
-234, cinch cincha latigo bellyband girth
-1528, cinch cincha
-528, cinquefoil
-593, circe-in-two-planes
-942, circular
-628, circular-flat-topped
-32, closed-loop
-1869, close-hitch
-1813, clothesline-hitch
-11, clove-hitch waterman's simple-fastening-in-a-rope lark's-head crossed builders'
-53 69 198 267 1036 1176 1177 1178 1245 1268 1276 1672 1693 1739 1774 1777 1779 1814 2102 2128 2159 2180 3320, clove-hitch
-70, clove-hitch post-hitch binding
-149, clove-hitch half-hitches
-201 2148, clove-hitch marlingspike-hitch
-1670 1671, clove-hitch post-hitch
-1773, clove-hitch builder's single-hitches
-1887, clove-hitch hook-hitch
-2011, clove-hitch ground-line-hitch
-2079, clove-hitch crossing-hitch
-2150, clove-hitch single-hitch
-3177, clove-hitch mouse
-3322, clove-hitch buoy-rope
-3038 3039, clove-hitches
-3123, clove-hitching becket-hitch
-1295 1299 1300 3015, coachwhipping
-1113, commercial-cord-curtain-holdback
-176 279 355 1059 1094 1188 1189 1249 1250 1251 1252 2058 2097 3853, constrictor
-2052, constrictor bowline
-3441, contrictor
-191, corned-beef-and-salt-pork
-56 1184 1889 3317, cow-hitch
-244, cow-hitch deadeye-hitch lanyard-hitch
-1673, cow-hitch lanyard-hitch bale-sling-hitch ring-hitch running-eye cow-hitch eye-splice
-1802, cow-hitch strap bale-sling-hitch lanyard-hitch deadeye-hitch stake-hitch
-2168, cow-hitch bowline bale-sling-hitch
-3315, cow-hitch running-eye
-1987, crabber's-wyw crossed-running bowline
-1294, cross-grafting cross-pointing
-2059, cross-grafting
-206 1171 1172 1173 1174 1175 1199 2077 2094 2130 3854, crossing
-1818, crossing-hitch
-2089 2127 2179, crossing-s
-1764, cross-lashed-sling
-721 722, crown-a-cable
-708 784 785, crown-and-diamond
-704, crown-and-double-matthew-walker
-703, crown-and-lanyard
-3495, crown-and-wall-mat
-3496, crowned-mat
-670, crowning
-3506 3507, crown-sinnet
-3066, crown-sinnets
-903, crown-upon-crown
-1510, crow's-feet crow's-foot
-207 1895, crow's-foot
-734, cube-shaped-diamond
-1112, curtain-holdback-with-a-turk-head
-3194, cut-splice
-1293, cutting-out-strands
-754, cycle-of-emerald-s
-618, cylindrical-toggle-based-on-a-turk's-head
-897, daisy
-673, deck-stopper
-554, decorative-terminal stopper
-1018, department-store-loop
-693 737 748 755 875 978 1064 1298 1505, diamond
-1288, diamond standing-turk's-head
-716, diamond-and-block-strap
-851, diamond-and-crown
-715, diamond-crowned
-757, diamond-sinnet
-738 739, diamond-variation-1
-740, diamond-variation-2
-741, diamond-variation-3
-742, diamond-variation-4
-643, disk-shaped
-3502 3504, dolphin
-3492, door-mats
-1070, double-angler's-loop
-491, double-bastard-weaver's
-312 1906 1909, double-becket-hitch
-1902, double-becket-hitch single-becket-hitch
-1876, double-blackwall-hitch awning
-1013, double-bowline round-turn-bowline
-1083, double-bowline
-1068, double-bowstring
-853, double-crown
-709, double-crown-and-diamond
-707, double-crown-and-matthew-walker
-706, double-crown-and-single-wall
-694 695, double-diamond-with-lead
-2156 3330, double-eye
-523, double-figure-eight
-1416, double-figure-eight-bend
-1377, double-figure-eight-chain-turk's-head
-1085, double-figure-eight-loop
-697 869, double-footrope
-1099, double-forked splayed-loop
-1090 1091, double-forked-loop
-649, double-four-strand-mathew-walker
-3096, double-half
-1420, double-harness-bend crossing-s single-harness-bend
-1421 1548 1553, double-harness-bend
-329 1052, double-harness-loop
-652 1078 1093 1104 1107 1135, double-loop
-2304, double-loops
-3116, double-marline-hitch
-1133 1136 1138 1139, double-noose
-309 339 1061, double-overhand
-516, double-overhand blood
-552 553, double-oysterman's
-486, double-polish
-3473, double-riff-points
-1126, double-ring tag double-running
-60, double-ring-hitch
-1767, double-ring-stopper
-1434 1435 1523, double-sheet-bend
-1461, double-sheet-bends triple-sheet-bends
-1530, double-shiver-hitch
-1216, double-shoestring
-732, double-single-matthew-walker
-1219, double-slip
-1100, double-splayed-loop
-1695, double-strap-hitch double-loop
-3481, double-tail-block
-579, double-three-ply
-1375, double-trumpet-cord-turk's-head
-1427, double-twofold-overhand-bend two-strand-four-tuck-matthew-walker multi-strand-lanyard-s double-overhand matthew-walker overhands
-581 779 780 857 862 885, double-wall
-675, double-wall-1
-676, double-wall-2
-677, double-wall-3
-488, double-weaver's double-sheet-bend
-489, double-weaver's
-1438, double-weaver's tucked-sheet-bend
-543, doughnut
-235, drayman's
-336, dropper-fly-hitch snell-hitch
-337 338, dropper-fly-hitch
-1474, drowing-bend harness-bend parcel-bend weaver's crossing
-204, dry-wheather-hitch
-1696, ed-strap-hitch half-hitch
-602, eight-part-button
-603, eight-part-button-doubled
-3009, eight-strand-ellipse
-3012, eight-strand-round-sinnet
-3044, eight-strand-sinnet
-3041, eight-strand-sinnets nine-strand-sinnets ten-strand-sinnets
-35, elbow
-644, eliipse
-985 986 3078, ellipse
-622 623, elliptical
-745, emerald
-1544, end bowline
-1038, englishman fisherman angler true-lover
-344 1554, englishman's
-1022, englishman's-loop
-1566, english-shroud
-844, equilateral-triangular
-1019, eskimo-bowstring-loop
-1028, eskimo-loop strap-loop
-1248, eskimo-spear-lashing
-3162, eye-spice
-17, eye-splice multi-strand-loop
-175 229 268 280 281 289 1905 2070 3105 3304 3308, eye-splice
-1900, eye-splice becket-hitch sheet-bend
-3302, eye-splice lanyard
-3305, eye-splice running-eye
-3313, eye-splice cow-hitch
-2088, eye-splice-and-thimble eye-splice single-hitch crowwing-s clove-hitch
-3092 3291 3327 3346, eye-splices
-1495 1923 1924, eye-to-eye
-1023, farmer's-halter-loop
-1054, farmer's-loop
-1806, farm-hitch open-overhand slip
-170 308 524 530 531 570 1638 1824 2028 2284 2398, figure-eight
-520, figure-eight figure-of-eight
-1512, figure-eight half-hitches
-2003, figure-eight oysterman's-stopper
-1376, figure-eight-chain-turk's-head
-1042, figure-eight-englishman
-1666 1669, figure-eight-hitch
-1908, figure-eight-hitch leader-loop becket-hitchs
-1116, figure-eight-noose
-1658, figure-eight-s
-1668, figure-eight-timber-hitch
-572, figure-eight-to-tie-a-double-twist-braid
-264, fire-escape
-564, fire-escape philadelphia
-1840, fishermam's-bend
-1841, fishermam's-bend anchor-bend round-turn-and-two-half-hitches
-1842, fishermam's-bend-and-bowline anchor-bend
-288, fisherman's waterman's englishman's true-lover's
-293, fisherman's waterman's englishman's angler's english
-24, fisherman's-bend anchor-hitch
-1518 1722 1723 1885 1911, fisherman's-bend
-1724, fisherman's-bend-and-bowline bowline
-3505, fisherman's-fender
-354, fishline-splice
-2273, five-bight-by-seven-bight
-573 574, five-lead flat-sinnet
-1307, five-lead three-bight single-line-turk's-head
-612, five-lead-by-three-bight-turk's-head
-926 929 930 931, five-strand
-877, five-strand-flat-sinnet
-849 865, five-strand-manrope
-3013, five-strand-square-sinnet
-1989, flagstaff
-247, flail
-2012, flat square
-3385, flat
-3071 3072, flat-chisel-edged-sinnets
-806 817 818 819, flat-lanyard
-576, flat-lanyard-based-on-five-strand-french-sinnet
-805, flat-lozenge-shaped
-2013, flat-not
-619, flat-oblong-toggle
-1937 3151, flat-sinnet
-803 804, flat-square
-620, flattened-cylindroid-toggle
-3515, flattened-turk's-head
-1386, flat-with-a-double-edge guide solid-triangular-turk's-heads
-1411, flemish-bend figure-eight-bend
-3491, flemish-flake
-1047, flemish-loop figure-eight-loop
-357, florist's
-696 756 792 971 3511, footrope
-750, footrope-doubled
-705, footrope-variation
-3130, foot-stopper boom-stopper reef-s
-1069 1071 1101, forked-loop
-2776, fork-splice-with-lashing-eyes
-34, foul-hawse cross
-2235, four-bight-turk's-head turk's-head
-2236, four-bight-turk's-head turk's-head six-lead four-bight-turk's-head monkey's-fist
-610, four-by-four-pellet-shaped-based-on-a-four-bight-by-five-lead-turk's-head
-1308 1309 1310 1311, four-lead three-bight single-line-turk's-head
-790, four-lead-diamond
-1105, four-looped-with-a-double-square-crown
-578 1313, four-ply
-913 914 920, four-strand
-809, four-strand-crown
-868, four-strand-double full-matthew-walker
-870, four-strand-double-diamond
-691, four-strand-full double-matthew-walker
-3307, four-strand-lanyard matthew-walker
-692 867, four-strand-single-matthew-walker
-970, four-strand-sinnet
-1430, four-strand-square round-sinnet
-1568 1569 1570, french single-shroud
-1170, french-masthead
-1565, french-shroud overhand
-1571, french-shroud
-821, french-sinnet
-3089, french-sinnet running-eye
-2343 2344 2345 2346 2347, frog-s ring-hitches
-678 680, full-matthew-walker double-matthew-walker
-1677, gaff-topsail-halyard-bend
-1121, gallows
-276 278, ganging
-1124, gibbet
-1237, girl-scout-hitch
-3, granny false
-80 186 1442 1552, granny
-1206, granny false laubber calf booby
-1405, granny reef
-294, grapevine double-english
-1415, grapevine double-english double
-259, grass
-1490, grass-bend
-953, grasshopper
-3516, grommet-fender
-1384, grommet-of-four-strands four-strand-round-sinnet-turk's-haed
-277 340, ground-line-hitch
-1680, ground-line-hitch codfish-trawl ring-hitches
-3098, ground-line-hitch single-hitch clove-hitch
-292, gut
-47, half binding
-1183 2057, half
-1202, half single
-1211, half single-bow draw slipped-reef
-2176, half single-hitch
-48 1607, half-hitch single-hitch
-50 307 1185 1662 1663 1717 1821 1857 3097 3850, half-hitch
-1805, half-hitched-clove-hitch half-hitch clove-hitch
-1709, half-hitched-half-hitch
-1747 2047 2081 2082 3306, half-hitches
-1877, half-htich
-640 928 941 946, half-round
-735, half-round-diamond
-1391, half-round-turk's-head
-1389, half-round-turk's-head-of-seventeen-leads-based-on-sinnet
-2095, halt half-hitch
-243 1804 1826, halter-hitch
-1783, halt-hitches left-hand-bowline
-1832 1833, hammock-hitches
-1134 1140 2292, handcuff
-1119, hangman's
-3477 3478, harbor-gasket
-212, harness-chain-anchor
-532 1050 1051, harness-loop
-562, hawse-block plug
-1496, hawser cable-bend outside-clinches inside-clinch
-1446, hawser-bends full-carrick-bend
-1014, hawser-bowline
-2760, hawser-eye
-2762, hawser-thimble-eye
-952, heart
-537 538 540, heaving-line
-1463, heaving-line-bend
-536, heaving-line-lanyard
-3047, helical-sinnet
-958, hemisphere
-1291, herringbone-parallel-with-the-length-of-the-knot
-1290 1292, herringbone-weave
-3519, hide-scotchmen
-1809, high-post-hitch slip
-1810, high-post-hitch
-12 38, hitch
-1594, hitch simple-hitch single-hitch slippery-hitch
-3524, hitched-eyelet-holes
-3508, hitched-fender
-1225 1226, hitched-loop
-1089, hitched-tom-fool
-226 476, hobble
-227 1128 1129, honda
-1532, hook-and-eye
-1898, hook-and-stopper
-320 1893, hook-hitch
-800, horizontal-matthew-walker
-1425, hunter's-bend matthew-walker
-906, hybrid
-1123, ichabod
-1039, improved-englishman
-1130, inside-clinch
-1845, inside-clinch outside-clinch
-521, intermediate-between-the-figure-eight-and-the-stevedore
-656, in-two-planes
-558, iron
-561, iron-ring
-169, iverhand
-306 1228, jam
-1727, jam-hitch butcher's-s binder-s
-1991, jam-hitch
-1471, jamming-bend
-1992, jamming-hitch
-1423, japanese-bend
-1098, japanese-loop
-260, jar-sling jug-sling
-1502, josephine
-2361, josephine carrick-bend
-2186, jug jar-sling
-1142, jug-sling jar-sling
-2007, jug-sling double-harness-bend
-2300, jug-sling
-213, jumper-hitch
-1168 1169, jury-mast
-1697, kellig-hitch slingstone-hitch
-948, kidney-bean-shape
-156, killeg-hitch
-271, killeg-hitch kellig-hitch kellagh-hitch kellick-hitch killock-hitch killick-hitch timber-hitch-and-half-hitch
-788, knife-lanyard
-14, knob
-947, knob-shape
-19 22 684 685 687 689 690 769 795 799 866 977, lanyard
-1865, lanyard bend
-3296, lanyard ring-hitch
-582, lanyard-based-on-the-figure-eight
-688, lanyard-by-seaman's-way
-3240 3318, lanyard-hitch
-747 2315 2317 2318, lanyard-s
-589 632, larger-rectangular
-1127, lariat lasso-noose
-1871, latigo cinch girth cow-hitch
-291, leader-loop
-1860, lead-line strap-hitch long-eye
-1705, leather-strap-hitch strap-hitch
-1034, left-hand-bowline
-1203, left-handed-half two-strand-left-handed-crown
-67 492 1432 1988, left-hand-sheet-bend
-636, letter-box-shape-adapted-from-a-turk's-head-diagram
-1209, ligature
-331 1053, lineman's-loop
-760, link-sinnet
-58 1714 1839, lobster-buoy-hitch
-1990, lock noose sheet-bend
-2249, long-basket-weave
-974, long-double-diamond
-3174, long-eye
-3185, long-eye tack-s
-773, long-four-strand-lanyard
-1861, long-runing-hitch bowline eye-splice
-1659 1700 1932 1933 2132 3312, long-running-eye
-1858, long-running-eye hitch long-eye short-eye-splices
-16, long-splice short-splice multi-strand-bend
-959, long-spritsail-sheet
-972, long-terminal
-580, long-three-ply
-981, long-toggle-shaped
-15 33 39 290 533 1009 1056 2069, loop
-1046, loop overhand
-2068, loop thumb
-2124, loop harness-loop farmer's-loop
-1514, loop-lashing bowline harness-loop single-bowline loop half-hitches
-659, loop-or-eye-for-the-button
-1707, loose-hitches half-hitch
-299, lorn leader-lop
-762, luce's-deck-stopper
-1828, magner-hitch
-1230, magnus rolling-hitch
-480 481, magnus-hitch camel-hitch safety-belt-hitch
-1736, magnus-hitch
-2158, malingspike-hitch
-242, manger-hitch
-470 847 848 850 879, manrope
-765, manuel-perry's-sinnet
-2337, maple-leaf
-1482, marline-bend
-1477, marline-hitch half-hitch half-hitch weaver's
-2075, marline-hitches
-2092, marline-hitches single-hitches
-2093, marline-hitches trick
-3115, marline-hitching
-7, marlingspike-hitch boat
-559 1186 1880 2030 2142, marlingspike-hitch
-1789, marlingspike-hitch boat noose-hitch
-1881, marlingspike-hitch farmer's-noose-hitch
-2024, marlingspike-hitches
-539, martha's-vineyard-boat-heaving-line
-1167, masthead jury-mast
-2113 2295 2296, masthead
-3180, mathew-walker manrope
-801, mattew-walker
-1953, mattew-walker eye-splice
-285 646 647 681 724 725 730 753, matthew-walker
-682 683, matthew-walker-by-seaman's-way
-714, matthew-walker-crowned
-648, matthew-walker-with-four-part-crown-at-the-top
-544, mauretania
-937, melon-seed
-62 1027 1730 1753 1754 1855, midshipman's-hitch
-1728 1729, midshipman's-hitch rolling-hitch two-half-hitch clove-hitch
-1799 1993, midshipman's-hitch half-hitch
-1241 1242, miller
-1144, monkey-chain chain-shortening
-1145, monkey-chain
-596, monkey-chain-lanyard
-1003, monkey's-first
-542 2206, monkey's-fist
-2200, monkey's-fist three-strand-manrope three-strand-diamond three-strand-footrope two-ply three-ply
-2203, monkey's-fist single-overhand double-overhand triple-overhand quadruple-overhand
-2204, monkey's-fist double-overhand triple-overhand overhand
-2205, monkey's-fist triple-overhand overhand
-2210, monkey's-fist cube
-534, monkey's-tail
-1791, mooring-hitch magnus rolling-hitch single-hitch
-2325, mors-du-cheval
-3498 3499, mouse
-2051, multifold-becket-hitch
-1497, multiple-bends
-568 1503, multiple-figure-eight
-1076, multiple-loop
-257 566, multiple-overhand
-1086, multiple-parallel-loop
-1077, multiple-parallel-loops
-1508, multiple-portuguese-bowline
-1498, multiple-racking-bend
-1501, multiple-sheet-bend
-777 2209 2279, multi-strand
-2234, multi-strand ten-lead four-bight-turk's-head
-2239, multi-strand two-ply three-ply four-ply five-ply
-854 2224, multi-strand-button
-731, multi-strand-matthew-walker
-1321, narrow-turk's-head
-3336, narrow-turk's-heads
-274 275, net-line
-1247, net-line-hitch-from-clovelly
-1246, net-line-hitch-from-looe
-216 217, net-pole
-1378, netting-needle-sinnet flat-sinnet-turk's-head three-lead-truk's-head flat-sinnet five-lead seven-lead
-3466, nettle-stuff nettles knittles knettles nittles
-1122, newgate
-961, nine-strand
-64 65, nip
-1260, nippers twistters
-43 311 1125, noose
-1114, noose noose simple-noose
-2061, noose slippery-hitch
-2091, noose crossing eye-splice
-1803, noose-hitch farmer's-hitch
-1825, noose-hitch
-535, norfolk-to-washington-boat-heaving-line
-899, nosegay
-261 1261, nose-twitch
-630 966, oblong
-823 2243 2245, ocean-plat
-954, octagonal
-770, of-four-strands-with-na-elliptical-cross-section-based-on-button
-749, of-herringbone-texture
-586, one-cord
-208, one-lenght-hitch
-1448, open-carrick-bend
-31, open-loop
-3465, ordinary-fox
-1131 1844, outside-clinch
-541, over-and-under-heaving-line
-4, overhand simple
-46, overhand single-strand-stopper
-228 246 321 518 519 569 1029 1975 1976 2049 2054 2125 2217 2254 2280 3269, overhand
-514, overhand simple single thumb common ordinary
-2072, overhand noose
-2177, overhand marline-hitch single-hitch
-1410, overhand-bend thumb openhand sheet-bend
-1556, overhand-bend ring
-1557 1558, overhand-bend
-3510, overhand-round-turn-hitching
-2032, overhand-s strand-matthew-walker
-2303, overhand-s
-571, overhand-to-tie-a-double-twist-braid
-526, oysterman's-stopper
-187, packer
-2083, packing figure-eight butcher's
-1227, parcel
-2332 2338 2339 2340 2341, pectoral
-611, pellet-shaped-button
-650, pendant
-1701, pendant-hitch
-639 996 997 1008 3079 3080, pentagon
-591, pentagon-in-two-planes
-989, pentalpha
-1370, perry-basket footrope crown-and-wall
-635, petagonal-butterfly-button
-154, picket-line-hitch
-1676, picket-line-hitch snug-hitch turk's-head ground-line-hitch
-1815, pile-hitch
-841, pillow-shaped
-838, pillow-shaped-rectangular
-1369, pilot
-772, pocket-shaped
-1543, police-line
-1072 3095, portuguese-bowline
-1848, portuguese-bowline anchor-bend french-bowline double-loop-s
-2191, portuguese-bowline spanish-bowline single-hitch
-168 2283, pretzel
-820 2242 3490, prolong
-898, propeller
-3500, puddening-an-ancor-ring
-3501, pudding
-940, pumpkin-seed
-3494, punch-mat wrought-mat
-925, pyramid
-211, quarter-pole-hitch
-210, quarter-pole-twist
-641, quarter-round
-527, quatrefoil
-1462, racking-bend
-1892, racking-hitch cat's-paw
-3484, railroad-sinnet-1
-3485, railroad-sinnet-2
-3486, railroad-sinnet-3
-651, ralted-to-the-monkey's-fist
-588 590 638 858 2261 2266, rectangular
-592, rectangular-two-plane-lanyard
-74, reef square binding
-75, reef square bend
-76 1204, reef square
-77, reef reef
-487 1549 2076 2098 3271, reef
-1402, reef square binder
-1404, reef weaver's
-1441, reef carrick-bend
-2086, reef parcel bow crossing-s
-3479 3480, reef-becket
-2096, reef-or-square
-1743, reef-pendant-hitch circus-pole-hitches
-1459, reeving-line-bend two-half-hitches grass
-1486, reeving-off-bend
-1713, reserve-hitches two-half-hitches
-57, reversed-half-hitch
-1786, reversed-half-hitches cow-hitch two-half-hitches clove-hitch two-half-hitches
-1567, reversed-stopper multi-strand-stopper lanyard button shroud french-shroud
-767, reverse-star
-2759, rigger's-lashing-eye
-3153, rigger's-shot-splice
-843, right-angled-triangular-pectroal
-1787, right-hand-bowline reversed-half-hitches
-904, right-hand-diamond
-66, right-hand-sheet-bend
-1412, ring water gut single-overhand
-284, ring-hitch strap-hitch
-347 1862 1958, ring-hitch
-1890, ring-hitch cow-hitch
-2044, ring-hitch bale-sling-hitch
-1859, ring-hitch-and-tag bale-sling-hitch
-1504, ring-hitches
-1768 1769, ring-stopper
-1270, roband-hitch
-2000, roband-hitch halyard-bend clove-hitch single-hitch
-1274, roband-hitches
-3474, robands
-3125, rohand-hitches
-61 1465, rolling-hitch magnus-hitch magner's-hitch
-167 1466 1856 1884 1999 2014, rolling-hitch
-1681, rolling-hitch magnus-hitch magner's-hitch two-round-turns-and-two-half-hitches
-1734, rolling-hitch magnus-and-magner's-hitch
-1735, rolling-hitch midshipman's-hitch
-1737, rolling-hitch half-hitch
-2151, rolling-hitch single-hitch
-2031, rolling-hitches adjustable-bend
-1480, rope-yarn reef half
-1483, rope-yarn-bend
-861 894 895 896, rose
-872, rosebud
-994 999, round-flat
-794 3043 3063 3064 3065 3067, round-sinnet
-1372, round-sinnet multi-strand foundation coachwhipping french-sinnet
-3062, round-sinnet hexagonal-sinnet
-1382, round-sinnet-turk's-head turk's-head-of-french-sinnet chain-sinnet flat-sinnet solid-sinnet long-splicing
-36 41, round-turn
-1838, round-turn-and-buntline-hitch two-half-hitches reversed-hitches
-37, round-turn-and-elbow
-1718, round-turn-and-half-hitch
-1837, round-turn-and-reversed-hitches round-turn-and-two-half-hitches
-1785, round-turn-and-slipped-half-hitch stake-hitch
-1720 1784 1834 1910, round-turn-and-two-half-hitches
-1835, round-turn-and-two-half-hitches anchor-bend
-1836, round-turn-and-two-half-hitches rolling-hitch
-1883, round-turn-and-two-half-hitches hook-hitch
-2172, round-wyw
-1256, rubber-bend
-1117, running-bowline running-bowling
-2071, running-bowline noose
-2080, running-bowline crossing half-hitch overhand
-2090, running-bowline half-hitch overhand
-1699, running-eye eye-splice loop
-2201, monkey's-fist
-1243, sack
-923, saddlecloth-shaped
-787, sailor's-knife-lanyard marlingspike-lanyard single-strand-diamond two-strand-diamond bosun's-whistle
-174, sallies sally-tufts sallie-tuftings
-3487, sallie-tucks tuckings sallies
-313, salmon
-1866, sampan-hitch
-203, sash-cord-hitch
-199, sash-weight
-1120, scaffold
-3518, scotchmen
-563, scuttle-butt
-1780, seized-half-hitch
-1151, seized-shortening
-2112, seizing
-998, seven-bight
-950, seven-strand
-951, seven-strand-quarter-round
-3014, seven-strand-square-sinnet
-6, sheepshank dogshank
-202, sheepshank spanish-bowline
-1088 1152 1153 1154 1158 1159 1160 1161 1162 2297 2298, sheepshank
-1156, sheepshank-based-on-the-tom-fool's
-1157, sheepshank-from-a-handcuff
-1163, sheepshank-with-a-sword
-1155, sheepshank-with-marlingspike-hitches
-263, sheet
-1403, sheet overhand-s reef
-1 72 78 1424 1433 1436 1522 1550, sheet-bend
-1431, sheet-bend the-bend simple-bend ordinary-bend common-bend single-bend becket-bend
-1529, shiver-hitch matthew-walker single-hitch
-1215, shoe-clerk
-1220 1221, shoestring parcel
-1473, short-end-bend noose-hitch marlingspike-hitch sheet-bend
-2005, short-end-bend sheet-bend noose left-hand-sheet-bend right-hand-sheet-bend
-1146, shortening
-1275, short-running-eye clove-hitch single-hitch
-475, short-splice
-1560, shroud sailmaker's-short-splice
-1057 1058, single-bowline
-1440, single-carrick-bend true-carrick-bend
-1443 1444 1445, single-carrick-bend
-1449, single-carrick-bend sheet-bend two-half-hitches
-1888, single-cat's-paw
-763, single-crown-and-double-wall
-699 700 701, single-crown-and-double-wall
-240, single-half-hitch
-49 1595 1596 1598 1599 1600 1602 1605 1772 1775 1812 1966 1985 2043 2146, single-hitch
-1603, single-hitch sliperry-hitch
-1606 2155, single-hitch overhand
-1748, single-hitch half-hitch
-1873, single-hitch sheep-shank
-2019, single-hitch rolling-hitch
-2178, single-hitch cat's-paw
-2074, single-hitches marline-hitches
-2153 3114, single-hitches
-1886, single-hook-hitch pile-hitch
-859, single-matthew-walker
-1731, single-pass-hitch
-3476, single-reef-points
-1766, single-ring-stopper deck wing hatchway bitt-stroppers
-3475, single-roband
-1464, single-stopper
-128, single-strand
-3483, single-tail-block
-40, single-turn
-759 761 802 876 3053 3054 3060, sinnet
-1067, sinnet lanyard knife-lanyard
-2122, sinnet long-running-eye
-3482, sinnet-earings
-1079, sister-loop
-933, six-strand
-3016, six-strand-coachwhipping
-3008, six-strand-ellipse
-3011, six-strand-round-sinnet
-1001, six-strand-sinnet
-1468, slack-line-bend
-1746, slack-line-hitch
-171, slath slarth
-1494, sling strap-toggle
-272, slingstone-hithch
-44, slip stopper slipped
-529 1830, slip
-1811, sliperry-hitch
-2145, slip-loop
-45 1115, slip-noose
-1715, slip-noose-hitch
-196, slip-over-single-hitch
-1915, slipped-and-toggled-becket-hitch
-1712, slipped-buntline-hitch
-1807, slipped-buntline-kitch
-52, slipped-half-fitch
-1664 1708 1822 1823 2119 2120 2121, slipped-half-hitch
-2001 3299, slipped-hitch
-1020, slipped-loop
-1437, slipped-sheet-bend
-1619, slippering-hitch slipped
-51 82 1597 1621 1622 1623, slippery-hitch
-1620, slippery-hitch slippery-pinhitch
-219 1996, slip-tackle
-545, smaller-turk's-heads
-557, small-hickory-toggle
-645, small-of-four-parts
-333, snell-loop
-1986, snug-half-hitches
-1683 1686 1692, snug-hitch
-1674, snug-hitches
-1808, snug-hitches post-hitches picket-line-hitch
-733, souble-full-matthew-walker
-265 1087 1137, spanish-bowline
-1092, spanish-bowline clove-hitch single-hitches
-2160, spanish-bowline double-loops
-3464, spanish-fox
-1447, spanish-hawser-bend
-1049, span-loop
-1187, spar-hitch
-233, spliced-eye
-3343, splices bends
-1006, sport
-1000, sports single-strand-button one-strand-button
-887 889 915 934 1520 3179 3326, spritsail-sheet
-1765, spritsail-sheet stopper double-wall
-3463, spun-yarn
-185 626 924 955 956 995 1007 1218, square
-3379, square reef
-992, square-button
-2336, square-leaf-form
-598, square-loop-sinnet-lanyard
-1217, square-shoestring
-1301 3070, square-sinnet
-3061, square-sinnet round-sinnet
-1319 1324, square-turk's-head
-1322, square-turk's-head 4lx3b-turk's-head 3lx2b-turk's-head
-1381, square-turk's-head over-two-under-two over-three-under-three
-627, square-wiht-the-same-characteristics-as-triangular
-1790, stake-hitch timber-hitch single-hitch
-1011, standing-bowline
-1278 1280, standing-turk's-head
-1282, standing-turk's-head footrope three-ply four-ply five-ply
-1283, standing-turk's-head diamond four-lead
-727 766 883 884 886, star
-1222, stationer
-1778, steamboat-hitch clove-hitch
-2194, steel-wire-cargo-slings
-1745, steeplejack's-hitch rolling-hitch
-522, stevedore
-1026, stopped seized-half-hitch
-18 21, stopper knob terminal
-560 674 702 863 864 1519 2232 3200, stopper
-2022, stopper rolling-hitch
-723, stopper-and-button-s
-713, stopper-and-deck-stopper
-726 3199, stopper-s
-1978, stopper-s double-overhand-s
-1239 3100 3440, strangle
-1489, strap becket-hitch
-1491, strap
-1698, strap-and-becket-hitch
-1492 2175, strap-bend
-249 1872, strap-hitch
-1694, strap-hitch bale-sling-hitch
-1678, studding-sail-bend fisherman's-bend
-25, studding-sail-halyard-bend yard-hitch
-1702, studding-sail-halyard-strap
-1878, stunner-hitch double-blackwall-hitch
-900, sunflower
-1901, swab-hitch
-764, s-with-strands-at-one-end
-302 303, swivel-hitch
-583, symmetrical-and-somewhat-larger
-846 856 878 908, tack
-1925, tack stopper-s double-wall-s
-310, tag ring-hitch
-1935, tag-hitch
-1868, teamster's-hitch long-overhand-loop ring-hitch
-1458, temporary-bend
-1392, tennis-bag-lanyard
-964, ten-strand
-3010, ten-strand-ellipse
-826 893, terminal
-1979, terminal-overhand
-963, tetrahedron
-8, the-noose running
-1110, theodore
-1207, thief bag bread-bag
-1132, thimble-and-eye
-3525, thimbles
-3046, thirteen-strands sixteen-strand-sinnets
-546, three-bight four-lead-turk's-head
-594, three-bight-turk's-head
-517, threefold-overhand
-1304, three-lead two-bright-turk's-head figure-eight
-1306, three-lead five-bright
-2287, three-lead four-bight-turk's-head
-2288, three-lead five-bight-turk's-head
-2289 2368, three-lead eight-bight-turk's-head
-2293, three-lead seven-bight-turk's-head
-607, three-lead two-bight-turk's-head
-1318, three-lead-turk's-head
-1097, three-part-crown
-577, three-ply
-911, three-strand-button
-1383, three-strand-flat-sinnet three-lead-turk's-haed three-strand-flat-sinnet
-686, three-strand-rope-and-two-matthew-walker-s deck-bucket-bails
-1316, three-strand-sinnet three-lead-turk's-head
-1684, three-strand-sinnet
-860, thrice-crowned
-473, thumb
-515, thumb single-or-double-overhand
-1062 1063, tie-a-left-half
-744, tied-in-the-end
-195 479 1417 2161, timber-hitch
-1665, timber-hitch lumberman's countryman's-not
-2162, timber-hitch single-hitches clove-hitch
-1733, timber-hitch-and-halt-hitch single-hitches
-1922, toggle-and-eye
-1867, toggled-bight boat boat-hitch
-1914 1919 1920, toggled-bight
-615, toggle-shaped t-shaped
-616 617 771 922 949, toggle-shaped
-1141, tom-fool
-2290 2291, tom-fool's
-26, topsail-halyard-bend yard-hitch
-1679, topsail-halyard-bend studding-sail-bend
-1258 1259, tourniquet
-1182 1255 3372, transom
-2281, trefoil
-2285, trefoil two-lead three-bight-turk's-head
-2286, trefoil four-lead three-bight-turk's-head
-624 625 943 990, triangular
-991, triangular-button
-842, triangular-of-the-butterfly
-3045, triangular-sinnet
-774, triangular-tied-with-four-strands
-1387, triangular-turk's-head-of-nine-leads-and-two-strands-based-on-sinnet
-1388, triangular-turk's-head-of-thirteen-leads
-798 1143, true-lover
-2301, true-lover's
-2383, true-lover's eight-bight three-lead-turk's-head
-2394, true-lover's overhand-s
-597, trumpet-cord-or-double-monkey-chain-lanyard
-637, truncated-pyramid
-1485, tucked-bend
-483, tuft
-796, turkish-lanyard
-918 919 1279 1281 2348 2349 2350 2351 2355 2356 3513, turk's-head
-1395, turk's-head button lanyard-s multi-strand-button single-strand-button
-2233, turk's-head eight-lead three-bight-turk's-head
-2360, turk's-head one-strand-button monkey's-fist multi-strand-button
-1478, turk's-head-bend
-1390, turk's-head-of-eleven-leads-with-square-cross-section-tied-with-one-cord
-1385, turk's-head-of-square-sinnet
-2212 2213 2215, turk's-heads
-2219, turk's-heads multi-strand monkey's-fist
-305, turtle major-turtle's turl
-525, tweenie
-2211, tweenie monkey's-fist
-710, twice-crowned
-1454, two-bends
-605, two-bight one-lead-turk's-head
-606, two-bight two-lead-turk's-head
-595, two-bight-turk's-head-lanyard
-1455, two-bowlines bowline-bend hawser-bends
-1335, two-bright-b
-2306 2307 2308, two-dimensional-s
-1426, twofold-overhand-bend two-strand-full-matthew-walker
-54 81 160 1719 1782 2053 2129 2138 2182, two-half-hitches
-1781, two-half-hitches granny two-half-hitches
-1710, two-halt-hitches clove-hitch
-1166, two-hearts-that-beat-as-one
-1342 1345, two-lead
-2393, two-overhand-s true-lover's
-1084, two-parallel-round-loop
-3081 3082, two-pentalphas
-587 839, two-plane
-837, two-plane-basket-weave
-840, two-plane-bosun
-852, two-ply doubled
-2207, two-ply three-ply four-ply
-42, two-round-turns
-1721, two-round-turns-and-two-half-hitches rolling-hitch
-197, two-single-hitches
-793, two-strand
-910, two-strand-button
-807, two-strand-chinese-lanyard
-909, two-strand-crown
-781 782, two-strand-diamond
-3387, two-strand-eye-splice
-783, two-strand-footrope
-256 776 1065 2006, two-strand-matthew-walker
-778, two-strando-stopper
-775, two-strand-wall
-728, tye-the-wall-and-crown-s
-3509, underhand-round-turn-hitching
-621, upright-cylindroid-toggle
-655, wafer-shaped
-717, walker-thompson-tied-a-cable-stopper
-9, wall pig-tail
-237 671 729, wall
-2062, wall double-becket-hitch
-10, wall-and-crown skull-pig-tail
-672 711 712, wall-and-crown
-296 343, water
-1414, water waterman's english englishman's fisherman's true-lover's angler's
-2 485 493, weaver's
-1401, weaver's shroud-s short-splices multi-strand-bens
-1418, weaver's sheet-bend
-1419, weaver's reek becket-hitches
-1513, wedding rigging-stopper
-1796, wet-weather-hitch stake-hitch single-hitch slipped-hald-hitch
-205, wet-wheather-hitch take-up-hitch
-845, whale
-1208, what
-1406 1407 1408 1409, whatnot
-2248, wide-basket-weave
-1284 1285, wide-standing-turk's-head
-150 1320, wide-turk's-head
-633, with-a-diagonal-texture
-768, with-a-triangular-cross-section-and-three-square-faces
-3493, woven sword-mat
-209, wrap-hitch
-1149, yardarm
-1484, yarn-splice
-1195, zigzag
-751, zigzag-lanyard
+684, 2lx3b 4lx5b 6lx7b
+687, 3lx2b 5lx4b 7lx6b
+690, 3lx2b 3lx4b 4lx5b 2lx3b
+769, 4lx3b-turk's-head whistle knife-lanyard
+795, acorn
+977, adaptation-of-the-butterfly
+3318, adjustable-bend rolling-hitch
+685, adjustable-bowstring-loop
+689, adjustable-hitch midshipman's-hitch
+559, adjustable-hitch magnus rolling-hitch midshipman's
+530, adjustable-hitch
+1987, adjustable-jam-hitch midshipman's-hitch half-hitch
+2075, adjustable-jam-hitch
+2236, adjustable-loop
+635, african-rafter-lashing
+154, anchor-bend fisherman's-bend
+1838, anchor-hitch portuguese-bowline
+1088, angler's-s fisherman's-s
+750, angler's-loop leader-loop
+212 588 2450, angler's-loop
+74, angler's-loop bowline
+971, anti-galligan-hitch belaying-pin-hitch
+1308, arboreal-hitch-or-tree-surgeon's
+950, arched-disk
+1778, artillery-loop man-harness harness-loop
+1501, ascot
+2072, automobile-tire-scotchmen
+3072, awning
+297 1920, awning midshipman's-hitch stake-hitch
+2253, awning post-hitch stake-hitch
+1370, axle-hitch bowline midshipman's-hitch
+460, backhanded-eye-splice
+37 1984 1125 514, backhanded-hitch
+1520, backhanded-hitch sliped-half-hitch two-half-hitches
+989 75, back-handed-hitch clove-hitch
+76, backhanded-hitch-and-bowline towrope-hitch bowline
+1502, backhanded-hitch-and-bowline
+2361, backhanded-mooring-hitch
+1029, back-spliced-wall-and-crown
+77 3080, bag
+2422, bag-lanyard
+906, baker's cowboy's-pretzel
+1085, balance-pole-hicth
+1996, balancing-pole-hitch
+960, bale barrel-sing
+287, bale-hitch
+1602, bale-sling cat's-paw hook-hitches
+2153, bale-sling-hitch ring-hitch lark's-head
+1603, bale-sling-hitch ring-hitch tag
+905 2164 2152 2090 1550 1491 1868, bale-sling-hitch
+571, bale-sling-hitch strap
+1698, bale-sling-hitch reef
+664, banana stropper-s single-overhand-with-a-half-hitch pearl figure-eight
+2400, banana-hitch button-and-eye
+773, barrel
+1802, barrel figure-eight overhand
+3096, barrel blood
+1548, based-on-chinese-butterfly
+903, basket
+1307 3044 1494, basket-weave
+272, basket-shaped
+661, bastard-weaver's left-hand-sheet-bend right-hand-sheet-bend
+1036, bead button
+1739, bead
+361 471 666 1545 1769 1274 1372 1836 701 3200, becket-hitch
+3115, becket-hitch drawing-bend bowline
+1480 723, becket-hitches
+754, beckets
+1037, bell-ringer sheepshank
+1310 462, bell-ringer
+449, bell-ringer's resembles-sheepshank
+475, bell-ringer's-not
+2073, bend
+457, bended-buoy-rope
+1509, bight lineman's
+1856, bight-and-eye
+432, bight-hitch cow-hitch single-hitches bight-hitches
+391, bight-hitch cow-hitch
+2071, bight-hitch
+870, bight-loop
+1786, bill-hitch becket-hitch marlingspike-hitch
+1716 1532, binder
+1228, binding
+257, blackwall-hitch single-hitch
+1486 174 1605 433, blackwall-hitch
+13, boatswain's-hitch single-hitch
+35, bookbinder left-hand-sheet-bend
+644 1809, bosun
+1810, bow-fender
+515, bow-tie
+3267, bow double-bow
+1475, bow
+2314 2451 1411 1047 2344 2345 1677 1121 276 285 714 997 2157, bowline
+1429, bowline forked-stick-hitch
+792, bowline bowling bolin
+2261, bowline eye-splices
+1681, bowline marlingspike-hitch bowline
+998, bowline inside-clinches
+182, bowline-and-two-half-hitches drawing-bends
+682, bowline-bridles
+541, bowline-hitch half-hitch
+2031, bowline round-turn-and-bowline anchor-bend
+1466, bowline-s bowline-bend hawser-bends
+2176 3153, bowline-s
+1459, bowline-shortening
+73, bowline-with-a-bight slip-loop
+1069, bowline-with-a-bight
+250, bowlines
+1620, bowstring loop
+84, bowstring honda
+1128, bowstring-doubled
+1448, bumblebee
+2266 1734 856 878, buntline-hitch
+1068, buntline-hitch two-half-hitches half-hitch
+2008 1918 1260 427, buoy-rope-hitch
+720 1772, buoy-rope
+1017, buoy-rope running-eye-splice splice-hitch
+3091, butcher half-hitch
+1082, butcher overhand binder half-hitch jam weaver
+3092, butt hogshead-sling noose two-half-hitches
+1250 785 704, butterfly
+703 3495, button knob
+3506, button flat two-dimensional
+3507, button
+3066 442 721 2168 1888 3463 1083, button-ends
+71, button-based-on-a-triangular-turk's-head
+2049, button-s
+925, button-molds half-hitches
+3116, button-on-a-single-lanyard
+2158, buuy-rope-hitch
+1855, cable-eye
+33, cable-stopper
+39, camel-hitch picket-line-hitch
+1514, camel-hitch
+1799, capstan
+500, captain-charles-w-smith's-sinnet
+1001, carrich-bend
+1746, carrick
+394, carrick-bend full-carrick-bend josephine carrick-bend
+1000 934 2483 1173 1606 317 715 430, carrick-bend
+889, carrick-bend full-carrick-bend sailor's anchor-bend
+1862, carrick-bend priest-cord
+440, carrick-bends
+495, carrick-loop
+1214, cask-seing splice
+1672, casket-shaped-kont
+2315, cat-stopper
+3501, caterpillar
+2203, cat's-paw
+1993, cat's-paw hook-hitch bale-sling-hitch racking-hitch
+596 3343, cattail
+708, cauliflower
+784, center-pole-hitch
+337, chain-of-figure-eight-s
+338, chain-sinnet-turk's-head constrictor monkey-chain single-trunpet-cord
+279, chain-slip chain-sinnet
+355, check delay shroud
+364, chinese harness-bend englishman's carrick reef
+1094, chinese carrick double-weaver's
+876 235, chinese-adjust-pieces
+1490 1570 45, chinese-butterfly
+610 1080 1027 528 1295 293, chinese-button
+1673 2406, chinese-crown
+2098, chinese-crown-loop
+1848, chinese-frog
+1801, chinese flat-knife-lanyard priest-cord
+736, chinese-loop
+2111, cinch cincha latigo bellyband girth
+3241, cinch cincha
+556, cinquefoil
+245, circe-in-two-planes
+1254, circular
+55, circular-flat-topped
+1309, close-hitch
+1050, closed-loop
+1051, clothesline-hitch
+428, clove-hitch watermans simple-fastening-in-a-rope lark's-head-crossed builders'
+1123 1098 1247 216 1976 2083 1227 1883 1159 1436 1560 763 699 1596 2043 846 626 1218 335 2106 2202 3379 642 867 537 521 561, clove-hitch
+2007, clove-hitch post-hitch binding
+1246, clove-hitch half-hitches
+2091 1552, clove-hitch marlingspike-hitch
+383, clove-hitch crossing-hitch bale-sling-hitch rope-yarn half-hitch-seized diamong marlingspike-hitch
+2338 2191, clove-hitch half
+221, clove-hitch marline-hitch
+713 583, clove-hitch post-hitch
+864, clove-hitch builder's single-hitches
+341, clove-hitch hook-hitch
+2126, clove-hitch ground-line-hitch
+3323, clove-hitch crossing-hitch
+952, clove-hitch single-hitch
+558, clove-hitch mouse
+306, clove-hitch buoy-rope
+199 506, clove-hitch-and-two-half-hitches clove-hitch
+1431 616, clove-hitches
+963, clove-hitching becket-hitch
+1817 218 1507 1446, coachwhipping
+217, commercial-cord-curtain-holdback
+1676 347 1901 302 3063 15 1780 3237 1119 3477 3478 494 532 540 1158 1058 617 168, constrictor
+1748, constrictor clove-hitch ring-hitch
+72, constrictor bowline
+2298, contrictor
+1146, corned-beef
+2019, corned-beef-and-salt-pork half-hitch buntline-hitch
+2032, corner-beef
+853, coventry-dress-tie
+2435 1100 1695 510 195, cow-hitch
+3492, cow-hitch deadeye-hitch lanyard-hitch
+757, cow-hitch lanyard-hitch bale-sling-hitch ring-hitch running-eye cow-hitch eye-splice
+742, cow-hitch strap bale-sling-hitch lanyard-hitch deadeye-hitch stake-hitch
+686, cow-hitch bowline bale-sling-hitch
+3496, cow-hitch running-eye
+479, crabber's-wyw crossed-running bowline
+1282, cringle taper-splice sailmaker's-splice one-strand-splice backhanded left-handed-eye-splice
+520, cross-grafting cross-pointing
+724, cross-grafting
+455 2044 1377 340 1239 14 1104 3853 207 441 696 748, crossing
+170, crossing-hitch
+869 329 1107, crossing-s
+3304, cross-lashed-sling
+454 1568, crown-a-cable
+788 2095 730, crown-and-diamond
+1876, crown-and-double-matthew-walker
+1022, crown-and-lanyard
+1909, crown-and-wall-mat
+2304 697, crown-sinnet
+1099, crown-sinnets
+1090, crown-upon-crown
+1091, crowned-mat
+649, crowning
+1174, crow's-feet crow's-foot
+473 1062, crow's-foot
+577, cube-shaped-diamond
+821, curtain-holdback-with-a-turk-head
+811, cut-splice
+1741, cutting-out-strands
+1768, cycle-of-emerald-s
+2000, cylindrical-toggle-based-on-a-turk's-head
+3125, daisy
+1713, deadeye lanyard-hitch
+357, deck-stopper
+278, decorative-terminal stopper
+1565, department-store-loop
+1019 1070 3504 3502 1288 49 310 2267 589, diamond
+755, diamond-and-crown
+1700, diamond standing-turk's-head
+1124, diamond-and-block-strap
+716, diamond-crowned
+2070 294 186 464 2130, diamond-variation
+451, diamond-sinnet
+2132, disk-shaped
+3312 390, dolphin
+1144, door-mats
+1546, double-angler's-loop
+920, double-bastard-weaver's
+2127 953 1384, double-becket-hitch
+678, double-becket-hitch eye-splice
+1405, double-becket-hitch single-becket-hitch
+3850, double-blackwall-hitch awning
+1619, double-bowline round-turn-bowline
+863, double-bowline
+1857, double-bowstring
+1805, double-cat's-paw
+146 1747, double-crown
+2763, double-crown-and-diamond
+2370, double-crown-and-matthew-walker
+599, double-crown-and-single-wall
+970, double-diamond-hitch diamond-hitch half-hitches single-and-double-diamond
+437 438, double-diamond-with-the-lead-followed-above
+1559 3525, double-english
+307 5, double-eye
+2471, double-figure-eight-bend
+1056, double-figure-eight-chain-turk's-head
+533, double-figure-eight single-strand-lanyard-s
+62, double-figure-eight-loop
+879 1729, double-footrope
+38, double-forked splayed-loop
+3330 3508, double-forked-loop
+1415, double-four-strand-mathew-walker
+1825, double-half
+2288, double-harness-bend crossing-s single-harness-bend
+2148 2317 981, double-harness-bend
+2159 1461, double-harness-loop
+1530 363 268 3346 734 1112, double-loop
+3194, double-loops
+1555, double-marline-hitch
+660 2124 267 1081, double-noose
+1551 2093, double-overhand
+2246, double-overhand dropper-hitch single-overhand
+2247, double-overhand blood knob
+2045, double-overhand blood
+535, double-overhand-s
+372, double-oysterman's oysterman's-stopper
+1059, double-oysterman's
+955, double-polish
+1007, double-riff-points
+598, double-ring tag double-running
+627, double-ring-hitch
+1798, double-ring-stopper
+1175 247 3071, double-sheet-bend
+883, double-sheet-bends triple-sheet-bends
+189, double-shiver-hitch
+2405, double-shoestring
+1421, double-single-matthew-walker
+1754, double-slip
+1311, double-splayed-loop
+2427, double-strap-hitch double-loop
+1145, double-tail-block
+705, double-three-ply
+2206, double-trumpet-cord-turk's-head
+496, double-twofold-overhand-bend two-strand-four-tuck-matthew-walker multi-strand-lanyard-s double-overhand matthew-walker overhands
+756 34 1845 702 1849 3093 1074 1229 3324, double-wall
+183, double-weaver's double-sheet-bend
+20, double-weaver's
+1504, double-weaver's tucked-sheet-bend
+1270, doughnut
+2436, dragon-fly
+1026, drayman's
+1705, dropper-fly-hitch snell-hitch
+1872, dropper-fly-hitch half overhand
+2402, dropper-fly-hitch bowline angler's-loop long-running-hitch overhand
+1702, drowing-bend harness-bend parcel-bend weaver's crossing
+900, dry-wheather-hitch clove-hitch
+2297, eight-part-button
+2194, eight-part-button-doubled
+249, eight-strand-ellipse
+1925, eight-strand-round-sinnet
+1392, eight-strand-sinnet
+2296, eight-strand-sinnets nine-strand-sinnets ten-strand-sinnets
+1999, elbow
+2014, eliipse
+2776 868 1369, ellipse
+679 2147, elliptical
+808, emerald
+2367, end bowline
+942, english angler's
+628, english
+1777, english englishman water fisher fisherman true-lover
+725, english-shroud
+2209, englishman fisherman angler true-lover
+3490 1720, englishman's
+389, englishman's-loop
+1830, equilateral-triangular
+915, eskimo-bowstring-loop
+2318, eskimo-loop strap-loop
+1105, eskimo-spear-lashing
+3336, espalier double-half butcher's double-half constrictor
+275, eye-spice
+3474, eye-splice multi-strand-loop
+292 2234 274 1814 1024 1671 3486 858 2469 662 544 359, eye-splice
+651, eye-splice becket-hitch sheet-bend
+1615, eye-splice lanyard
+346, eye-splice running-eye
+904, eye-splice cow-hitch
+167, eye-splice-and-thimble eye-splice single-hitch crowwing-s clove-hitch
+459 1063 2167 1115, eye-splices
+1887 2011 770, eye-to-eye
+371, false-lover
+1658, false-lover's
+1668, farm-hitch open-overhand slip
+264, farmer's-halter-loop
+386, farmer's-loop
+3308 344 289 3065 826 469 1438 2172 3441 560 488 489, figure-eight
+2449, figure-eight belaying-pin-turns
+2066, figure-eight flemish single-strand-stopper
+1910 895, figure-eight oysterman's-stopper
+727, figure-eight half-hitches
+543, figure-eight-chain-turk's-head
+1474, figure-eight-englishman
+204 602, figure-eight-hitch
+2079, figure-eight-hitch leader-loop becket-hitchs
+192, figure-eight-to-tie-a-double-twist-braid
+1922, figure-eight-s
+1034, figure-eight-noose
+3174, figure-eight-timber-hitch
+2438 578, fire-escape
+698, fire-escape philadelphia
+1298, fishermam's-bend
+1135, fishermam's-bend anchor-bend round-turn-and-two-half-hitches
+1427, fishermam's-bend-and-bowline anchor-bend
+877, fisherman's waterman's englishman's true-lover's
+2162, fisherman's waterman's englishman's angler's english
+652, fisherman's-bend anchor-hitch
+643 2022 1571 3089 259, fisherman's-bend
+185, fisherman's-bend-and-bowline bowline
+83, fisherman's-fender
+761, fishline-splice constrictor sailor-splice
+1079 1251, five-bight
+749, five-bight-by-seven-bight
+744 633, five-lead flat-sinnet
+768, five-lead three-bight single-line-turk's-head
+1375, five-lead-by-three-bight-turk's-head
+3516 2128 1696 1669, five-strand
+1908, five-strand-flat-sinnet
+2003 336, five-strand-manrope
+1905, five-strand-square-sinnet
+3105, flagpole-slings
+693, flagstaff
+25, flail
+737 1900, flat-chisel-edged-sinnets
+931, flat square
+290, flat
+534, flat-with-a-double-edge guide solid-triangular-turk's-heads
+1791 2325 366 2205, flat-lanyard
+2470, flat-lanyard-based-on-five-strand-french-sinnet
+3009, flat-lozenge-shaped
+1222, flat-not
+1674, flat-oblong-toggle
+1808 733, flat-sinnet
+1049 265, flat-square
+1293, flattened-cylindroid-toggle
+618, flattened-turk's-head
+1122, flemish-bend figure-eight-bend
+1211, flemish-flake
+1682, flemish-loop figure-eight-loop
+719, florist's half-bow draw
+50, foot-stopper boom-stopper reef-s
+1898 1323 669 1921 958, footrope
+58, footrope-doubled
+299, footrope-variation
+502, fork-splice-with-lashing-eyes
+663 1659 1874, forked-loop
+539, foul-hawse cross
+354, four-bight-turk's-head turk's-head
+1867, four-bight-turk's-head turk's-head six-lead four-bight-turk's-head monkey's-fist
+291, four-by-four-pellet-shaped-based-on-a-four-bight-by-five-lead-turk's-head
+2056, four-crown-butterfly
+2388, four-in-hand
+64 456 881 1726, four-lead three-bight single-line-turk's-head
+1496, four-lead-diamond
+536, four-looped-with-a-double-square-crown
+3519, four-part-crown-butterfly
+563 1873, four-ply
+1853 892 658, four-strand
+1014, four-strand-crown
+1498, four-strand-double full-matthew-walker
+2279, four-strand-double-diamond
+731, four-strand-full double-matthew-walker
+46, four-strand-lanyard matthew-walker
+2283 1549, four-strand-single-matthew-walker
+1745, four-strand-sinnet
+615, four-strand-square round-sinnet
+838, four-strand-square-sinnet mouse single-harness-loop man-harness-and-artillery-loop
+586 2217 313, french single-shroud
+1161, french-masthead
+1162, french-shroud overhand
+1678, french-shroud
+767, french-sinnet
+1171, french-sinnet running-eye
+1116 288 1518 523 1203, frog-s ring-hitches
+1432 78, full-matthew-walker double-matthew-walker
+1476, gaff-topsail-halyard-bend
+841, gallows
+3500 611, ganging
+641, ghiordes turkish
+211, gibbet
+3097, gift
+2047, girl-scout-hitch binder
+1822, girl-scout-hitch
+1183 913 1276, granny
+517, granny two-half-hitchs reef
+1304, granny half half-hitch butcher's-s
+2403, granny false laubber calf booby
+1869, granny reef
+914, granny false
+3180, grapevine double-english
+1230, grapevine double-english double
+3130, grass
+3179, grass-bend
+3326, grasshopper
+3505, grommet-fender
+69, grommet-of-four-strands four-strand-round-sinnet-turk's-haed
+70 149 511, ground-line-hitch
+53, ground-line-hitch codfish-trawl ring-hitches
+3061, ground-line-hitch single-hitch clove-hitch
+573, gut
+2476, half binding
+2475 790 1663 1102, half
+947, half single
+1919, half single-bow draw slipped-reef
+1543, half-bow draw
+411 1417, half-hitch single-hitch
+1994 3498 922 226 476 80 1010 614 1012 1607, half-hitch
+162, half-hitch bowline
+1662, half-hitched-clove-hitch half-hitch clove-hitch
+1730, half-hitched-half-hitch
+1859 758 1958 581 972 531, half-hitches
+48, half-htich
+638, half granny square
+1764, half single-hitch
+1177, half-round-diamond
+1268 227 1410 1382, half-round
+3146, half-round-turk's-head
+555, half-round-turk's-head-of-seventeen-leads-based-on-sinnet
+1477, halt-hitches left-hand-bowline
+36 16 1442, halter-hitch
+1882 646, hammock-hitches
+233, handcuff tom-fool's
+2155 2082 1835, handcuff
+3299, hangman sheepshank
+1212, hangman's
+1140 2292, harbor-gasket
+261, harness-bend
+1723 1903 1711, harness-loop
+579, harness-loops
+1021, harness-chain-anchor crossing clove-hitch
+1722, hawse-block plug
+286, hawser cable-bend outside-clinches inside-clinch
+2067, hawser-bends full-carrick-bend
+554, hawser-bowline
+1018, hawser-eye
+978, hawser-thimble-eye
+1505, heart
+851 885, heaving-line
+552, heaving-line hangman's
+677, heaving-line-lanyard eye-splice becket-hitch
+392, heaving-line-bend
+3013, helical-sinnet
+1404, hemisphere
+436 2180, herringbone-weave
+1064, herringbone herringbone-parallel-with-the-length-of-the-knot
+1489, hide-scotchmen
+303, high-post-hitch slip
+1553, high-post-hitch
+1621 1622, hitch
+1623, hitch simple-hitch single-hitch slippery-hitch
+445, hitched-eyelet-holes
+3315, hitched-fender
+1185 3271, hitched-loop
+236, hitched-tom-fool
+405, hobble
+2243, hobble square
+2407, hogshead-slings two-half-hitches
+1463, honda bowstring
+2020 813, honda
+1009, hook-and-eye
+3064, hook-and-stopper
+1294, hook-hitch overhand
+1291, hook-hitch
+1428, horizontal-matthew-walker
+809, hunter's-bend matthew-walker
+1136, hybrid
+2199, ichabod
+1131, improved-englishman
+3485, inside-clinch
+3067, inside-clinch outside-clinch
+171, intermediate-between-the-figure-eight-and-the-stevedore
+865, iron
+2232, iron-ring
+3199 1126, jam
+487, jam-hitch butcher's-s binder-s
+2239, jam-hitch
+966, jamming-bend
+3479, jamming-hitch
+1483, japanese
+861, japanese-bend
+1440, japanese-loop
+1878, jar-sling jug-sling
+1843, josephine
+574, josephine carrick-bend
+849, jug jar-sling
+2150, jug-sling jar-sling
+1989, jug-sling double-harness-bend
+1181, jug-sling
+3520, jumper-hitch single-hitch half-hitch
+2758 23, jury-mast
+32, kellig-hitch slingstone-hitch
+3515, kidney-bean-shape
+2477, killeg-hitch
+691, killeg-hitch kellig-hitch kellagh-hitch kellick-hitch killock-hitch killick-hitch timber-hitch-and-half-hitch
+951 3014 2005, knife-lanyard
+648, knob-shape
+722, knob
+954 1316 1684 203 1773 2346 1150 2415, loop
+667 1709 1598 1110 480 2762 1075 1458 803, sheet-bend
+1139, halt half-hitch
+940 1129, pumpkin-seed
+214 565, based-on-footrope
+569, in-two-planes
+1595, of-four-strands-with-na-elliptical-cross-section-based-on-button
+1917, of-herringbone-texture
+2468, tied-in-the-end
+1566, with-a-diagonal-texture
+1038, with-a-triangular-cross-section-and-three-square-faces
+1554, ed-strap-hitch half-hitch
+2088, s
+508, s-with-strands-at-one-end
+333 1789 7 1153 263 1472 1178 2760 1008 1567 2759 1243 1444, lanyard
+1 21, lanyard-hitch
+1699, lanyard bend
+147, lanyard ring-hitch
+1134, lanyard-based-on-the-figure-eight
+1529, lanyard-by-seaman's-way
+2119 2120 1978 779, lanyard-s
+896 2169, larger-rectangular
+1818, lariat lasso-noose
+2077, latigo cinch girth cow-hitch
+897, lead-line strap-hitch long-eye
+707, leader-loop
+706, leather-strap-hitch
+499, left-hand-bowline
+1093 673 1906, left-hand-sheet-bend
+439, left-hand-sheet-bend right-hand-sheet-bend
+2094, left-handed-half two-strand-left-handed-crown
+314, letter-box-shape-adapted-from-a-turk's-head-diagram
+1841, ligature half
+165, ligature
+1101 1556, lineman's-loop
+1557, link-sinnet
+1558 2280 3269, lobster-buoy-hitch
+422, lock noose sheet-bend
+463, long-basket-weave
+41, long-double-diamond
+1893, long-eye
+800, long-eye tack-s
+1877, long-four-strand-lanyard
+254, long-runing-hitch bowline eye-splice
+3015 3151 3114 1731 3476 1766, long-running-eye
+201, long-running-eye hitch long-eye short-eye-splices
+3475, long-splice short-splice multi-strand-bend
+40, long-spritsail-sheet
+1813, long-terminal
+3079, long-three-ply
+557, long-toggle-shaped
+801, loop multi-strand-stopper-s
+647, loop overhand
+1693, loop thumb
+2347, loop harness-loop farmer's-loop
+683, loop-lashing bowline harness-loop single-bowline loop half-hitches
+1953, loop-or-eye-for-the-button
+549, loose-hitches half-hitch
+1435, lorn leader-lop
+3483, luce's-deck-stopper
+759, magner-hitch
+933 1715, magnus rolling-hitch
+1028 3054, magnus-hitch camel-hitch safety-belt-hitch
+2156, magnus-hitch
+419, malingspike-hitch
+1935, manger-hitch
+164 273 1130 1039 155, manrope
+266, manrose multi-strand-buttons
+632, manuel-perry's-sinnet
+1132, maple-leaf
+512, mariner's-splice
+612, marline-bend
+358, marline-hitch half-hitch half-hitch weaver's
+435, marline-hitches
+2446, marline-hitches single-hitches
+1851, marline-hitches trick
+215, marline-hitching
+1680, marlingspike single
+163, marlingspike-hitch boat
+1151 1155 1815 11 1926 1423, marlingspike-hitch
+898, marlingspike-hitch boat noose-hitch
+420, marlingspike-hitch farmer's-noose-hitch
+1889, marlingspike-hitches
+930, martha's-vineyard-boat-heaving-line
+3012, masthead jury-mast
+3008 3011 2455, masthead
+553, mathew-walker manrope
+1052, mattew-walker
+3320, mattew-walker eye-splice
+177 481 153 1207 1717 590 1015 1846 1451, matthew-walker
+198 1479, matthew-walker-by-seaman's-way
+1273, matthew-walker-crowned
+2214, matthew-walker-with-four-part-crown-at-the-top
+601, mauretania turk's-head three-bight four-part-turk's-head
+604, melon-seed
+1774, mesh fisherman's-netting sheet-bend
+2235, mesh
+994 999 202 1275 1966 44, midshipman's-hitch
+1866 3518, midshipman's-hitch rolling-hitch two-half-hitch clove-hitch
+2122 196, midshipman's-hitch half-hitch
+1492, miller sack half-bow clove-hitch bag-s constrictor
+974 1003, miller
+542, mohair queensbury half half-hitch overhand-bend
+2200, mohair weaver's
+2161, monkey-chain chain-shortening
+452, monkey-chain
+1437, monkey-chain-lanyard
+1779, monkey's-first
+234, monkey's-fist heaving-line monkey's-fist
+1816, monkey's-fist three-strand-manrope three-strand-diamond three-strand-footrope two-ply three-ply
+1156, monkey's-fist single-overhand double-overhand triple-overhand quadruple-overhand
+458, monkey's-fist double-overhand triple-overhand overhand
+645, monkey's-fist triple-overhand overhand
+1986, monkey's-fist
+1683, monkey's-fist cube
+1686, monkey's-tail single-throat-seizing seized-round-turn clinch pigtail
+1692, mooring-hitch magnus rolling-hitch single-hitch
+1252, mors-du-cheval
+3854, moth
+630 365, mouse
+819, multifold-becket-hitch
+576, multiple-bends
+620 884, multiple-figure-eight
+886, multiple-loop
+3039 2012, multiple-overhand
+688, multiple-parallel-loop
+425, multiple-parallel-loops
+334, multiple-portuguese-bowline
+3466, multiple-racking-bend
+3095, multiple-sheet-bend
+623 986, multi-strand-button
+582, multi-strand-button-s
+3473, multi-strand constrictor
+1753 2343 450, multi-strand
+592, multi-strand ten-lead four-bight-turk's-head
+2178, multi-strand two-ply three-ply four-ply five-ply
+1928, multi-strand-matthew-walker
+1811, multi-strand-stopper layard
+603, narrow-turk's-head
+3016, narrow-turk's-heads
+1097 308, net-line
+860, net-line-hitch-from-clovelly
+426, net-line-hitch-from-looe
+1842 1383, net-pole
+572, netting-needle-sinnet flat-sinnet-turk's-head three-lead-truk's-head flat-sinnet five-lead seven-lead
+3503, nettle-stuff nettles knittles knettles nittles
+835, newgate
+1172, nine-strand
+1528, nine-strand-sinnet multi-strand-lanyard
+470 1890, nip
+2368, nippers twistters
+2480 1318 444, noose
+2089, noose noose simple-noose
+3038, noose slippery-hitch
+206, noose crossing eye-splice
+3162, noose-hitch farmer's-hitch
+529, noose-hitch
+2145, norfolk-to-washington-boat-heaving-line
+3123 362, nose-twitch
+295, nosegay
+345 1413, oblong
+1547 3047 331, ocean-plat
+760, octagonal
+1707, one-hitch
+1241, one-cord
+1154, one-lenght-hitch single-hitch
+1157, open-carrick-bend
+1433, open-loop
+2175, ordinary-fox
+1306 2287, outside-clinch
+1424, over-and-under-heaving-line
+2054, overhand single-strand-stopper
+850 2142 3465 2163 639 2210 674 190 1033 434 872 3487 3480 681 187 1837 2186 3046 1519, overhand
+516, overhand marline-hitch half single-hitch sheepshank blackwall-hitch strap-hitch bale-sling-hitch
+1765, overhand simple,-single,-thumb,-common,-and-ordinary
+1544, overhand-bend thumb openhand sheet-bend
+996, overhand-bend ring
+524 1759, overhand-bend
+3185, overhand simple
+1402, overhand figure-of-eight overhand
+526, overhand noose
+260, overhand marline-hitch single-hitch
+59, overhand-to-tie-a-double-twist-braid
+3176, overhand-s strand-matthew-walker
+2337, overhand-s
+505, overhand-round-turn-hitching
+65, owl
+518, oysterman's-stopper three-strand-wall half
+519, packer rolled-roast corned-beef
+1975, packer half-hitch
+1204, packing figure-eight butcher's
+1787, parcel
+1718, parker
+1256, pearl
+700 923 1186 1880 229, pectoral
+1806, pellet-shaped-button
+1023, pendant
+1054, pendant-hitch
+3302 817 2013 862 747 2336 1381, pentagon
+1790, pentagon-in-two-planes
+1011, pentalpha
+1280, perry-basket footrope crown-and-wall
+1278, persian senna
+1871, petagonal-butterfly-button
+1854, picket-line-hitch
+1725, picket-line-hitch snug-hitch turk's-head ground-line-hitch
+3484, pile-hitch
+1995, pillow-shaped
+169, pillow-shaped-rectangular
+1892, pilot
+1701, poacher
+246, pocket-shaped
+650, police-line
+210, policeman's-nippers
+527, porter right-handed-double threefold-overhand reef
+1462 1775, portuguese-bowline
+843, portuguese-bowline anchor-bend french-bowline double-loop-s
+61, portuguese-bowline spanish-bowline single-hitch
+1991, pot-hitch clove-hitch
+47, precipice slippery-hitch
+6, pretzel giant-pretzel
+1160, pretzel
+1163 899 1886, prolong
+1425, propeller
+2284, puddening-an-ancor-ring
+3481, pudding
+1147, pumpkin-seed
+607, punch-mat wrought-mat
+1831, pyramid
+1441, quarter-round
+1875, quarter-pole-hitch
+1235, quarter-pole-twist
+1202, quatrefoil oysterman's-stopper
+1914, racking-bend
+1670, racking-hitch cat's-paw
+2339 735 1403, railroad-sinnet
+805, ralted-to-the-monkey's-fist
+1911 1724 2463 634 1601 1237, rectangular
+640, rectangular-two-plane-lanyard
+1391, reef square binding
+1389, reef square bend
+1783 1804 1832, reef square
+243, reef reef
+1826 2121 1833 1328 629 959, reef
+2001 941, reef-becket
+946, reef reversed-hitch cow-hitch
+928, reef square binder
+151, reef weaver's
+1053, reef carrick-bend
+3337, reef parcel bow crossing-s
+468, reef-or-square
+1046, reef-pendant-hitch circus-pole-hitches
+2068, reeving-line-bend two-half-hitches grass
+403, reeving-off-bend
+1242, reserve-hitches two-half-hitches
+1728, reverse-star
+12, reversed-half-hitch
+1225, reversed-half-hitches cow-hitch two-half-hitches clove-hitch two-half-hitches
+1226, reversed-stopper multi-strand-stopper lanyard button shroud french-shroud
+2092, rigger's-lashing-eye
+1784, rigger's-shot-splice
+342, right-angled-triangular-pectroal
+1142, right-hand-bowline reversed-half-hitches
+613, right-hand-diamond
+2204, right-hand-sheet-bend
+3307 659 762 1828 1736, ring-hitch
+692, ring-hitch strap-hitch
+373, ring-hitch cow-hitch
+284, ring-hitch bale-sling-hitch
+309, ring-hitch-and-tag bale-sling-hitch
+738, ring-hitches
+739, ring water gut single-overhand
+740 1788, ring-stopper
+1795, roband-hitch
+3499, roband-hitch halyard-bend clove-hitch single-hitch
+2051, roband-hitches
+1503, robands
+568, rohand-hitches
+1076 1077, rolling-hitch magnus-hitch magner's-hitch
+566 1086 1508 1743 2414 3043 2080, rolling-hitch
+2254, rolling-hitch magnus-hitch magner's-hitch two-round-turns-and-two-half-hitches
+408, rolling-hitch magnus-and-magner's-hitch
+188, rolling-hitch midshipman's-hitch
+1072, rolling-hitch half-hitch
+787, rolling-hitch single-hitch
+1449, rolling-hitches adjustable-bend
+240, rope-yarn reef half
+1985, rope-yarn-bend
+1152 417 18 66, rose
+17, rosebud
+4, rosette
+546 3510, round-flat
+594, round-sinnet sheet-bend overhand
+765 2293 1133 1138 780 3305, round-sinnet
+490, round-sinnet multi-strand foundation coachwhipping french-sinnet
+1690, round-sinnet hexagonal-sinnet
+1170, round-sinnet-turk's-head turk's-head-of-french-sinnet chain-sinnet flat-sinnet solid-sinnet long-splicing
+1473 3070, round-turn
+1319, round-turn-and-buntline-hitch two-half-hitches reversed-hitches
+1322, round-turn-and-elbow
+2289, round-turn-and-half-hitch clove-hitch
+680, round-turn-and-half-hitch
+564, round-turn-and-reversed-hitches round-turn-and-two-half-hitches
+992, round-turn-and-slipped-half-hitch stake-hitch
+924 995 1937 2295, round-turn-and-two-half-hitches
+1482, round-turn-and-two-half-hitches anchor-bend
+2177, round-turn-and-two-half-hitches rolling-hitch
+172, round-turn-and-two-half-hitches hook-hitch
+1847, round-wyw
+1852, rubber-bend
+593, running-bowline noose
+3494, running-bowline crossing half-hitch overhand
+413, running-bowline half-hitch overhand
+1445, running-bowline running-bowling
+1271, running-eye eye-splice loop
+3098 1844, sack
+1055, saddlecloth-shaped
+1465, safety-belt-hitch magnus-hitch rolling-hitch steeplejack's
+31, sailor's-knife-lanyard marlingspike-lanyard single-strand-diamond two-strand-diamond bosun's-whistle
+409, sallie-tucks tuckings sallies
+1244, sallies sally-tufts sallie-tuftings
+125, salmon
+453, sampan-hitch
+820, sash-cord-hitch single-hitch half-hitch overhand
+2242, sash-weight
+1215, scaffold
+1220, scotchmen
+1221, scout-coil hangman's
+1785, scuttle-butt
+1694, seized-clove-hitch round-turn-and-eye-splice
+3511, seized-half-hitch
+2069, seized-shortening
+854, seizing
+388, seven-bight
+2251, seven-strand
+1497, seven-strand-quarter-round
+2224, seven-strand-square-sinnet
+123, shamerock
+121, sheepshank dogshank
+777, sheepshank spanish-bowline double-loop
+332 467 400 1176 1199 1439 3062 43 1114 772 1416, sheepshank
+2061, sheepshank-based-on-the-tom-fool's
+1378, sheepshank-from-a-handcuff
+152, sheepshank-with-a-sword
+429, sheepshank-with-marlingspike-hitches
+1206, sheet
+1313, sheet-bend the-bend simple-bend ordinary-bend common-bend single-bend becket-bend sheet-bend
+619, sheet overhand-s reef
+1923, shiver-hitch matthew-walker single-hitch
+1924, shoe-clerk
+570 1840, shoestring parcel
+402, short-end-bend noose-hitch marlingspike-hitch sheet-bend
+2303, short-end-bend sheet-bend noose left-hand-sheet-bend right-hand-sheet-bend
+726, short-running-eye clove-hitch single-hitch
+908, short-splice
+8, shortening
+238, shroud sailmaker's-short-splice
+401 2398, single-bowline
+2456, single-carrick-bend true-carrick-bend
+2273 818 804, single-carrick-bend
+3524, single-carrick-bend sheet-bend two-half-hitches
+3010, single-cat's-paw
+806 545 176 1594, single-crown-and-double-wall
+743, single-diamond-hitch
+1324, single-half-hitch
+1283 19 866 3240 1127 1184 2462 3491 1168 694 1061 3291 1495 1089 2074 2125, single-hitch
+2300, single-hitch sliperry-hitch
+1697 1066, single-hitch overhand
+948, single-hitch half-hitch
+3327, single-hitch sheep-shank
+2332, single-hitch rolling-hitch
+1071, single-hitch cat's-paw
+159, single-hitches marline-hitches
+1035 1245, single-hitches
+1895, single-hook-hitch pile-hitch
+741, single-matthew-walker
+280, single-pass-hitch
+281, single-reef-points
+937, single-ring-stopper deck wing hatchway bitt-stroppers
+1117, single-roband
+3060, single-stopper
+3440, single-tail-block
+709, single-turn
+1902, single-strand
+416, single-strand multi-strand
+253 3100 1979 2024 1167 2113 1812, sinnet
+320, sinnet lanyard knife-lanyard
+522, sinnet long-running-eye
+1261, sinnet-earings
+143, sister-loop
+1803, six-strand
+2245, six-strand-coachwhipping
+2096, six-strand-ellipse
+961, six-strand-round-sinnet
+1744, six-strand-sinnet
+823, slack-line-hitch
+57, slack-line-bend
+424, slath slarth josephine crown
+1412, sling strap-toggle
+339, slingstone-hithch
+668, slip stopper slipped
+608 2086, slip
+3177, slip-loop
+2420 1248, slip-noose
+3313, slip-noose-hitch
+1512, slip-over-single-hitch single-hitch
+2151 718, slip-tackle
+894, sliperry-hitch
+848, slipped-and-toggled-becket-hitch
+636 929, slipped-buntline-hitch
+956, slipped-buntline-kitch
+3041, slipped-half-fitch
+2302 794 926 1030 277 1290 1821, slipped-half-hitch
+949 1301, slipped-hitch
+421, slipped-loop
+1299, slipped-sheet-bend
+600, slippering-hitch slipped
+746 656 1712 52 1823 393, slippery-hitch
+1807, slippery-hitch slippery-pinhitch
+1249, small-hickory-toggle
+764, small-of-four-parts
+3, smaller-turk's-heads stopper-s lanyard-s
+2102, snell-loop
+1666, snug-half-hitches
+1860 875 2201, snug-hitch
+311, snug-hitches
+175, snug-hitches post-hitches picket-line-hitch
+1891, souble-full-matthew-walker
+2465, span-loop
+1430 328 2018, spanish-bowline
+1420, spanish-bowline clove-hitch single-hitches
+901, spanish-bowline double-loops
+1858, spanish-fox
+1321, spanish-hawser-bend
+1599, spar-hitch
+1600, spliced-eye
+352, splices bends
+1884 2076, splipped-half-hitch
+503, sport
+1735, sports single-strand-button one-strand-button
+1737, springs
+2052 2058 2097 486 2028 2081 1664, spritsail-sheet
+1885, spritsail-sheet stopper double-wall
+1708, spun-yarn
+987, square reverse-hitch
+509 1471 1992 562 1727 964 56 244, square
+219, square circular
+1915, square reef
+397, square-button
+24, square-wiht-the-same-characteristics-as-triangular
+3385, square-leaf-form
+1386, square-loop-sinnet-lanyard
+745, square-shoestring
+1217 67, square-sinnet
+60, square-sinnet round-sinnet
+492 3306, square-turk's-head
+676, square-turk's-head 4lx3b-turk's-head 3lx2b-turk's-head
+1020, square-turk's-head over-two-under-two over-three-under-three
+1006, stake-hitch timber-hitch single-hitch
+887, standing-bowline
+1113 2030, standing-turk's-head
+2059, standing-turk's-head footrope three-ply four-ply five-ply
+1374, standing-turk's-head diamond four-lead
+675, standing-turk's-heads
+1638 1824 213 1169 461, star
+3482, stationer slipped-half-hitch
+1087, stationer
+1092, steamboat-hitch clove-hitch
+1137, steel-wire-cargo-slings
+2160 3464 1447, steeple-slings reef eye-splice two-half-hitches
+1187, steeplejack's-hitch rolling-hitch
+1733, stevedore single-strand-stopper
+142, stevedore
+1988, stopped seized-half-hitch
+1705 131, stopper knob terminal
+802 1067 3053 128 491 242 1188 1189, stopper
+631, stopper rolling-hitch
+1032, stopper-and-button-s
+1300, stopper-and-deck-stopper
+847 51, stopper-s
+799, stopper-s double-overhand-s
+82 1597 580, strangle
+2282, strap bale-sling-hitch loop eye-splice overhand
+824, strap becket-hitch
+1907, strap
+228, strap-and-becket-hitch
+2340 2341, strap-bend
+1120 1057 2146 208, strap-hitch
+1443, strap-hitch bale-sling-hitch
+412, string-tie
+1865, studding-sail-bend fisherman's-bend
+3296, studding-sail-halyard-bend yard-hitch
+410, studding-sail-halyard-strap
+423, stunner-hitch double-blackwall-hitch
+766, sunflower
+448, swab-hitch
+3322 3078, swivel-hitch
+985, symmetrical-and-somewhat-larger
+622 844 1464 1797, tack
+321, tack stopper-s double-wall-s
+1879, tag ring-hitch
+857, tag-hitch
+1042, teamster's-hitch long-overhand-loop ring-hitch
+2467, temporary-bend
+1376, tennis-bag-lanyard
+1216, ten-strand
+732, ten-strand-ellipse
+893 1219, terminal
+1916, terminal-overhand
+1434, tetrahedron
+1569, the-noose running
+1834, theodore
+1523, thief bag bread-bag
+1767, thimble-and-eye
+695, thimbles
+1665, thirteen-strands sixteen-strand-sinnets
+191, three-bight-turk's-head
+2179, three-bight,-four-lead-turk's-head
+1013, threefold-overhand french multiple-overhand
+431, three-lead two-bright-turk's-head figure-eight
+1499, three-lead five-bright
+670, three-lead four-bight-turk's-head
+498, three-lead five-bight-turk's-head
+2112 1510, three-lead eight-bight-turk's-head
+1800, three-lead seven-bight-turk's-head
+312, three-lead
+507, three-lead-turk's-head
+665, three-lead,-two-bight-turk's-head
+2397, three-part-crown
+1861, three-petal
+1325, three-ply
+1827, three-strand-button
+2460, three-strand-flat-sinnet three-lead-turk's-haed three-strand-flat-sinnet
+1209, three-strand-matthew-walker multi-strand-stopper
+1932, three-strand-rope-and-two-matthew-walker-s deck-bucket-bails
+1933, three-strand-sinnet three-lead-turk's-head
+753, three-strand-sinnet
+591, thrice-crowned
+2166, thumb single double-overhand
+497, thumb
+1292, thumb single-or-double-overhand
+1990 2249, tie-a-left-half
+1714, timber-hitch half-hitch
+1839 1468 271, timber-hitch
+156, timber-hitch lumberman's countryman's-not
+567, timber-hitch single-hitches clove-hitch
+22, timber-hitch-and-halt-hitch single-hitches
+3317, toggle-and-eye
+406, toggled-bight boat boat-hitch
+911 834 2057, toggled-bight
+1881 538 1093 1104 1107, toggle-shaped
+1078, toggle-shaped t-shaped
+1135, tom-fool
+2304 3116, tom-fool's
+1133, topsail-halyard-bend yard-hitch
+1136, topsail-halyard-bend
+1138, topsail-halyard-bend studding-sail-bend
+1139 309, tourniquet
+339 508 1061 516, transom
+406, trefoil
+552, trefoil two-lead three-bight-turk's-head
+553, trefoil four-lead three-bight-turk's-head
+486 3473 1767 1434, triangular
+1126, triangular-butterfly
+60, triangular-button
+1435, triangular-of-the-butterfly
+1523, triangular-tied-with-four-strands
+1461, triangular-sinnet
+1530, triangular-turk's-head-of-nine-leads-and-two-strands-based-on-sinnet
+1216, triangular-turk's-head-of-thirteen-leads
+732 1219 1100 1695 3481 579 1375 1427, true-lover
+857, true-lover's
+862, true-lover's eight-bight three-lead-turk's-head
+885, true-lover's overhand-s
+675, trumpet-cord-or-double-monkey-chain-lanyard
+676, truncated-pyramid
+677, tucked-bend
+581, tuft half-hitch butcher's
+779, turkish-lanyard
+780 488 1438 2467 235 337 338 1474 204 602 603, turk's-head
+489, turk's-head eight-lead three-bight-turk's-head
+543, turk's-head mat
+336, turk's-head button lanyard-s multi-strand-button single-strand-button
+3009, turk's-head one-strand-button monkey's-fist multi-strand-button
+3012, turk's-head-bend
+3044, turk's-head-of-eleven-leads-with-square-cross-section-tied-with-one-cord
+3041, turk's-head-of-square-sinnet
+35 644 985, turk's-heads
+986, turk's-heads multi-strand monkey's-fist
+3078, turtle major-turtle's turl
+622, tweenie
+623, tweenie monkey's-fist
+745, twice-crowned
+1544, two-bends
+496, two-bowlines bowline-bend hawser-bends
+497 2420 1566 1038 344 1554 844 1019 1028 1248 363, two-half-hitches
+1022, two-half-hitches granny two-half-hitches
+3162, two-halt-hitches clove-hitch
+17, two-hearts-that-beat-as-one
+175, two-overhand-s true-lover's
+229, two-parallel-round-loop
+268 280, two-pentalphas
+281, two-round-turns
+289, two-round-turns-and-two-half-hitches rolling-hitch
+392, two-single-hitches clove-hitch
+1900, two-wall
+1905, two-bight-turk's-head-lanyard
+2070, two-bight,-one-lead-turk's-head
+3105, two-bight,-two-lead-turk's-head
+3302, two-bright b
+3304, two-cord-lanyard
+3305 3308 3313, two-dimensional-s
+2088, twofold-overhand-bend two-strand-full-matthew-walker
+3092 3291, two-lead
+3327 1923, two-plane
+3346, two-plane-basket-weave
+1495, two-plane-bosun
+1924, two-ply doubled
+2422, two-ply three-ply four-ply
+2302, two-strand
+1806, two-strand-button
+1023, two-strand-chinese-lanyard
+1054, two-strand-crown
+170 308 420, two-strand-diamond
+424, two-strand-eye-splice
+495, two-strand-footrope
+520 524 530 531, two-strand-matthew-walker
+1512, two-strand-wall
+1376, two-strando-stopper
+1042, tye-the-wall-and-crown-s
+1666, underhand-round-turn-hitching
+1669, upright-cylindroid-toggle
+1908, violet
+570, wafer-shaped
+1638, walker-thompson-tied-a-cable-stopper
+1824 1116 1668, wall
+2003, wall overhand
+2028, wall-and-crown skull-pig-tail
+2284 2398 572, wall-and-crown
+1658, wall pig-tail
+264, wall double-becket-hitch
+386 564, water
+1840, water waterman's english englishman's fisherman's true-lover's angler's
+1841 288, weaver's
+1842, weaver's butcher's overhand-bend
+293, weaver's shroud-s short-splices multi-strand-bens
+24, weaver's sheet-bend
+1518, weaver's reek becket-hitches
+1722, wedding rigging-stopper
+1723, well-pipe-hitch
+1885, wet-weather-hitch stake-hitch single-hitch slipped-hald-hitch
+1911, wet-wheather-hitch take-up-hitch single-hitch slipped-half-hitch
+1724, whale
+3505, what
+354 2455 2456 2273, whatnot
+573, wide-basket-weave
+574 1307, wide-standing-turk's-head
+612 926 929, wide-turk's-head
+930, wild-goose
+931, woven sword-mat
+877, wrap-hitch
+849, yardarm
+865, yarn-splice
+3013, zigzag
+454, zigzag-lanyard
