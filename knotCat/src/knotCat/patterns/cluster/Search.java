@@ -143,7 +143,9 @@ public class Search {
 						if(uncertaintyFlag){
 							List<Knot> tempKnotList = new ArrayList<>();
 							for(Knot k : knotsToSearch){
-								Knot k1 = new Knot(null, null, k.getFeatures(), k.getAtoms());
+								Map<Integer, BitArray> kAf = new TreeMap<Integer, BitArray>();
+								kAf.putAll(k.getAtoms());
+								Knot k1 = new Knot(null, null, k.getFeatures().copy(), kAf);
 								tempKnotList.add(k1);
 
 								//update feature BitArray
