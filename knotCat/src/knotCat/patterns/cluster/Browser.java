@@ -535,152 +535,152 @@ public class Browser {
 		//			
 		//		}
 
-		//		@SuppressWarnings("resource")
-		//		Scanner scanKnots = new Scanner(knotsPath);
-		//		
-		//		while(scanKnots.hasNext()){
-		//			
-		//			String line = scanKnots.nextLine();
-		//			
-		//			if(!line.matches("[0-9 ]+, [0-9a-z\\'\\- ]+")){
-		//				System.out.println("Linha errada: " + line);
-		//			}
-		//			
-		//			String[] num_name = line.split("\\, ");
-		//			
-		//			String[] numbers = num_name[0].split(" ");
-		//			String[] names = num_name[1].split(" ");
-		//			
-		//			LinkedList<Integer> numbersList = new LinkedList<Integer>();
-		//			LinkedList<String> namesList = new LinkedList<String>();
-		//			
-		//			for(int i = 0; i < numbers.length; i++){
-		//				numbersList.add(Integer.parseInt(numbers[i]));
-		//			}
-		//			
-		//			for(int j = 0; j < names.length; j++){
-		//				namesList.add(names[j]);
-		//			}
-		//			
-		//		//	BitArray ba = new BitArray(NUMFEATURES);
-		//			Map<Integer, BitArray> at = new TreeMap<Integer, BitArray>();
-		//			
-		//			Knot knot = new Knot(numbersList, namesList, browser.ba, at);
-		//			
-		//			browser.insertKnot(knot);
-		//			
-		//		}
+				@SuppressWarnings("resource")
+				Scanner scanKnots = new Scanner(knotsPath);
+				
+				while(scanKnots.hasNext()){
+					
+					String line = scanKnots.nextLine();
+					
+					if(!line.matches("[0-9 ]+, [0-9a-z\\'\\- ]+")){
+						System.out.println("Linha errada: " + line);
+					}
+					
+					String[] num_name = line.split("\\, ");
+					
+					String[] numbers = num_name[0].split(" ");
+					String[] names = num_name[1].split(" ");
+					
+					LinkedList<Integer> numbersList = new LinkedList<Integer>();
+					LinkedList<String> namesList = new LinkedList<String>();
+					
+					for(int i = 0; i < numbers.length; i++){
+						numbersList.add(Integer.parseInt(numbers[i]));
+					}
+					
+					for(int j = 0; j < names.length; j++){
+						namesList.add(names[j]);
+					}
+					
+				//	BitArray ba = new BitArray(NUMFEATURES);
+					Map<Integer, BitArray> at = new TreeMap<Integer, BitArray>();
+					
+					Knot knot = new Knot(numbersList, namesList, browser.ba, at);
+					
+					browser.insertKnot(knot);
+					
+				}
 
 		///////////////CHAPTER FEATURES PARSER
 
-//		@SuppressWarnings("resource")
-//		Scanner scanCF = new Scanner(chapterFeaturesPath);
-//		//read line by line
-//
-//		LinkedList<String> features = new LinkedList<String>();
-//		String[] atomFeatureParser = null;
-//		String[] knotInterval = null;
-//		LinkedList<String[]> atoms = new LinkedList<>();
-//
-//
-//		while(scanCF.hasNextLine()){
-//			//process each line
-//			String line = scanCF.nextLine();
-//			if(line.matches("[0-9]+ [0-9]+")){
-//				knotInterval = line.split(" ");
-//			}
-//
-//			if(line.matches("[a-z'-]+")){
-//				features.add(line);
-//			}	
-//
-//			if(line.matches("[a-z'-]+, [a-z'-. ]+")){
-//				atomFeatureParser = line.split(", ");
-//				atoms.add(atomFeatureParser);
-//			}	
-//
-//			if(line.matches("")){
-//
-//				for(int knotNumber = Integer.parseInt(knotInterval[0]);
-//						knotNumber < Integer.parseInt(knotInterval[1]);
-//						knotNumber++){
-//
-//					for(Knot k : browser.getKnotList()){
-//
-//						for(int ref : k.getReference()){
-//							if(ref == knotNumber){
-//
-//								//								actualizar features
-//								if(!features.isEmpty()){
-//									for(String feature : features){
-//										browser.insertFeature(feature);
-//										int indexFeature = browser.getFeatureIndex(feature);
-//										BitArray bArray = (BitArray)k.getFeatures().clone();
-//										bArray.set(indexFeature);
-//										k.setFeatures(bArray);
-//									}
-//								}
-//
-//								if(!atoms.isEmpty()){
-//									//actualizar atoms
-//									for(String[] feature_atom : atoms){
-//										//((feature) (feature.atom1 feature.atom2))
-//										String featureToUpdate = feature_atom[0];
-//										String setOfAtomsToUpdate = feature_atom[1]; // (feature.atom1 feature.atom2)
-//
-//
-//										System.out.println("Feature To Update: " + featureToUpdate);
-//										System.out.println("Set of Atoms To Update: " + setOfAtomsToUpdate);
-//
-//										//(feature.atomN)
-//										String[] feature_atomN = setOfAtomsToUpdate.split(" ");
-//
-//										System.out.println("feature_atomN various pairs : " + feature_atomN);
-//
-//										for(int atomNumber = 0 ; atomNumber < feature_atomN.length; atomNumber++){
-//											System.out.println("atomNumber " + atomNumber);
-//											System.out.println("feature_atomN.length " + feature_atomN.length);
-//											//((feature) (atom))
-//											String wordToSplit = feature_atomN[atomNumber];
-//											System.out.println("wordToSplit " + wordToSplit);
-//											String[] aux = wordToSplit.split("\\.");
-//											System.out.println("Aux[0] " + aux[0]);
-//											System.out.println("Aux[1] " + aux[1]);
-//											String atomName = aux[1];
-//											System.out.println("atomName " + atomName);
-//
-//											int featureIndex = browser.getFeatureIndex(featureToUpdate);
-//
-//											System.out.println("featureIndex " + featureIndex);
-//											if(featureIndex == -1){
-//												browser.insertFeature(featureToUpdate);
-//												browser.insertAtomFeature(featureToUpdate, atomName);
-//												featureIndex = browser.getFeatureIndex(featureToUpdate);
-//												BitArray atom = k.getAtomFeature(featureIndex);
-//
-//												if (atom == null){
-//													atom = new BitArray(Browser.NUMATOMS);
-//													k.getAtoms().put(featureIndex, atom);
-//												}
-//												k.getFeatures().set(featureIndex);
-//												k.getAtoms().put(featureIndex, atom);
-//											}
-//											browser.insertAtomFeature(featureToUpdate, atomName);
-//											BitArray atom = k.getAtomFeature(featureIndex);
-//											k.getFeatures().set(featureIndex);
-//											k.getAtoms().put(featureIndex, atom);
-//										}
-//									}
-//								}
-//							}
-//						}
-//					}
-//				}
-//				features.clear();
-//				knotInterval = null;
-//				atoms.clear();
-//			}
-//		}
+		@SuppressWarnings("resource")
+		Scanner scanCF = new Scanner(chapterFeaturesPath);
+		//read line by line
+
+		LinkedList<String> features = new LinkedList<String>();
+		String[] atomFeatureParser = null;
+		String[] knotInterval = null;
+		LinkedList<String[]> atoms = new LinkedList<>();
+
+
+		while(scanCF.hasNextLine()){
+			//process each line
+			String line = scanCF.nextLine();
+			if(line.matches("[0-9]+ [0-9]+")){
+				knotInterval = line.split(" ");
+			}
+
+			if(line.matches("[a-z'-]+")){
+				features.add(line);
+			}	
+
+			if(line.matches("[a-z'-]+, [a-z'-. ]+")){
+				atomFeatureParser = line.split(", ");
+				atoms.add(atomFeatureParser);
+			}	
+
+			if(line.matches("")){
+
+				for(int knotNumber = Integer.parseInt(knotInterval[0]);
+						knotNumber < Integer.parseInt(knotInterval[1]);
+						knotNumber++){
+
+					for(Knot k : browser.getKnotList()){
+
+						for(int ref : k.getReference()){
+							if(ref == knotNumber){
+
+								//								actualizar features
+								if(!features.isEmpty()){
+									for(String feature : features){
+										browser.insertFeature(feature);
+										int indexFeature = browser.getFeatureIndex(feature);
+										BitArray bArray = (BitArray)k.getFeatures().clone();
+										bArray.set(indexFeature);
+										k.setFeatures(bArray);
+									}
+								}
+
+								if(!atoms.isEmpty()){
+									//actualizar atoms
+									for(String[] feature_atom : atoms){
+										//((feature) (feature.atom1 feature.atom2))
+										String featureToUpdate = feature_atom[0];
+										String setOfAtomsToUpdate = feature_atom[1]; // (feature.atom1 feature.atom2)
+
+
+										System.out.println("Feature To Update: " + featureToUpdate);
+										System.out.println("Set of Atoms To Update: " + setOfAtomsToUpdate);
+
+										//(feature.atomN)
+										String[] feature_atomN = setOfAtomsToUpdate.split(" ");
+
+										System.out.println("feature_atomN various pairs : " + feature_atomN);
+
+										for(int atomNumber = 0 ; atomNumber < feature_atomN.length; atomNumber++){
+											System.out.println("atomNumber " + atomNumber);
+											System.out.println("feature_atomN.length " + feature_atomN.length);
+											//((feature) (atom))
+											String wordToSplit = feature_atomN[atomNumber];
+											System.out.println("wordToSplit " + wordToSplit);
+											String[] aux = wordToSplit.split("\\.");
+											System.out.println("Aux[0] " + aux[0]);
+											System.out.println("Aux[1] " + aux[1]);
+											String atomName = aux[1];
+											System.out.println("atomName " + atomName);
+
+											int featureIndex = browser.getFeatureIndex(featureToUpdate);
+
+											System.out.println("featureIndex " + featureIndex);
+											if(featureIndex == -1){
+												browser.insertFeature(featureToUpdate);
+												browser.insertAtomFeature(featureToUpdate, atomName);
+												featureIndex = browser.getFeatureIndex(featureToUpdate);
+												BitArray atom = k.getAtomFeature(featureIndex);
+
+												if (atom == null){
+													atom = new BitArray(Browser.NUMATOMS);
+													k.getAtoms().put(featureIndex, atom);
+												}
+												k.getFeatures().set(featureIndex);
+												k.getAtoms().put(featureIndex, atom);
+											}
+											browser.insertAtomFeature(featureToUpdate, atomName);
+											BitArray atom = k.getAtomFeature(featureIndex);
+											k.getFeatures().set(featureIndex);
+											k.getAtoms().put(featureIndex, atom);
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				features.clear();
+				knotInterval = null;
+				atoms.clear();
+			}
+		}
 
 		//        System.out.println("-------------------------------------");
 		//        System.out.println("ALL KNOTS: " + browser.getKnotNames().toString()+"\n");
@@ -715,10 +715,10 @@ public class Browser {
 		//        DistanceFunction distanceFunction = new DistanceJaccard();
 		//        DistanceFunction distanceFunction = new DistanceCosine();
 
-		for(int i=0;i<browser.getKnotList().size()-1;i++){
-			System.out.println(browser.getKnotList().get(i).getName().toString());
-			System.out.println(browser.getKnotList().get(i).getFeatures().toString());
-		}
+//		for(int i=0;i<browser.getKnotList().size()-1;i++){
+//			System.out.println(browser.getKnotList().get(i).getName().toString());
+//			System.out.println(browser.getKnotList().get(i).getFeatures().toString());
+//		}
 
 
 
