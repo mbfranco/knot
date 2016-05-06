@@ -1,6 +1,9 @@
 package knotCat.patterns.cluster;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.InputStreamReader;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -21,9 +24,10 @@ public class Search {
 	File input;
 	Browser browser;
 
-	public Search() {
-
-	}
+	String urlDomain = "http://words.bighugelabs.com/api/2/3798afc1ef8cdcc0382aa79a402b8d61/";
+	String wordToSearch = "word";
+	
+	public Search() {}
 
 	public Search(File knotsFile, Browser browser) {
 		this.input=knotsFile;
@@ -510,6 +514,26 @@ public class Search {
 		}
 	}
 
+	
+	public List<String> getSynonymous(String word) throws Exception{
+
+		List<String> words = new ArrayList<String>();
+
+		URL url = new URL(urlDomain + wordToSearch + "/");
+		BufferedReader in = new BufferedReader(
+				new InputStreamReader(url.openStream()));
+
+		String inputLine;
+		while ((inputLine = in.readLine()) != null){
+			String[] wordList = inputLine.split("\\|");
+			words.add(wordList[2]);
+		}
+		in.close();
+
+		
+
+		return words;
+	}
 
 
 	private List<ClusterSearchResult> bayesRule(List<ClusterSearchResult> knotResult) {
