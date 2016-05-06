@@ -518,7 +518,7 @@ public class Search {
 
 
 		if(!knotResult.isEmpty()){
-			if(knotResult.get(1).getProbability() == 0.0){
+			if(knotResult.get(1).getProbability() == 0.0 && knotResult.get(0).getProbability() != 0.0){
 
 				ClusterSearchResult element = knotResult.get(0);
 				element.setProbability(1);

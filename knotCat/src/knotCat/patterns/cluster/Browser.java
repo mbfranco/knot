@@ -2,7 +2,9 @@ package knotCat.patterns.cluster;
 
 import java.awt.LinearGradientPaint;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.file.Path;
@@ -355,6 +357,19 @@ public class Browser {
 			e.getMessage();
 		}
 	}
+	
+	public void saveTreeToFile(String output, List<FinalCluster> fc ) throws IOException {
+		BufferedWriter writer = new BufferedWriter(new FileWriter(output));
+		// for each cluster
+		for(FinalCluster f : fc){
+			writer.write(f.toString());
+
+			writer.newLine();
+
+		}
+		// close the file
+		writer.close();
+	}
 
 
 	public static void main(String[] args) throws Exception{
@@ -377,7 +392,10 @@ public class Browser {
 		Path knotsPath = Paths.get(knotsFileName);
 		String outputFileName = "output.txt";
 		File outputFile = new File(outputFileName );
-
+		String outputTree = "outputTree.txt";
+		File outputTreeFile = new File(outputTree);
+		
+		
 		String fileIterator = "C:\\Users\\miguel\\Desktop\\Test\\file";
 		Path fiPath;
 
@@ -390,6 +408,11 @@ public class Browser {
 		// if the output file doesn't exist, then create it
 		if (!outputFile.exists()) {
 			outputFile.createNewFile();
+		}
+		
+		
+		if (!outputTreeFile.exists()) {
+			outputTreeFile.createNewFile();
 		}
 
 
@@ -729,13 +752,11 @@ public class Browser {
 		//        	System.out.println("Atom Features: " + s);
 		//        }	
 
-		hc.runAlgorithm(7, distanceFunction, browser);
+		hc.runAlgorithm(2, distanceFunction, browser);
 		hc.printStatistics();
 		hc.saveToFile(outputFileName);
-		//TODO print não está a ser bem feito
-		for(FinalCluster fc : browser.getFinalCluster()){
-			System.out.println(fc.toString());
-		}
+		
+		browser.saveTreeToFile(outputTree,browser.getFinalCluster());
 
 		//		for(FinalCluster f : browser.getFinalCluster()){
 		//			f.printDendrogram("", true);
@@ -750,7 +771,7 @@ public class Browser {
 
 
 		//ArrayList<ClusterSearchResult> result = s.searchForKnot("?best-for-purpose trim offer-resistance tie use untie slip slip.not ?secure ?low.gravity ?secure.not ?hang.at-sea ?secure.add-crossing-turns-to-seizings", 1);
-		List<ClusterSearchResult> result = s.searchForKnot("hang.at-sea", 0, "hamming");
+		List<ClusterSearchResult> result = s.searchForKnot("hang.at-sea", 0.1, "hamming");
 		//        List<ClusterSearchResult> result = s.searchForKnot("best-for-purpose.leader best-for-purpose.small-line best-for-purpose.stiff-line best-for-purpose.slip-line trim.end trim.short offer-resistance.wet-not tie.additional-turns-unnecessary tie.opposite-twists tie.end-opposite-side use.piano-wire-not untie.not slip.not secure.very secure.most", 0.3, "euclidean");
 		//List<ClusterSearchResult> result = s.searchForKnot("tie.bight use.hand-hold use.shoulder-hold haul.gun-to-position", .88, "hamming");
 

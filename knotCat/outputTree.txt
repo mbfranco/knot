@@ -1,0 +1,200 @@
+|   +--- four-strand-square
+'--- 
+    '--- narrow-turk's-head
+
+|   +--- anchor-hitch
+'--- 
+    '--- dropper-fly-hitch
+
+|       +--- two-half-hitches
+|   +--- 
+|   |   '--- tye-the-wall-and-crown-s
+'--- 
+    |   +--- pendant
+    '--- 
+        '--- double-oysterman's
+
+|       +--- seven-strand
+|   +--- 
+|   |   '--- sash-weight
+'--- 
+    |   +--- banana-hitch
+    '--- 
+        '--- four-in-hand
+
+|       +--- figure-eight-chain-turk's-head
+|   +--- 
+|   |   '--- bow-tie
+'--- 
+    |   +--- clove-hitch
+    '--- 
+        '--- half-round-turk's-head-of-seventeen-leads-based-on-sinnet
+
+|   +--- wild-goose
+'--- 
+    '--- spanish-bowline
+
+|       +--- single-hook-hitch
+|   +--- 
+|   |   '--- souble-full-matthew-walker
+'--- 
+    |   +--- pilot
+    '--- 
+        '--- strap
+
+|               +--- smaller-turk's-heads
+|           +--- 
+|           |   '--- two-bright
+|       +--- 
+|       |   |   +--- scaffold
+|       |   '--- 
+|       |       '--- triangular-tied-with-four-strands
+|   +--- 
+|   |   |       +--- japanese
+|   |   |   +--- 
+|   |   |   |   '--- nettle-stuff
+|   |   '--- 
+|   |       |   +--- multi-strand-stopper
+|   |       '--- 
+|   |           '--- triangular-turk's-head-of-nine-leads-and-two-strands-based-on-sinnet
+'--- 
+    |           +--- square-leaf-form
+    |       +--- 
+    |       |   '--- standing-turk's-head
+    |   +--- 
+    |   |   |   +--- constrictor
+    |   |   '--- 
+    |   |       '--- full-matthew-walker
+    '--- 
+        |       +--- sheet
+        |   +--- 
+        |   |   '--- short-running-eye
+        '--- 
+            |   +--- bead
+            '--- 
+                '--- grass
+
+|   +--- trefoil
+'--- 
+    '--- noose-hitch
+
+|   +--- bend
+'--- 
+    '--- monkey-chain
+
+|               +--- single-hitches
+|           +--- 
+|           |   '--- two-single-hitches
+|       +--- 
+|       |   |   +--- diamond-sinnet
+|       |   '--- 
+|       |       '--- three-lead
+|   +--- 
+|   |   |       +--- slipped-loop
+|   |   |   +--- 
+|   |   |   |   '--- single-strand
+|   |   '--- 
+|   |       |   +--- intermediate-between-the-figure-eight-and-the-stevedore
+|   |       '--- 
+|   |           '--- multiple-parallel-loops
+'--- 
+    |           +--- weaver's
+    |       +--- 
+    |       |   '--- shroud
+    |   +--- 
+    |   |   |   +--- clove-hitch
+    |   |   '--- 
+    |   |       '--- long-runing-hitch
+    '--- 
+        |       +--- three-bight-turk's-head
+        |   +--- 
+        |   |   '--- fisherman's-bend-and-bowline
+        '--- 
+            |   +--- circe-in-two-planes
+            '--- 
+                '--- farmer's-halter-loop
+
+|   +--- four-strand-full
+'--- 
+    '--- ten-strand-ellipse
+
+|       +--- sheepshank
+|   +--- 
+|   |   '--- button-based-on-a-triangular-turk's-head
+'--- 
+    |   +--- camel-hitch
+    '--- 
+        '--- corner-beef
+
+|   +--- butt
+'--- 
+    '--- kellig-hitch
+
+|       +--- running-bowline
+|   +--- 
+|   |   '--- round-sinnet
+'--- 
+    |   +--- josephine
+    '--- 
+        '--- multi-strand
+
+|       +--- mooring-hitch
+|   +--- 
+|   |   '--- one-hitch
+'--- 
+    |   +--- hitch
+    '--- 
+        '--- wall
+
+|       +--- five-strand-manrope
+|   +--- 
+|   |   '--- long-running-eye
+'--- 
+    |   +--- turk's-head
+    '--- 
+        '--- crossing-hitch
+
+'--- carrick-bend
+
+'--- figure-eight
+
+'--- buoy-rope-hitch
+
+'--- inside-clinch
+
+'--- chinese-button
+
+'--- half
+
+'--- rose
+
+'--- hunter's-bend
+
+'--- department-store-loop
+
+'--- double-loop
+
+'--- maple-leaf
+
+'--- four-lead
+
+'--- half-round
+
+'--- harness-loop
+
+'--- snug-half-hitches
+
+'--- bale-sling-hitch
+
+'--- single-hitch
+
+'--- square-shoestring
+
+'--- six-strand-sinnet
+
+'--- 3lx2b
+
+'--- short-splice
+
+'--- pumpkin-seed
+
