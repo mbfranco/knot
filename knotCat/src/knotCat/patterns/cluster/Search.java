@@ -261,6 +261,10 @@ public class Search {
 
 		}
 
+		System.out.println("KNOTS TO SEARCH: ");
+		for(Knot k : knotsToSearch)
+			System.out.println(k.getFeatures() + " " + k.getAtoms());
+		
 		//Search in the cluster for knots the are similar and are above the minimum similarity threshold
 		List<ClusterSearchResult> knotResult = searchCluster(knotsToSearch, uncertaintyThreshold, distanceFunction);
 
@@ -560,7 +564,7 @@ public class Search {
 		//if there is only one element on the list that has a certainty > 1, than calculate Bayes Rule
 
 
-		if(!knotResult.isEmpty()){
+		if(!knotResult.isEmpty() && knotResult.size() > 1){
 			if(knotResult.get(1).getProbability() == 0.0 && knotResult.get(0).getProbability() != 0.0){
 
 				ClusterSearchResult element = knotResult.get(0);

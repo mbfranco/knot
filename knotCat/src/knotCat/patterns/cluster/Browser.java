@@ -781,47 +781,47 @@ public class Browser {
 		if(result.isEmpty()){System.out.println("Está vazio...");}
 		else{
 			System.out.println("Preencheu!!!");
-
 			for(ClusterSearchResult r : result){
-
-				System.out.println(r.getKnot().getNames() + " " + r.getProbability());
+				System.out.println(r.getKnot().getNames() + " " + r.getProbability() + " " + r.getKnot().getFeatures());
 
 			}
 		}
 
-//		while(true){
-//
-//			System.out.println("Enter the 'features' to search separated by a \"space\" (feature): ");
-//			System.out.println("If you want any 'sub-features' add a \".\" between the feature and the sub-feature (feature.sub-feature): ");
-//			System.out.println("If you are not sure if either a 'feature' or a 'sub-features' is present, add a \"?\" before the word (?feature): ");
-//			try{
-//				BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
-//				String knotsToSearch = bufferRead.readLine();
-//
-//				System.out.println("Type your threshold for the probability of the search being your knot: ");
-//				String uncertaintyThreshold = bufferRead.readLine();
-//
-//				Search search = new Search(outputFile, browser);
-//				List<ClusterSearchResult> sr = search.searchForKnot(knotsToSearch, Double.parseDouble(uncertaintyThreshold), "hamming");
-//
-//				if(sr.isEmpty()){
-//					System.out.println("Está vazio...");
-//				}
-//				else{
-//					System.out.println("Preencheu!!!");
-//
-//					for(ClusterSearchResult r : sr){
-//
-//						System.out.println(r.getKnot().getNames() + " " + r.getProbability());
-//
-//					}
-//				}
-//			}
-//			catch(IOException e)
-//			{
-//				e.printStackTrace();
-//			}
-//
-//		}
+		while(true){
+
+			System.out.println("Enter the 'features' to search separated by a \"space\" (feature): ");
+			System.out.println("If you want any 'sub-features' add a \".\" between the feature and the sub-feature (feature.sub-feature): ");
+			System.out.println("If you are not sure if either a 'feature' or a 'sub-features' is present, add a \"?\" before the word (?feature): ");
+			try{
+				BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
+				String knotsToSearch = bufferRead.readLine();
+
+				System.out.println("Type your threshold for the probability of the search being your knot: ");
+				String uncertaintyThreshold = bufferRead.readLine();
+
+				Search search = new Search(outputFile, browser);
+				List<ClusterSearchResult> sr = search.searchForKnot(knotsToSearch, Double.parseDouble(uncertaintyThreshold), "hamming");
+
+				if(sr.isEmpty()){
+					System.out.println("Está vazio...");
+				}
+				else{
+					System.out.println("Preencheu!!!");
+
+					for(ClusterSearchResult r : sr){
+
+						if(r.getProbability() > 0)
+						System.out.println(r.getKnot().getNames() + " " + r.getProbability() + " " + r.getKnot().getFeatures() + " " + r.getKnot().getAtomFeatures());
+						//r.getTreeClusterResult().toString();
+
+					}
+				}
+			}
+			catch(IOException e)
+			{
+				e.printStackTrace();
+			}
+
+		}
 	}
 }
