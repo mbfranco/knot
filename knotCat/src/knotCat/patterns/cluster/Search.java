@@ -435,7 +435,7 @@ public class Search {
 		//Check if the feature that is being searched does have an atom feature
 		for(Entry<Integer, BitArray> fea : currentKnot.getAtoms().entrySet()){
 			int isAtomFeaturePresentInClusterKnot = 0;
-			boolean isFeaturePresentInClusterKnot = fc.getAtomFeatures().containsKey(fea.getKey());
+			boolean isFeaturePresentInClusterKnot = fc.getAtomFeatures().containsKey(fea.getKey()) && fc.getAtomFeatures().get(fea.getKey()) != null;
 			if(isFeaturePresentInClusterKnot){
 				isAtomFeaturePresentInClusterKnot = fc.getAtomFeatures().get(fea.getKey()).and(fea.getValue()).count();
 			}
