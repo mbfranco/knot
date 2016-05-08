@@ -10,6 +10,7 @@ import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.Stack;
 import java.util.TreeMap;
@@ -73,7 +74,7 @@ public class Search {
 		}
 
 		int bitArrayDimention = Browser.NUMFEATURES;
-		int atomsBitArrayDimention = Browser.NUMFEATURES;
+		int atomsBitArrayDimention = Browser.NUMATOMS;
 
 		//the list of knots to search
 		LinkedList<Knot> knotsToSearch = new LinkedList<Knot>();
@@ -303,7 +304,7 @@ public class Search {
 
 				//If it is a leaf of the TreeCluster
 				if(fc instanceof ClusterKnot){
-					knotToAdd = checkClusterKnot(currentKnot, fc, threshold, distanceFunction);
+					knotToAdd = checkClusterKnot(currentKnot, (ClusterKnot)fc, threshold, distanceFunction);
 
 
 
@@ -374,7 +375,7 @@ public class Search {
 
 			if(fic instanceof ClusterKnot){
 
-				knotToAdd = checkClusterKnot(currentKnot, fic, threshold, distanceFunction);
+				knotToAdd = checkClusterKnot(currentKnot, (ClusterKnot)fic, threshold, distanceFunction);
 
 				if(knotToAdd == null){
 					break;
@@ -397,7 +398,7 @@ public class Search {
 
 					else if(finClu instanceof ClusterKnot){
 
-						knotToAdd = checkClusterKnot(currentKnot, finClu, threshold, distanceFunction);
+						knotToAdd = checkClusterKnot(currentKnot, (ClusterKnot)finClu, threshold, distanceFunction);
 						if(knotToAdd != null){
 							knotsToReturn.add(knotToAdd);
 						}
@@ -417,10 +418,12 @@ public class Search {
 	 * @param distanceFunction not being used
 	 * @return knot that is being added (or not) to the overall knots to return
 	 */
-	private ClusterSearchResult checkClusterKnot(Knot currentKnot, FinalCluster fc, double threshold,
+	private ClusterSearchResult checkClusterKnot(Knot currentKnot, ClusterKnot fc, double threshold,
 			String distanceFunction) {
 
 		//Choose if you want to use SIMILARITY FUNCTION or AND FUNCTION
+		//true = similarity
+		//false = AND (jaccard)
 		boolean chooseSimilarityFuntion = false;
 
 		ClusterKnot knotNames = new ClusterKnot();
@@ -428,6 +431,21 @@ public class Search {
 		FinalCluster cluster = null;
 		ClusterSearchResult knotToAdd = new ClusterSearchResult(knotNames, probability, cluster);
 
+		
+		//Check if the feature that is being searched does have an atom feature
+		for(Entry<Integer, BitArray> fea : currentKnot.getAtoms().entrySet()){
+			int isAtomFeaturePresentInClusterKnot = 0;
+			boolean isFeaturePresentInClusterKnot = fc.getAtomFeatures().containsKey(fea.getKey());
+			if(isFeaturePresentInClusterKnot){
+				isAtomFeaturePresentInClusterKnot = fc.getAtomFeatures().get(fea.getKey()).and(fea.getValue()).count();
+			}
+
+			if(isFeaturePresentInClusterKnot && isAtomFeaturePresentInClusterKnot == 0){
+				fc.getFeatures().clear(fea.getKey());
+			}
+		}
+		
+		
 		//the value should be [-1, 1]
 		double similarity = calculateSimilarity(currentKnot.getFeatures(), fc.getFeatures(), chooseSimilarityFuntion);
 
@@ -486,14 +504,16 @@ public class Search {
 	 * @param chooseSimilarityFuntion2 
 	 * @return
 	 */
-	private double calculateSimilarity(BitArray currentKnot, BitArray clusterKnot, boolean chooseSimilarityFuntion) {
+	private double calculateSimilarity(BitArray currentKnotFeatures, BitArray clusterKnot, boolean chooseSimilarityFuntion) {
 
+		double similarity = -2;
+		
 		if(chooseSimilarityFuntion){
 			//similarity value should be [-1, 1]
-			double similarity = -2;
-
+			similarity = -2;
+			
 			int clusterKnotModule = clusterKnot.count();
-			BitArray sharedFeatures = clusterKnot.and(currentKnot);
+			BitArray sharedFeatures = clusterKnot.and(currentKnotFeatures);
 			int sharedFeaturesModule = sharedFeatures.count();
 
 			similarity = (2.0 / (double)clusterKnotModule) * (double)sharedFeaturesModule - 1.0;
@@ -502,13 +522,12 @@ public class Search {
 		}
 		else{
 			//AND similarity
-			int currentKnotKnotModule = currentKnot.count();
-			BitArray sharedFeatures = clusterKnot.and(currentKnot);
+			BitArray sharedFeatures = clusterKnot.and(currentKnotFeatures);
 			int sharedFeaturesModule = sharedFeatures.count();
-			BitArray bothFeatures = clusterKnot.or(currentKnot);
+			BitArray bothFeatures = clusterKnot.or(currentKnotFeatures);
 			int bothFeaturesModule = bothFeatures.count();
 
-			double similarity = (double)sharedFeaturesModule/(double)bothFeaturesModule;
+			similarity = (double)sharedFeaturesModule/(double)bothFeaturesModule;
 
 			return similarity;
 		}
